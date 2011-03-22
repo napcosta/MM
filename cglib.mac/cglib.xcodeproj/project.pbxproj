@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74A8AB1B11A124C4001D9799 /* MyText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A8AB1911A124C4001D9799 /* MyText.cpp */; };
-		74A8AB2111A124E4001D9799 /* MyText.h in Sources */ = {isa = PBXBuildFile; fileRef = 74A8AB1A11A124C4001D9799 /* MyText.h */; };
 		74B972AD11A7E5180095D288 /* cg.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728711A7E5180095D288 /* cg.h */; };
 		74B972D211A7E5370095D288 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728611A7E5180095D288 /* Application.h */; };
 		74B972D311A7E5370095D288 /* cg.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728711A7E5180095D288 /* cg.h */; };
@@ -48,9 +46,6 @@
 		74B972F511A7E5370095D288 /* UpdateNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A911A7E5180095D288 /* UpdateNotifier.h */; };
 		74B972F611A7E5370095D288 /* Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972AA11A7E5180095D288 /* Util.h */; };
 		74B972F711A7E5370095D288 /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972AB11A7E5180095D288 /* Vector.h */; };
-		74C3302211A0152400459BCC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C32F9111A013E000459BCC /* main.cpp */; };
-		74C3302311A0152400459BCC /* MyApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C32F9211A013E000459BCC /* MyApp.cpp */; };
-		74C3302411A0152400459BCC /* MyApp.h in Sources */ = {isa = PBXBuildFile; fileRef = 74C32F9311A013E000459BCC /* MyApp.h */; };
 		74C3303111A0155700459BCC /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3303011A0155700459BCC /* GLUT.framework */; };
 		74C3303511A0156200459BCC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3303411A0156200459BCC /* OpenGL.framework */; };
 		74C3305B11A0157400459BCC /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3303011A0155700459BCC /* GLUT.framework */; };
@@ -71,6 +66,21 @@
 		74C3309011A0163400459BCC /* ReshapeEventNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307211A0161F00459BCC /* ReshapeEventNotifier.cpp */; };
 		74C3309111A0163400459BCC /* UpdateNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307311A0161F00459BCC /* UpdateNotifier.cpp */; };
 		74C3309211A0163400459BCC /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307411A0161F00459BCC /* Util.cpp */; };
+		B0E7837E13390808003FA6CB /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7836F13390808003FA6CB /* App.cpp */; };
+		B0E7837F13390808003FA6CB /* App.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837013390808003FA6CB /* App.h */; };
+		B0E7838013390808003FA6CB /* BEVCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837113390808003FA6CB /* BEVCamera.cpp */; };
+		B0E7838113390808003FA6CB /* BEVCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837213390808003FA6CB /* BEVCamera.h */; };
+		B0E7838213390808003FA6CB /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837313390808003FA6CB /* Controller.cpp */; };
+		B0E7838313390808003FA6CB /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837413390808003FA6CB /* Controller.h */; };
+		B0E7838413390808003FA6CB /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837513390808003FA6CB /* Hero.cpp */; };
+		B0E7838513390808003FA6CB /* Hero.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837613390808003FA6CB /* Hero.h */; };
+		B0E7838613390808003FA6CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837713390808003FA6CB /* main.cpp */; };
+		B0E7838713390808003FA6CB /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837813390808003FA6CB /* Particle.cpp */; };
+		B0E7838813390808003FA6CB /* Particle.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837913390808003FA6CB /* Particle.h */; };
+		B0E7838913390808003FA6CB /* ParticleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837A13390808003FA6CB /* ParticleManager.cpp */; };
+		B0E7838A13390808003FA6CB /* ParticleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837B13390808003FA6CB /* ParticleManager.h */; };
+		B0E7838B13390808003FA6CB /* PhysicalEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837C13390808003FA6CB /* PhysicalEntity.cpp */; };
+		B0E7838C13390808003FA6CB /* PhysicalEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837D13390808003FA6CB /* PhysicalEntity.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +94,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		74A8AB1911A124C4001D9799 /* MyText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyText.cpp; path = ../template/MyText.cpp; sourceTree = SOURCE_ROOT; };
-		74A8AB1A11A124C4001D9799 /* MyText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyText.h; path = ../template/MyText.h; sourceTree = SOURCE_ROOT; };
 		74B9728611A7E5180095D288 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Application.h; path = ../cglib/include/cg/Application.h; sourceTree = SOURCE_ROOT; };
 		74B9728711A7E5180095D288 /* cg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cg.h; path = ../cglib/include/cg/cg.h; sourceTree = SOURCE_ROOT; };
 		74B9728811A7E5180095D288 /* CommandQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandQueue.h; path = ../cglib/include/cg/CommandQueue.h; sourceTree = SOURCE_ROOT; };
@@ -124,9 +132,6 @@
 		74B972A911A7E5180095D288 /* UpdateNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateNotifier.h; path = ../cglib/include/cg/UpdateNotifier.h; sourceTree = SOURCE_ROOT; };
 		74B972AA11A7E5180095D288 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Util.h; path = ../cglib/include/cg/Util.h; sourceTree = SOURCE_ROOT; };
 		74B972AB11A7E5180095D288 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = ../cglib/include/cg/Vector.h; sourceTree = SOURCE_ROOT; };
-		74C32F9111A013E000459BCC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../template/main.cpp; sourceTree = SOURCE_ROOT; };
-		74C32F9211A013E000459BCC /* MyApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyApp.cpp; path = ../template/MyApp.cpp; sourceTree = SOURCE_ROOT; };
-		74C32F9311A013E000459BCC /* MyApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyApp.h; path = ../template/MyApp.h; sourceTree = SOURCE_ROOT; };
 		74C32FC811A0144900459BCC /* libcglib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcglib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C32FD011A0145B00459BCC /* template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = template; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C3303011A0155700459BCC /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
@@ -146,6 +151,21 @@
 		74C3307211A0161F00459BCC /* ReshapeEventNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReshapeEventNotifier.cpp; path = ../cglib/src/ReshapeEventNotifier.cpp; sourceTree = SOURCE_ROOT; };
 		74C3307311A0161F00459BCC /* UpdateNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UpdateNotifier.cpp; path = ../cglib/src/UpdateNotifier.cpp; sourceTree = SOURCE_ROOT; };
 		74C3307411A0161F00459BCC /* Util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Util.cpp; path = ../cglib/src/Util.cpp; sourceTree = SOURCE_ROOT; };
+		B0E7836F13390808003FA6CB /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
+		B0E7837013390808003FA6CB /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		B0E7837113390808003FA6CB /* BEVCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEVCamera.cpp; sourceTree = "<group>"; };
+		B0E7837213390808003FA6CB /* BEVCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEVCamera.h; sourceTree = "<group>"; };
+		B0E7837313390808003FA6CB /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		B0E7837413390808003FA6CB /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		B0E7837513390808003FA6CB /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
+		B0E7837613390808003FA6CB /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		B0E7837713390808003FA6CB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B0E7837813390808003FA6CB /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
+		B0E7837913390808003FA6CB /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		B0E7837A13390808003FA6CB /* ParticleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleManager.cpp; sourceTree = "<group>"; };
+		B0E7837B13390808003FA6CB /* ParticleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleManager.h; sourceTree = "<group>"; };
+		B0E7837C13390808003FA6CB /* PhysicalEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicalEntity.cpp; sourceTree = "<group>"; };
+		B0E7837D13390808003FA6CB /* PhysicalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalEntity.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +194,9 @@
 		74C32F7D11A0137200459BCC = {
 			isa = PBXGroup;
 			children = (
+				B0E7836E13390808003FA6CB /* src */,
 				74C32F8E11A0139200459BCC /* cglib.include */,
 				74C32F8F11A013A100459BCC /* cglib.src */,
-				74C32F9011A013AD00459BCC /* template */,
 				74C32FC911A0144900459BCC /* Products */,
 				74C3303011A0155700459BCC /* GLUT.framework */,
 				74C3303411A0156200459BCC /* OpenGL.framework */,
@@ -250,18 +270,6 @@
 			name = cglib.src;
 			sourceTree = "<group>";
 		};
-		74C32F9011A013AD00459BCC /* template */ = {
-			isa = PBXGroup;
-			children = (
-				74C32F9111A013E000459BCC /* main.cpp */,
-				74C32F9211A013E000459BCC /* MyApp.cpp */,
-				74C32F9311A013E000459BCC /* MyApp.h */,
-				74A8AB1911A124C4001D9799 /* MyText.cpp */,
-				74A8AB1A11A124C4001D9799 /* MyText.h */,
-			);
-			name = template;
-			sourceTree = "<group>";
-		};
 		74C32FC911A0144900459BCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +277,29 @@
 				74C32FD011A0145B00459BCC /* template */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B0E7836E13390808003FA6CB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B0E7836F13390808003FA6CB /* App.cpp */,
+				B0E7837013390808003FA6CB /* App.h */,
+				B0E7837113390808003FA6CB /* BEVCamera.cpp */,
+				B0E7837213390808003FA6CB /* BEVCamera.h */,
+				B0E7837313390808003FA6CB /* Controller.cpp */,
+				B0E7837413390808003FA6CB /* Controller.h */,
+				B0E7837513390808003FA6CB /* Hero.cpp */,
+				B0E7837613390808003FA6CB /* Hero.h */,
+				B0E7837713390808003FA6CB /* main.cpp */,
+				B0E7837813390808003FA6CB /* Particle.cpp */,
+				B0E7837913390808003FA6CB /* Particle.h */,
+				B0E7837A13390808003FA6CB /* ParticleManager.cpp */,
+				B0E7837B13390808003FA6CB /* ParticleManager.h */,
+				B0E7837C13390808003FA6CB /* PhysicalEntity.cpp */,
+				B0E7837D13390808003FA6CB /* PhysicalEntity.h */,
+			);
+			name = src;
+			path = ../src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +355,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				74B972AD11A7E5180095D288 /* cg.h in Headers */,
+				B0E7837F13390808003FA6CB /* App.h in Headers */,
+				B0E7838113390808003FA6CB /* BEVCamera.h in Headers */,
+				B0E7838313390808003FA6CB /* Controller.h in Headers */,
+				B0E7838513390808003FA6CB /* Hero.h in Headers */,
+				B0E7838813390808003FA6CB /* Particle.h in Headers */,
+				B0E7838A13390808003FA6CB /* ParticleManager.h in Headers */,
+				B0E7838C13390808003FA6CB /* PhysicalEntity.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +410,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 74C32F8211A0137200459BCC /* Build configuration list for PBXProject "cglib" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 74C32F7D11A0137200459BCC;
 			productRefGroup = 74C32FC911A0144900459BCC /* Products */;
 			projectDirPath = "";
@@ -411,11 +453,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74A8AB1B11A124C4001D9799 /* MyText.cpp in Sources */,
-				74A8AB2111A124E4001D9799 /* MyText.h in Sources */,
-				74C3302211A0152400459BCC /* main.cpp in Sources */,
-				74C3302311A0152400459BCC /* MyApp.cpp in Sources */,
-				74C3302411A0152400459BCC /* MyApp.h in Sources */,
+				B0E7837E13390808003FA6CB /* App.cpp in Sources */,
+				B0E7838013390808003FA6CB /* BEVCamera.cpp in Sources */,
+				B0E7838213390808003FA6CB /* Controller.cpp in Sources */,
+				B0E7838413390808003FA6CB /* Hero.cpp in Sources */,
+				B0E7838613390808003FA6CB /* main.cpp in Sources */,
+				B0E7838713390808003FA6CB /* Particle.cpp in Sources */,
+				B0E7838913390808003FA6CB /* ParticleManager.cpp in Sources */,
+				B0E7838B13390808003FA6CB /* PhysicalEntity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
