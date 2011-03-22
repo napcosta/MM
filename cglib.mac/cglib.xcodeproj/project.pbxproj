@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74A8AB1B11A124C4001D9799 /* MyText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A8AB1911A124C4001D9799 /* MyText.cpp */; };
+		74A8AB2111A124E4001D9799 /* MyText.h in Sources */ = {isa = PBXBuildFile; fileRef = 74A8AB1A11A124C4001D9799 /* MyText.h */; };
+		74B972AD11A7E5180095D288 /* cg.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728711A7E5180095D288 /* cg.h */; };
+		74B972D211A7E5370095D288 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728611A7E5180095D288 /* Application.h */; };
+		74B972D311A7E5370095D288 /* cg.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728711A7E5180095D288 /* cg.h */; };
+		74B972D411A7E5370095D288 /* CommandQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728811A7E5180095D288 /* CommandQueue.h */; };
+		74B972D511A7E5370095D288 /* DebugFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728911A7E5180095D288 /* DebugFile.h */; };
+		74B972D611A7E5370095D288 /* DebugNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728A11A7E5180095D288 /* DebugNotifier.h */; };
+		74B972D711A7E5370095D288 /* DrawNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728B11A7E5180095D288 /* DrawNotifier.h */; };
+		74B972D811A7E5370095D288 /* DrawOverlayNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728C11A7E5180095D288 /* DrawOverlayNotifier.h */; };
+		74B972D911A7E5370095D288 /* Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728D11A7E5180095D288 /* Entity.h */; };
+		74B972DA11A7E5370095D288 /* Group.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728E11A7E5180095D288 /* Group.h */; };
+		74B972DB11A7E5370095D288 /* GroupDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9728F11A7E5180095D288 /* GroupDebug.h */; };
+		74B972DC11A7E5370095D288 /* GroupDraw.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729011A7E5180095D288 /* GroupDraw.h */; };
+		74B972DD11A7E5370095D288 /* GroupDrawOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729111A7E5180095D288 /* GroupDrawOverlay.h */; };
+		74B972DE11A7E5370095D288 /* GroupKeyboardEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729211A7E5180095D288 /* GroupKeyboardEvent.h */; };
+		74B972DF11A7E5370095D288 /* GroupMouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729311A7E5180095D288 /* GroupMouseEvent.h */; };
+		74B972E011A7E5370095D288 /* GroupReshapeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729411A7E5180095D288 /* GroupReshapeEvent.h */; };
+		74B972E111A7E5370095D288 /* GroupUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729511A7E5180095D288 /* GroupUpdate.h */; };
+		74B972E211A7E5370095D288 /* IDebugListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729611A7E5180095D288 /* IDebugListener.h */; };
+		74B972E311A7E5370095D288 /* IDrawListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729711A7E5180095D288 /* IDrawListener.h */; };
+		74B972E411A7E5370095D288 /* IDrawOverlayListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729811A7E5180095D288 /* IDrawOverlayListener.h */; };
+		74B972E511A7E5370095D288 /* IKeyboardEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729911A7E5180095D288 /* IKeyboardEventListener.h */; };
+		74B972E611A7E5370095D288 /* IMouseEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729A11A7E5180095D288 /* IMouseEventListener.h */; };
+		74B972E711A7E5370095D288 /* IReshapeEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729B11A7E5180095D288 /* IReshapeEventListener.h */; };
+		74B972E811A7E5370095D288 /* IUpdateListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729C11A7E5180095D288 /* IUpdateListener.h */; };
+		74B972E911A7E5370095D288 /* KeyboardEventNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729D11A7E5180095D288 /* KeyboardEventNotifier.h */; };
+		74B972EA11A7E5370095D288 /* KeyBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729E11A7E5180095D288 /* KeyBuffer.h */; };
+		74B972EB11A7E5370095D288 /* Manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B9729F11A7E5180095D288 /* Manager.h */; };
+		74B972EC11A7E5370095D288 /* MouseEventNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A011A7E5180095D288 /* MouseEventNotifier.h */; };
+		74B972ED11A7E5370095D288 /* Notifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A111A7E5180095D288 /* Notifier.h */; };
+		74B972EE11A7E5370095D288 /* Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A211A7E5180095D288 /* Properties.h */; };
+		74B972EF11A7E5370095D288 /* Registry.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A311A7E5180095D288 /* Registry.h */; };
+		74B972F011A7E5370095D288 /* ReshapeEventNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A411A7E5180095D288 /* ReshapeEventNotifier.h */; };
+		74B972F111A7E5370095D288 /* Singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A511A7E5180095D288 /* Singleton.h */; };
+		74B972F211A7E5370095D288 /* State.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A611A7E5180095D288 /* State.h */; };
+		74B972F311A7E5370095D288 /* Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A711A7E5180095D288 /* Test.h */; };
+		74B972F411A7E5370095D288 /* TestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A811A7E5180095D288 /* TestSuite.h */; };
+		74B972F511A7E5370095D288 /* UpdateNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972A911A7E5180095D288 /* UpdateNotifier.h */; };
+		74B972F611A7E5370095D288 /* Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972AA11A7E5180095D288 /* Util.h */; };
+		74B972F711A7E5370095D288 /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B972AB11A7E5180095D288 /* Vector.h */; };
+		74C3302211A0152400459BCC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C32F9111A013E000459BCC /* main.cpp */; };
+		74C3302311A0152400459BCC /* MyApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C32F9211A013E000459BCC /* MyApp.cpp */; };
+		74C3302411A0152400459BCC /* MyApp.h in Sources */ = {isa = PBXBuildFile; fileRef = 74C32F9311A013E000459BCC /* MyApp.h */; };
+		74C3303111A0155700459BCC /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3303011A0155700459BCC /* GLUT.framework */; };
+		74C3303511A0156200459BCC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3303411A0156200459BCC /* OpenGL.framework */; };
+		74C3305B11A0157400459BCC /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3303011A0155700459BCC /* GLUT.framework */; };
+		74C3305C11A0157400459BCC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3303411A0156200459BCC /* OpenGL.framework */; };
+		74C3305D11A0159A00459BCC /* libcglib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C32FC811A0144900459BCC /* libcglib.a */; };
+		74C3308411A0163400459BCC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306611A0161F00459BCC /* Application.cpp */; };
+		74C3308511A0163400459BCC /* DebugFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306711A0161F00459BCC /* DebugFile.cpp */; };
+		74C3308611A0163400459BCC /* DebugNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306811A0161F00459BCC /* DebugNotifier.cpp */; };
+		74C3308711A0163400459BCC /* DrawNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306911A0161F00459BCC /* DrawNotifier.cpp */; };
+		74C3308811A0163400459BCC /* DrawOverlayNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306A11A0161F00459BCC /* DrawOverlayNotifier.cpp */; };
+		74C3308911A0163400459BCC /* Group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306B11A0161F00459BCC /* Group.cpp */; };
+		74C3308A11A0163400459BCC /* KeyboardEventNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306C11A0161F00459BCC /* KeyboardEventNotifier.cpp */; };
+		74C3308B11A0163400459BCC /* KeyBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306D11A0161F00459BCC /* KeyBuffer.cpp */; };
+		74C3308C11A0163400459BCC /* Manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306E11A0161F00459BCC /* Manager.cpp */; };
+		74C3308D11A0163400459BCC /* MouseEventNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3306F11A0161F00459BCC /* MouseEventNotifier.cpp */; };
+		74C3308E11A0163400459BCC /* Properties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307011A0161F00459BCC /* Properties.cpp */; };
+		74C3308F11A0163400459BCC /* Registry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307111A0161F00459BCC /* Registry.cpp */; };
+		74C3309011A0163400459BCC /* ReshapeEventNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307211A0161F00459BCC /* ReshapeEventNotifier.cpp */; };
+		74C3309111A0163400459BCC /* UpdateNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307311A0161F00459BCC /* UpdateNotifier.cpp */; };
+		74C3309211A0163400459BCC /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307411A0161F00459BCC /* Util.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74B9726011A768930095D288 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74C32F7F11A0137200459BCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74C32FC711A0144900459BCC;
+			remoteInfo = cglib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74A8AB1911A124C4001D9799 /* MyText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyText.cpp; path = ../template/MyText.cpp; sourceTree = SOURCE_ROOT; };
+		74A8AB1A11A124C4001D9799 /* MyText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyText.h; path = ../template/MyText.h; sourceTree = SOURCE_ROOT; };
+		74B9728611A7E5180095D288 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Application.h; path = ../cglib/include/cg/Application.h; sourceTree = SOURCE_ROOT; };
+		74B9728711A7E5180095D288 /* cg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cg.h; path = ../cglib/include/cg/cg.h; sourceTree = SOURCE_ROOT; };
+		74B9728811A7E5180095D288 /* CommandQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandQueue.h; path = ../cglib/include/cg/CommandQueue.h; sourceTree = SOURCE_ROOT; };
+		74B9728911A7E5180095D288 /* DebugFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugFile.h; path = ../cglib/include/cg/DebugFile.h; sourceTree = SOURCE_ROOT; };
+		74B9728A11A7E5180095D288 /* DebugNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugNotifier.h; path = ../cglib/include/cg/DebugNotifier.h; sourceTree = SOURCE_ROOT; };
+		74B9728B11A7E5180095D288 /* DrawNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawNotifier.h; path = ../cglib/include/cg/DrawNotifier.h; sourceTree = SOURCE_ROOT; };
+		74B9728C11A7E5180095D288 /* DrawOverlayNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawOverlayNotifier.h; path = ../cglib/include/cg/DrawOverlayNotifier.h; sourceTree = SOURCE_ROOT; };
+		74B9728D11A7E5180095D288 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = ../cglib/include/cg/Entity.h; sourceTree = SOURCE_ROOT; };
+		74B9728E11A7E5180095D288 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = ../cglib/include/cg/Group.h; sourceTree = SOURCE_ROOT; };
+		74B9728F11A7E5180095D288 /* GroupDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupDebug.h; path = ../cglib/include/cg/GroupDebug.h; sourceTree = SOURCE_ROOT; };
+		74B9729011A7E5180095D288 /* GroupDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupDraw.h; path = ../cglib/include/cg/GroupDraw.h; sourceTree = SOURCE_ROOT; };
+		74B9729111A7E5180095D288 /* GroupDrawOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupDrawOverlay.h; path = ../cglib/include/cg/GroupDrawOverlay.h; sourceTree = SOURCE_ROOT; };
+		74B9729211A7E5180095D288 /* GroupKeyboardEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupKeyboardEvent.h; path = ../cglib/include/cg/GroupKeyboardEvent.h; sourceTree = SOURCE_ROOT; };
+		74B9729311A7E5180095D288 /* GroupMouseEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupMouseEvent.h; path = ../cglib/include/cg/GroupMouseEvent.h; sourceTree = SOURCE_ROOT; };
+		74B9729411A7E5180095D288 /* GroupReshapeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupReshapeEvent.h; path = ../cglib/include/cg/GroupReshapeEvent.h; sourceTree = SOURCE_ROOT; };
+		74B9729511A7E5180095D288 /* GroupUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupUpdate.h; path = ../cglib/include/cg/GroupUpdate.h; sourceTree = SOURCE_ROOT; };
+		74B9729611A7E5180095D288 /* IDebugListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDebugListener.h; path = ../cglib/include/cg/IDebugListener.h; sourceTree = SOURCE_ROOT; };
+		74B9729711A7E5180095D288 /* IDrawListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDrawListener.h; path = ../cglib/include/cg/IDrawListener.h; sourceTree = SOURCE_ROOT; };
+		74B9729811A7E5180095D288 /* IDrawOverlayListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDrawOverlayListener.h; path = ../cglib/include/cg/IDrawOverlayListener.h; sourceTree = SOURCE_ROOT; };
+		74B9729911A7E5180095D288 /* IKeyboardEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKeyboardEventListener.h; path = ../cglib/include/cg/IKeyboardEventListener.h; sourceTree = SOURCE_ROOT; };
+		74B9729A11A7E5180095D288 /* IMouseEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMouseEventListener.h; path = ../cglib/include/cg/IMouseEventListener.h; sourceTree = SOURCE_ROOT; };
+		74B9729B11A7E5180095D288 /* IReshapeEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IReshapeEventListener.h; path = ../cglib/include/cg/IReshapeEventListener.h; sourceTree = SOURCE_ROOT; };
+		74B9729C11A7E5180095D288 /* IUpdateListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IUpdateListener.h; path = ../cglib/include/cg/IUpdateListener.h; sourceTree = SOURCE_ROOT; };
+		74B9729D11A7E5180095D288 /* KeyboardEventNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardEventNotifier.h; path = ../cglib/include/cg/KeyboardEventNotifier.h; sourceTree = SOURCE_ROOT; };
+		74B9729E11A7E5180095D288 /* KeyBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyBuffer.h; path = ../cglib/include/cg/KeyBuffer.h; sourceTree = SOURCE_ROOT; };
+		74B9729F11A7E5180095D288 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Manager.h; path = ../cglib/include/cg/Manager.h; sourceTree = SOURCE_ROOT; };
+		74B972A011A7E5180095D288 /* MouseEventNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MouseEventNotifier.h; path = ../cglib/include/cg/MouseEventNotifier.h; sourceTree = SOURCE_ROOT; };
+		74B972A111A7E5180095D288 /* Notifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Notifier.h; path = ../cglib/include/cg/Notifier.h; sourceTree = SOURCE_ROOT; };
+		74B972A211A7E5180095D288 /* Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Properties.h; path = ../cglib/include/cg/Properties.h; sourceTree = SOURCE_ROOT; };
+		74B972A311A7E5180095D288 /* Registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Registry.h; path = ../cglib/include/cg/Registry.h; sourceTree = SOURCE_ROOT; };
+		74B972A411A7E5180095D288 /* ReshapeEventNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReshapeEventNotifier.h; path = ../cglib/include/cg/ReshapeEventNotifier.h; sourceTree = SOURCE_ROOT; };
+		74B972A511A7E5180095D288 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = ../cglib/include/cg/Singleton.h; sourceTree = SOURCE_ROOT; };
+		74B972A611A7E5180095D288 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = State.h; path = ../cglib/include/cg/State.h; sourceTree = SOURCE_ROOT; };
+		74B972A711A7E5180095D288 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test.h; path = ../cglib/include/cg/Test.h; sourceTree = SOURCE_ROOT; };
+		74B972A811A7E5180095D288 /* TestSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestSuite.h; path = ../cglib/include/cg/TestSuite.h; sourceTree = SOURCE_ROOT; };
+		74B972A911A7E5180095D288 /* UpdateNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateNotifier.h; path = ../cglib/include/cg/UpdateNotifier.h; sourceTree = SOURCE_ROOT; };
+		74B972AA11A7E5180095D288 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Util.h; path = ../cglib/include/cg/Util.h; sourceTree = SOURCE_ROOT; };
+		74B972AB11A7E5180095D288 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = ../cglib/include/cg/Vector.h; sourceTree = SOURCE_ROOT; };
+		74C32F9111A013E000459BCC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../template/main.cpp; sourceTree = SOURCE_ROOT; };
+		74C32F9211A013E000459BCC /* MyApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyApp.cpp; path = ../template/MyApp.cpp; sourceTree = SOURCE_ROOT; };
+		74C32F9311A013E000459BCC /* MyApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyApp.h; path = ../template/MyApp.h; sourceTree = SOURCE_ROOT; };
+		74C32FC811A0144900459BCC /* libcglib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcglib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C32FD011A0145B00459BCC /* template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = template; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C3303011A0155700459BCC /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		74C3303411A0156200459BCC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		74C3306611A0161F00459BCC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = ../cglib/src/Application.cpp; sourceTree = SOURCE_ROOT; };
+		74C3306711A0161F00459BCC /* DebugFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DebugFile.cpp; path = ../cglib/src/DebugFile.cpp; sourceTree = SOURCE_ROOT; };
+		74C3306811A0161F00459BCC /* DebugNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DebugNotifier.cpp; path = ../cglib/src/DebugNotifier.cpp; sourceTree = SOURCE_ROOT; };
+		74C3306911A0161F00459BCC /* DrawNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawNotifier.cpp; path = ../cglib/src/DrawNotifier.cpp; sourceTree = SOURCE_ROOT; };
+		74C3306A11A0161F00459BCC /* DrawOverlayNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawOverlayNotifier.cpp; path = ../cglib/src/DrawOverlayNotifier.cpp; sourceTree = SOURCE_ROOT; };
+		74C3306B11A0161F00459BCC /* Group.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Group.cpp; path = ../cglib/src/Group.cpp; sourceTree = SOURCE_ROOT; };
+		74C3306C11A0161F00459BCC /* KeyboardEventNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardEventNotifier.cpp; path = ../cglib/src/KeyboardEventNotifier.cpp; sourceTree = SOURCE_ROOT; };
+		74C3306D11A0161F00459BCC /* KeyBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyBuffer.cpp; path = ../cglib/src/KeyBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		74C3306E11A0161F00459BCC /* Manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Manager.cpp; path = ../cglib/src/Manager.cpp; sourceTree = SOURCE_ROOT; };
+		74C3306F11A0161F00459BCC /* MouseEventNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MouseEventNotifier.cpp; path = ../cglib/src/MouseEventNotifier.cpp; sourceTree = SOURCE_ROOT; };
+		74C3307011A0161F00459BCC /* Properties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Properties.cpp; path = ../cglib/src/Properties.cpp; sourceTree = SOURCE_ROOT; };
+		74C3307111A0161F00459BCC /* Registry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Registry.cpp; path = ../cglib/src/Registry.cpp; sourceTree = SOURCE_ROOT; };
+		74C3307211A0161F00459BCC /* ReshapeEventNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReshapeEventNotifier.cpp; path = ../cglib/src/ReshapeEventNotifier.cpp; sourceTree = SOURCE_ROOT; };
+		74C3307311A0161F00459BCC /* UpdateNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UpdateNotifier.cpp; path = ../cglib/src/UpdateNotifier.cpp; sourceTree = SOURCE_ROOT; };
+		74C3307411A0161F00459BCC /* Util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Util.cpp; path = ../cglib/src/Util.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74C32FC611A0144900459BCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C3303111A0155700459BCC /* GLUT.framework in Frameworks */,
+				74C3303511A0156200459BCC /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C32FCE11A0145B00459BCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C3305D11A0159A00459BCC /* libcglib.a in Frameworks */,
+				74C3305B11A0157400459BCC /* GLUT.framework in Frameworks */,
+				74C3305C11A0157400459BCC /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74C32F7D11A0137200459BCC = {
+			isa = PBXGroup;
+			children = (
+				74C32F8E11A0139200459BCC /* cglib.include */,
+				74C32F8F11A013A100459BCC /* cglib.src */,
+				74C32F9011A013AD00459BCC /* template */,
+				74C32FC911A0144900459BCC /* Products */,
+				74C3303011A0155700459BCC /* GLUT.framework */,
+				74C3303411A0156200459BCC /* OpenGL.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		74C32F8E11A0139200459BCC /* cglib.include */ = {
+			isa = PBXGroup;
+			children = (
+				74B9728611A7E5180095D288 /* Application.h */,
+				74B9728711A7E5180095D288 /* cg.h */,
+				74B9728811A7E5180095D288 /* CommandQueue.h */,
+				74B9728911A7E5180095D288 /* DebugFile.h */,
+				74B9728A11A7E5180095D288 /* DebugNotifier.h */,
+				74B9728B11A7E5180095D288 /* DrawNotifier.h */,
+				74B9728C11A7E5180095D288 /* DrawOverlayNotifier.h */,
+				74B9728D11A7E5180095D288 /* Entity.h */,
+				74B9728E11A7E5180095D288 /* Group.h */,
+				74B9728F11A7E5180095D288 /* GroupDebug.h */,
+				74B9729011A7E5180095D288 /* GroupDraw.h */,
+				74B9729111A7E5180095D288 /* GroupDrawOverlay.h */,
+				74B9729211A7E5180095D288 /* GroupKeyboardEvent.h */,
+				74B9729311A7E5180095D288 /* GroupMouseEvent.h */,
+				74B9729411A7E5180095D288 /* GroupReshapeEvent.h */,
+				74B9729511A7E5180095D288 /* GroupUpdate.h */,
+				74B9729611A7E5180095D288 /* IDebugListener.h */,
+				74B9729711A7E5180095D288 /* IDrawListener.h */,
+				74B9729811A7E5180095D288 /* IDrawOverlayListener.h */,
+				74B9729911A7E5180095D288 /* IKeyboardEventListener.h */,
+				74B9729A11A7E5180095D288 /* IMouseEventListener.h */,
+				74B9729B11A7E5180095D288 /* IReshapeEventListener.h */,
+				74B9729C11A7E5180095D288 /* IUpdateListener.h */,
+				74B9729D11A7E5180095D288 /* KeyboardEventNotifier.h */,
+				74B9729E11A7E5180095D288 /* KeyBuffer.h */,
+				74B9729F11A7E5180095D288 /* Manager.h */,
+				74B972A011A7E5180095D288 /* MouseEventNotifier.h */,
+				74B972A111A7E5180095D288 /* Notifier.h */,
+				74B972A211A7E5180095D288 /* Properties.h */,
+				74B972A311A7E5180095D288 /* Registry.h */,
+				74B972A411A7E5180095D288 /* ReshapeEventNotifier.h */,
+				74B972A511A7E5180095D288 /* Singleton.h */,
+				74B972A611A7E5180095D288 /* State.h */,
+				74B972A711A7E5180095D288 /* Test.h */,
+				74B972A811A7E5180095D288 /* TestSuite.h */,
+				74B972A911A7E5180095D288 /* UpdateNotifier.h */,
+				74B972AA11A7E5180095D288 /* Util.h */,
+				74B972AB11A7E5180095D288 /* Vector.h */,
+			);
+			name = cglib.include;
+			sourceTree = "<group>";
+		};
+		74C32F8F11A013A100459BCC /* cglib.src */ = {
+			isa = PBXGroup;
+			children = (
+				74C3306611A0161F00459BCC /* Application.cpp */,
+				74C3306711A0161F00459BCC /* DebugFile.cpp */,
+				74C3306811A0161F00459BCC /* DebugNotifier.cpp */,
+				74C3306911A0161F00459BCC /* DrawNotifier.cpp */,
+				74C3306A11A0161F00459BCC /* DrawOverlayNotifier.cpp */,
+				74C3306B11A0161F00459BCC /* Group.cpp */,
+				74C3306C11A0161F00459BCC /* KeyboardEventNotifier.cpp */,
+				74C3306D11A0161F00459BCC /* KeyBuffer.cpp */,
+				74C3306E11A0161F00459BCC /* Manager.cpp */,
+				74C3306F11A0161F00459BCC /* MouseEventNotifier.cpp */,
+				74C3307011A0161F00459BCC /* Properties.cpp */,
+				74C3307111A0161F00459BCC /* Registry.cpp */,
+				74C3307211A0161F00459BCC /* ReshapeEventNotifier.cpp */,
+				74C3307311A0161F00459BCC /* UpdateNotifier.cpp */,
+				74C3307411A0161F00459BCC /* Util.cpp */,
+			);
+			name = cglib.src;
+			sourceTree = "<group>";
+		};
+		74C32F9011A013AD00459BCC /* template */ = {
+			isa = PBXGroup;
+			children = (
+				74C32F9111A013E000459BCC /* main.cpp */,
+				74C32F9211A013E000459BCC /* MyApp.cpp */,
+				74C32F9311A013E000459BCC /* MyApp.h */,
+				74A8AB1911A124C4001D9799 /* MyText.cpp */,
+				74A8AB1A11A124C4001D9799 /* MyText.h */,
+			);
+			name = template;
+			sourceTree = "<group>";
+		};
+		74C32FC911A0144900459BCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74C32FC811A0144900459BCC /* libcglib.a */,
+				74C32FD011A0145B00459BCC /* template */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		74C32FC411A0144900459BCC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B972D211A7E5370095D288 /* Application.h in Headers */,
+				74B972D311A7E5370095D288 /* cg.h in Headers */,
+				74B972D411A7E5370095D288 /* CommandQueue.h in Headers */,
+				74B972D511A7E5370095D288 /* DebugFile.h in Headers */,
+				74B972D611A7E5370095D288 /* DebugNotifier.h in Headers */,
+				74B972D711A7E5370095D288 /* DrawNotifier.h in Headers */,
+				74B972D811A7E5370095D288 /* DrawOverlayNotifier.h in Headers */,
+				74B972D911A7E5370095D288 /* Entity.h in Headers */,
+				74B972DA11A7E5370095D288 /* Group.h in Headers */,
+				74B972DB11A7E5370095D288 /* GroupDebug.h in Headers */,
+				74B972DC11A7E5370095D288 /* GroupDraw.h in Headers */,
+				74B972DD11A7E5370095D288 /* GroupDrawOverlay.h in Headers */,
+				74B972DE11A7E5370095D288 /* GroupKeyboardEvent.h in Headers */,
+				74B972DF11A7E5370095D288 /* GroupMouseEvent.h in Headers */,
+				74B972E011A7E5370095D288 /* GroupReshapeEvent.h in Headers */,
+				74B972E111A7E5370095D288 /* GroupUpdate.h in Headers */,
+				74B972E211A7E5370095D288 /* IDebugListener.h in Headers */,
+				74B972E311A7E5370095D288 /* IDrawListener.h in Headers */,
+				74B972E411A7E5370095D288 /* IDrawOverlayListener.h in Headers */,
+				74B972E511A7E5370095D288 /* IKeyboardEventListener.h in Headers */,
+				74B972E611A7E5370095D288 /* IMouseEventListener.h in Headers */,
+				74B972E711A7E5370095D288 /* IReshapeEventListener.h in Headers */,
+				74B972E811A7E5370095D288 /* IUpdateListener.h in Headers */,
+				74B972E911A7E5370095D288 /* KeyboardEventNotifier.h in Headers */,
+				74B972EA11A7E5370095D288 /* KeyBuffer.h in Headers */,
+				74B972EB11A7E5370095D288 /* Manager.h in Headers */,
+				74B972EC11A7E5370095D288 /* MouseEventNotifier.h in Headers */,
+				74B972ED11A7E5370095D288 /* Notifier.h in Headers */,
+				74B972EE11A7E5370095D288 /* Properties.h in Headers */,
+				74B972EF11A7E5370095D288 /* Registry.h in Headers */,
+				74B972F011A7E5370095D288 /* ReshapeEventNotifier.h in Headers */,
+				74B972F111A7E5370095D288 /* Singleton.h in Headers */,
+				74B972F211A7E5370095D288 /* State.h in Headers */,
+				74B972F311A7E5370095D288 /* Test.h in Headers */,
+				74B972F411A7E5370095D288 /* TestSuite.h in Headers */,
+				74B972F511A7E5370095D288 /* UpdateNotifier.h in Headers */,
+				74B972F611A7E5370095D288 /* Util.h in Headers */,
+				74B972F711A7E5370095D288 /* Vector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C3302F11A0154200459BCC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B972AD11A7E5180095D288 /* cg.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		74C32FC711A0144900459BCC /* cglib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C32FCC11A0144A00459BCC /* Build configuration list for PBXNativeTarget "cglib" */;
+			buildPhases = (
+				74C32FC411A0144900459BCC /* Headers */,
+				74C32FC511A0144900459BCC /* Sources */,
+				74C32FC611A0144900459BCC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cglib;
+			productName = cglib;
+			productReference = 74C32FC811A0144900459BCC /* libcglib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		74C32FCF11A0145B00459BCC /* template */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C32FFA11A014BF00459BCC /* Build configuration list for PBXNativeTarget "template" */;
+			buildPhases = (
+				74C32FCD11A0145B00459BCC /* Sources */,
+				74C32FCE11A0145B00459BCC /* Frameworks */,
+				74C3302F11A0154200459BCC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74B9726111A768930095D288 /* PBXTargetDependency */,
+			);
+			name = template;
+			productName = template;
+			productReference = 74C32FD011A0145B00459BCC /* template */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74C32F7F11A0137200459BCC /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 74C32F8211A0137200459BCC /* Build configuration list for PBXProject "cglib" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 0;
+			mainGroup = 74C32F7D11A0137200459BCC;
+			productRefGroup = 74C32FC911A0144900459BCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74C32FC711A0144900459BCC /* cglib */,
+				74C32FCF11A0145B00459BCC /* template */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74C32FC511A0144900459BCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C3308411A0163400459BCC /* Application.cpp in Sources */,
+				74C3308511A0163400459BCC /* DebugFile.cpp in Sources */,
+				74C3308611A0163400459BCC /* DebugNotifier.cpp in Sources */,
+				74C3308711A0163400459BCC /* DrawNotifier.cpp in Sources */,
+				74C3308811A0163400459BCC /* DrawOverlayNotifier.cpp in Sources */,
+				74C3308911A0163400459BCC /* Group.cpp in Sources */,
+				74C3308A11A0163400459BCC /* KeyboardEventNotifier.cpp in Sources */,
+				74C3308B11A0163400459BCC /* KeyBuffer.cpp in Sources */,
+				74C3308C11A0163400459BCC /* Manager.cpp in Sources */,
+				74C3308D11A0163400459BCC /* MouseEventNotifier.cpp in Sources */,
+				74C3308E11A0163400459BCC /* Properties.cpp in Sources */,
+				74C3308F11A0163400459BCC /* Registry.cpp in Sources */,
+				74C3309011A0163400459BCC /* ReshapeEventNotifier.cpp in Sources */,
+				74C3309111A0163400459BCC /* UpdateNotifier.cpp in Sources */,
+				74C3309211A0163400459BCC /* Util.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C32FCD11A0145B00459BCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A8AB1B11A124C4001D9799 /* MyText.cpp in Sources */,
+				74A8AB2111A124E4001D9799 /* MyText.h in Sources */,
+				74C3302211A0152400459BCC /* main.cpp in Sources */,
+				74C3302311A0152400459BCC /* MyApp.cpp in Sources */,
+				74C3302411A0152400459BCC /* MyApp.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74B9726111A768930095D288 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74C32FC711A0144900459BCC /* cglib */;
+			targetProxy = 74B9726011A768930095D288 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		74C32F8011A0137200459BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		74C32F8111A0137200459BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		74C32FCA11A0144A00459BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = cglib;
+			};
+			name = Debug;
+		};
+		74C32FCB11A0144A00459BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = cglib;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		74C32FD211A0145C00459BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = ../cglib/include;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = template;
+			};
+			name = Debug;
+		};
+		74C32FD311A0145C00459BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = ../cglib/include;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = template;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74C32F8211A0137200459BCC /* Build configuration list for PBXProject "cglib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C32F8011A0137200459BCC /* Debug */,
+				74C32F8111A0137200459BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C32FCC11A0144A00459BCC /* Build configuration list for PBXNativeTarget "cglib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C32FCA11A0144A00459BCC /* Debug */,
+				74C32FCB11A0144A00459BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C32FFA11A014BF00459BCC /* Build configuration list for PBXNativeTarget "template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C32FD211A0145C00459BCC /* Debug */,
+				74C32FD311A0145C00459BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74C32F7F11A0137200459BCC /* Project object */;
+}
