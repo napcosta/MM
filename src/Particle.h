@@ -7,7 +7,7 @@
 
 #ifndef PARTICLE_H_
 #define PARTICLE_H_
-#include "cg/cg.h"
+#include "cg.h"
 namespace Armageddon {
 
 	class Particle : public cg::Entity,

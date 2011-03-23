@@ -11,7 +11,7 @@
 #include <string>
 #include <ctime>
 #include <math.h>
-#include "cg/cg.h"
+#include "cg.h"
 
 namespace Armageddon {
 

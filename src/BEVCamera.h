@@ -7,7 +7,7 @@
 
 #ifndef BEVCAMERA_H_
 #define BEVCAMERA_H_
-#include "cg/cg.h"
+#include "cg.h"
 
 namespace Armageddon {
 

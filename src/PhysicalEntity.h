@@ -8,7 +8,7 @@
 #ifndef PHYSICALENTITY_H_
 #define PHYSICALENTITY_H_
 
-#include "cg/cg.h"
+#include "cg.h"
 
 namespace Armageddon {
 

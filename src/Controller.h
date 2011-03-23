@@ -10,7 +10,7 @@
 
 #include "Hero.h"
 
-#include "cg/cg.h"
+#include "cg.h"
 
 namespace Armageddon {
 

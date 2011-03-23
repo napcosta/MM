@@ -8,7 +8,7 @@
 #ifndef APP_H_
 #define APP_H_
 
-#include "cg/cg.h"
+#include "cg.h"
 
 #include "ParticleManager.h"
 #include "Controller.h"
