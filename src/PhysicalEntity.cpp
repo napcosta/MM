@@ -7,7 +7,7 @@
 
 #include "PhysicalEntity.h"
 
-namespace Armageddon
+namespace Micromachines
 	{
 
 	PhysicalEntity::PhysicalEntity()

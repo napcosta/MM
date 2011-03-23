@@ -13,7 +13,7 @@
 #include "ParticleManager.h"
 #include "Controller.h"
 
-namespace Armageddon {
+namespace Micromachines {
 
 	class App : public cg::Application {
 	public:

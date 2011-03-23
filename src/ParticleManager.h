@@ -9,7 +9,7 @@
 #define PARTICLEMANAGER_H_
 #include "Particle.h"
 
-namespace Armageddon {
+namespace Micromachines {
 
 	class ParticleManager : public cg::Entity,
 				public cg::IDrawListener,

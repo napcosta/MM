@@ -72,8 +72,8 @@
 		B0E7838113390808003FA6CB /* BEVCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837213390808003FA6CB /* BEVCamera.h */; };
 		B0E7838213390808003FA6CB /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837313390808003FA6CB /* Controller.cpp */; };
 		B0E7838313390808003FA6CB /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837413390808003FA6CB /* Controller.h */; };
-		B0E7838413390808003FA6CB /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837513390808003FA6CB /* Hero.cpp */; };
-		B0E7838513390808003FA6CB /* Hero.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837613390808003FA6CB /* Hero.h */; };
+		B0E7838413390808003FA6CB /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837513390808003FA6CB /* Car.cpp */; };
+		B0E7838513390808003FA6CB /* Car.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837613390808003FA6CB /* Car.h */; };
 		B0E7838613390808003FA6CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837713390808003FA6CB /* main.cpp */; };
 		B0E7838713390808003FA6CB /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837813390808003FA6CB /* Particle.cpp */; };
 		B0E7838813390808003FA6CB /* Particle.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837913390808003FA6CB /* Particle.h */; };
@@ -157,8 +157,8 @@
 		B0E7837213390808003FA6CB /* BEVCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEVCamera.h; sourceTree = "<group>"; };
 		B0E7837313390808003FA6CB /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		B0E7837413390808003FA6CB /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
-		B0E7837513390808003FA6CB /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
-		B0E7837613390808003FA6CB /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		B0E7837513390808003FA6CB /* Car.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Car.cpp; sourceTree = "<group>"; };
+		B0E7837613390808003FA6CB /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		B0E7837713390808003FA6CB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B0E7837813390808003FA6CB /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
 		B0E7837913390808003FA6CB /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
@@ -288,8 +288,8 @@
 				B0E7837213390808003FA6CB /* BEVCamera.h */,
 				B0E7837313390808003FA6CB /* Controller.cpp */,
 				B0E7837413390808003FA6CB /* Controller.h */,
-				B0E7837513390808003FA6CB /* Hero.cpp */,
-				B0E7837613390808003FA6CB /* Hero.h */,
+				B0E7837513390808003FA6CB /* Car.cpp */,
+				B0E7837613390808003FA6CB /* Car.h */,
 				B0E7837713390808003FA6CB /* main.cpp */,
 				B0E7837813390808003FA6CB /* Particle.cpp */,
 				B0E7837913390808003FA6CB /* Particle.h */,
@@ -358,7 +358,7 @@
 				B0E7837F13390808003FA6CB /* App.h in Headers */,
 				B0E7838113390808003FA6CB /* BEVCamera.h in Headers */,
 				B0E7838313390808003FA6CB /* Controller.h in Headers */,
-				B0E7838513390808003FA6CB /* Hero.h in Headers */,
+				B0E7838513390808003FA6CB /* Car.h in Headers */,
 				B0E7838813390808003FA6CB /* Particle.h in Headers */,
 				B0E7838A13390808003FA6CB /* ParticleManager.h in Headers */,
 				B0E7838C13390808003FA6CB /* PhysicalEntity.h in Headers */,
@@ -456,7 +456,7 @@
 				B0E7837E13390808003FA6CB /* App.cpp in Sources */,
 				B0E7838013390808003FA6CB /* BEVCamera.cpp in Sources */,
 				B0E7838213390808003FA6CB /* Controller.cpp in Sources */,
-				B0E7838413390808003FA6CB /* Hero.cpp in Sources */,
+				B0E7838413390808003FA6CB /* Car.cpp in Sources */,
 				B0E7838613390808003FA6CB /* main.cpp in Sources */,
 				B0E7838713390808003FA6CB /* Particle.cpp in Sources */,
 				B0E7838913390808003FA6CB /* ParticleManager.cpp in Sources */,

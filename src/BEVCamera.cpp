@@ -7,7 +7,7 @@
 
 #include "BEVCamera.h"
 
-namespace Armageddon {
+namespace Micromachines {
 
 	BEVCamera::BEVCamera() : Entity("BEVCamera")
 	{

@@ -8,9 +8,9 @@
 #include "App.h"
 #include "BEVCamera.h"
 #include "Particle.h"
-#include "Hero.h"
+#include "Car.h"
 
-namespace Armageddon {
+namespace Micromachines {
 
 	App::App() : cg::Application("config.ini")
 	{
@@ -24,7 +24,7 @@ namespace Armageddon {
 	{
 		addEntity(new BEVCamera());
 		addEntity(new ParticleManager("ParticleMngr"));
-		addEntity(new Hero("HERO"));
+		addEntity(new Car("Car"));
 		addEntity(new Controller());
 	}
 

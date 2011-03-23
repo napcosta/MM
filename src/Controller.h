@@ -8,11 +8,10 @@
 #ifndef CONTROLLER_H_
 #define CONTROLLER_H_
 
+#include "cg.h"
 #include "Hero.h"
 
-#include "cg.h"
-
-namespace Armageddon {
+namespace Micromachines {
 
 	class Controller : public cg::Entity,
 			   public cg::IKeyboardEventListener {

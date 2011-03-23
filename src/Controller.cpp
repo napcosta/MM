@@ -9,7 +9,7 @@
 #include "Controller.h"
 #include "Hero.h"
 
-namespace Armageddon {
+namespace Micromachines {
 
 	Controller::Controller() : cg::Entity("Controller")
 	{

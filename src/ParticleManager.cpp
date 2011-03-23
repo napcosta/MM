@@ -7,7 +7,7 @@
 
 #include "ParticleManager.h"
 
-namespace Armageddon
+namespace Micromachines
 	{
 
 	ParticleManager::ParticleManager(std::string id) : cg::Entity(id)

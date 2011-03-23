@@ -9,7 +9,7 @@
 #define BEVCAMERA_H_
 #include "cg.h"
 
-namespace Armageddon {
+namespace Micromachines {
 
 	class BEVCamera : public cg::Entity, public cg::IDrawListener {
 

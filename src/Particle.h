@@ -8,7 +8,7 @@
 #ifndef PARTICLE_H_
 #define PARTICLE_H_
 #include "cg.h"
-namespace Armageddon {
+namespace Micromachines {
 
 	class Particle : public cg::Entity,
 			 public cg::IDrawListener,

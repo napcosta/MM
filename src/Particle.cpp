@@ -7,7 +7,7 @@
 
 #include "Particle.h"
 
-namespace Armageddon {
+namespace Micromachines {
 
 	Particle::Particle(std::string id) : cg::Entity(id)
 	{

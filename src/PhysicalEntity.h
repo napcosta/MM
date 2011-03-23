@@ -10,7 +10,7 @@
 
 #include "cg.h"
 
-namespace Armageddon {
+namespace Micromachines {
 
 	class PhysicalEntity {
 	public:
