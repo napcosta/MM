@@ -7,7 +7,7 @@
 #include<stdio.h>
 
 #include "Controller.h"
-#include "Hero.h"
+#include "Car.h"
 
 namespace Micromachines {
 
@@ -21,7 +21,7 @@ namespace Micromachines {
 
 	void Controller::init()
 	{
-		_hero = (Hero*) cg::Registry::instance()->get("HERO");
+		_car = (Car*) cg::Registry::instance()->get("Car");
 		_dirKeys = cg::Vector2d(0.0, 0.0);
 	}
 
@@ -39,7 +39,7 @@ namespace Micromachines {
 
 	void Controller::onSpecialKeyPressed(int key)
 	{
-		cg::Vector2d keys = _hero->getArrowKeyPressed();
+		cg::Vector2d keys = _car->getArrowKeyPressed();
 		switch (key) {
 		case GLUT_KEY_UP:
 			_dirKeys[1]=1;
@@ -58,8 +58,8 @@ namespace Micromachines {
 			keys[0] += 1;
  			break;
 		}
-		_hero->applyForce(_dirKeys);
-		_hero->setArrowKeyPressed(keys);
+		_car->applyForce(_dirKeys);
+		_car->setArrowKeyPressed(keys);
 
 	}
 
@@ -72,19 +72,19 @@ namespace Micromachines {
 		switch (key) {
 		case GLUT_KEY_UP:
 			_dirKeys[1]=0;
-			_hero->keyBreak(up);
+			_car->keyBreak(up);
 			break;
 		case GLUT_KEY_DOWN:
 			_dirKeys[1]=0;
-			_hero->keyBreak(down);
+			_car->keyBreak(down);
 			break;
 		case GLUT_KEY_LEFT:
 			_dirKeys[0]=0;
-			_hero->keyBreak(left);
+			_car->keyBreak(left);
 			break;
 		case GLUT_KEY_RIGHT:
 			_dirKeys[0]=0;
-			_hero->keyBreak(right);
+			_car->keyBreak(right);
 			break;
 		}
 	}

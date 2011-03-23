@@ -9,7 +9,7 @@
 #define CONTROLLER_H_
 
 #include "cg.h"
-#include "Hero.h"
+#include "Car.h"
 
 namespace Micromachines {
 
@@ -17,7 +17,7 @@ namespace Micromachines {
 			   public cg::IKeyboardEventListener {
 
 	private:
-		Hero* _hero;
+		Car* _car;
 		cg::Vector2d _dirKeys;
 
 
