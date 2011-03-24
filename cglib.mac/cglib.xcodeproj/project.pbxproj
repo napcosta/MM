@@ -66,6 +66,10 @@
 		74C3309011A0163400459BCC /* ReshapeEventNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307211A0161F00459BCC /* ReshapeEventNotifier.cpp */; };
 		74C3309111A0163400459BCC /* UpdateNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307311A0161F00459BCC /* UpdateNotifier.cpp */; };
 		74C3309211A0163400459BCC /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307411A0161F00459BCC /* Util.cpp */; };
+		B0385E33133BE208003D302E /* ObstacleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0385E31133BE208003D302E /* ObstacleManager.cpp */; };
+		B0385E34133BE208003D302E /* ObstacleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0385E32133BE208003D302E /* ObstacleManager.h */; };
+		B089524B133BD6110076FED5 /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0895249133BD6110076FED5 /* Obstacle.cpp */; };
+		B089524C133BD6110076FED5 /* Obstacle.h in Headers */ = {isa = PBXBuildFile; fileRef = B089524A133BD6110076FED5 /* Obstacle.h */; };
 		B0E7837E13390808003FA6CB /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7836F13390808003FA6CB /* App.cpp */; };
 		B0E7837F13390808003FA6CB /* App.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837013390808003FA6CB /* App.h */; };
 		B0E7838013390808003FA6CB /* BEVCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837113390808003FA6CB /* BEVCamera.cpp */; };
@@ -151,6 +155,10 @@
 		74C3307211A0161F00459BCC /* ReshapeEventNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReshapeEventNotifier.cpp; path = ../cglib/src/ReshapeEventNotifier.cpp; sourceTree = SOURCE_ROOT; };
 		74C3307311A0161F00459BCC /* UpdateNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UpdateNotifier.cpp; path = ../cglib/src/UpdateNotifier.cpp; sourceTree = SOURCE_ROOT; };
 		74C3307411A0161F00459BCC /* Util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Util.cpp; path = ../cglib/src/Util.cpp; sourceTree = SOURCE_ROOT; };
+		B0385E31133BE208003D302E /* ObstacleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObstacleManager.cpp; sourceTree = "<group>"; };
+		B0385E32133BE208003D302E /* ObstacleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObstacleManager.h; sourceTree = "<group>"; };
+		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
+		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
 		B0E7836F13390808003FA6CB /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		B0E7837013390808003FA6CB /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		B0E7837113390808003FA6CB /* BEVCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEVCamera.cpp; sourceTree = "<group>"; };
@@ -297,6 +305,10 @@
 				B0E7837B13390808003FA6CB /* ParticleManager.h */,
 				B0E7837C13390808003FA6CB /* PhysicalEntity.cpp */,
 				B0E7837D13390808003FA6CB /* PhysicalEntity.h */,
+				B0895249133BD6110076FED5 /* Obstacle.cpp */,
+				B089524A133BD6110076FED5 /* Obstacle.h */,
+				B0385E31133BE208003D302E /* ObstacleManager.cpp */,
+				B0385E32133BE208003D302E /* ObstacleManager.h */,
 			);
 			name = src;
 			path = ../src;
@@ -362,6 +374,8 @@
 				B0E7838813390808003FA6CB /* Particle.h in Headers */,
 				B0E7838A13390808003FA6CB /* ParticleManager.h in Headers */,
 				B0E7838C13390808003FA6CB /* PhysicalEntity.h in Headers */,
+				B089524C133BD6110076FED5 /* Obstacle.h in Headers */,
+				B0385E34133BE208003D302E /* ObstacleManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +475,8 @@
 				B0E7838713390808003FA6CB /* Particle.cpp in Sources */,
 				B0E7838913390808003FA6CB /* ParticleManager.cpp in Sources */,
 				B0E7838B13390808003FA6CB /* PhysicalEntity.cpp in Sources */,
+				B089524B133BD6110076FED5 /* Obstacle.cpp in Sources */,
+				B0385E33133BE208003D302E /* ObstacleManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

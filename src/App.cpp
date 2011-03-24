@@ -6,9 +6,6 @@
  */
 
 #include "App.h"
-#include "BEVCamera.h"
-#include "Particle.h"
-#include "Car.h"
 
 namespace Micromachines {
 
@@ -23,9 +20,10 @@ namespace Micromachines {
 	void App::createEntities()
 	{
 		addEntity(new BEVCamera());
-		addEntity(new ParticleManager("ParticleMngr"));
+		//addEntity(new ParticleManager("ParticleMngr"));
 		addEntity(new Car("Car"));
 		addEntity(new Controller());
+        addEntity(new ObstacleManager("ObstacleManager"));
 	}
 
 }
