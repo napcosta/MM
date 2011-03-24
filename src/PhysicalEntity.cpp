@@ -7,8 +7,7 @@
 
 #include "PhysicalEntity.h"
 
-namespace Micromachines
-	{
+namespace Micromachines{
 
 	PhysicalEntity::PhysicalEntity()
 	{
@@ -21,4 +20,4 @@ namespace Micromachines
 		// TODO Auto-generated destructor stub
 	}
 
-	}
+}
