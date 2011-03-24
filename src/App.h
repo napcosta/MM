@@ -12,6 +12,10 @@
 
 #include "ParticleManager.h"
 #include "Controller.h"
+#include "BEVCamera.h"
+#include "Particle.h"
+#include "Car.h"
+#include "ObstacleManager.h"
 
 namespace Micromachines {
 
