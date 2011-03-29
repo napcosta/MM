@@ -12,6 +12,7 @@
 #include <ctime>
 #include <math.h>
 #include "cg.h"
+#include "glm.h"
 
 namespace Micromachines {
 
@@ -32,6 +33,8 @@ namespace Micromachines {
 		double _maxSpeed;
 		double _movForce;
 		cg::Vector2d _arrowKeyPressed;
+                 
+        GLMmodel *model;
 
 	public:
 		Car(std::string id);

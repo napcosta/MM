@@ -33,12 +33,21 @@ namespace Micromachines {
 		_atrittionFactor = 100;
 		_mass = 500;
 		_arrowKeyPressed =cg::Vector2d(0.0, 0.0);
+        
+        model = glmReadOBJ((char*)"src/Models/smart.obj");
+
+        
+		glmUnitize(model);
+        glmFacetNormals(model);
+        glmVertexNormals(model, 90.0);
+ 		glmScale(model, _size[0]);
+        
 	}
 
 	void Car::draw()
 	{
 
-		cg::Vector2d min = _position - _size/2.0;
+		/*cg::Vector2d min = _position - _size/2.0;
 		cg::Vector2d max = _position + _size/2.0;
 		glColor3d(0.9, 0.9, 0.9);
 		glLineWidth(1.5);
@@ -48,7 +57,17 @@ namespace Micromachines {
 			glVertex3d(max[0], min[1], -400);
 			glVertex3d(max[0], max[1], -400);
 			glVertex3d(min[0], max[1], -400);
-		glEnd();
+		glEnd();*/
+        
+       // glColor3d(0.2, 0.3, 0.4);
+		glLineWidth(1);
+		glMatrixMode(GL_MODELVIEW);
+		
+		glPushMatrix();
+            glTranslatef(_position[0], _position[1], -400);
+            glRotated(90, -1.0, 0.0, 0.0);
+            glmDraw(model, GLM_SMOOTH | GLM_TEXTURE);
+		glPopMatrix();
 	}
 
 	void Car::update(unsigned long elapsed_millis)
