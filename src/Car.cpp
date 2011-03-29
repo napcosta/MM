@@ -59,14 +59,15 @@ namespace Micromachines {
 			glVertex3d(min[0], max[1], -400);
 		glEnd();*/
         
-       // glColor3d(0.2, 0.3, 0.4);
+        glColor3d(0.2, 0.3, 0.4);
 		glLineWidth(1);
-		glMatrixMode(GL_MODELVIEW);
+		glMatrixMode(GL_PROJECTION);
 		
 		glPushMatrix();
             glTranslatef(_position[0], _position[1], -400);
-            glRotated(90, -1.0, 0.0, 0.0);
-            glmDraw(model, GLM_SMOOTH | GLM_TEXTURE);
+            glRotated(90, 1.0, 0.0, 0.0);
+            glRotated(180, 0.0, 1.0, 0.0);
+            glmDraw(model,GLM_MATERIAL|GLM_SMOOTH);
 		glPopMatrix();
 	}
 

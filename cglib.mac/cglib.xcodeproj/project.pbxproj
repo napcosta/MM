@@ -70,10 +70,10 @@
 		B0385E34133BE208003D302E /* ObstacleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0385E32133BE208003D302E /* ObstacleManager.h */; };
 		B073720D13423A2100163303 /* glm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B073720B13423A2100163303 /* glm.cpp */; };
 		B073720E13423A2100163303 /* glm.h in Headers */ = {isa = PBXBuildFile; fileRef = B073720C13423A2100163303 /* glm.h */; };
+		B073721A13424E8600163303 /* TrackPiece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B073721813424E8400163303 /* TrackPiece.cpp */; };
+		B073721B13424E8600163303 /* TrackPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = B073721913424E8400163303 /* TrackPiece.h */; };
 		B089524B133BD6110076FED5 /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0895249133BD6110076FED5 /* Obstacle.cpp */; };
 		B089524C133BD6110076FED5 /* Obstacle.h in Headers */ = {isa = PBXBuildFile; fileRef = B089524A133BD6110076FED5 /* Obstacle.h */; };
-		B09D3E27133C095F007BF420 /* TrackPiece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B09D3E25133C095E007BF420 /* TrackPiece.cpp */; };
-		B09D3E28133C095F007BF420 /* TrackPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = B09D3E26133C095F007BF420 /* TrackPiece.h */; };
 		B0E7837E13390808003FA6CB /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7836F13390808003FA6CB /* App.cpp */; };
 		B0E7837F13390808003FA6CB /* App.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837013390808003FA6CB /* App.h */; };
 		B0E7838013390808003FA6CB /* BEVCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837113390808003FA6CB /* BEVCamera.cpp */; };
@@ -165,10 +165,10 @@
 		B073720C13423A2100163303 /* glm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glm.h; sourceTree = "<group>"; };
 		B07372161342423300163303 /* smart.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart.mtl; sourceTree = "<group>"; };
 		B07372171342423300163303 /* smart.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart.obj; sourceTree = "<group>"; };
+		B073721813424E8400163303 /* TrackPiece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrackPiece.cpp; sourceTree = "<group>"; };
+		B073721913424E8400163303 /* TrackPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPiece.h; sourceTree = "<group>"; };
 		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
 		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
-		B09D3E25133C095E007BF420 /* TrackPiece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrackPiece.cpp; sourceTree = "<group>"; };
-		B09D3E26133C095F007BF420 /* TrackPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPiece.h; sourceTree = "<group>"; };
 		B0E7836F13390808003FA6CB /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		B0E7837013390808003FA6CB /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		B0E7837113390808003FA6CB /* BEVCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEVCamera.cpp; sourceTree = "<group>"; };
@@ -331,8 +331,8 @@
 				B089524A133BD6110076FED5 /* Obstacle.h */,
 				B0385E31133BE208003D302E /* ObstacleManager.cpp */,
 				B0385E32133BE208003D302E /* ObstacleManager.h */,
-				B09D3E25133C095E007BF420 /* TrackPiece.cpp */,
-				B09D3E26133C095F007BF420 /* TrackPiece.h */,
+				B073721813424E8400163303 /* TrackPiece.cpp */,
+				B073721913424E8400163303 /* TrackPiece.h */,
 			);
 			name = src;
 			path = ../src;
@@ -400,8 +400,8 @@
 				B0E7838C13390808003FA6CB /* PhysicalEntity.h in Headers */,
 				B089524C133BD6110076FED5 /* Obstacle.h in Headers */,
 				B0385E34133BE208003D302E /* ObstacleManager.h in Headers */,
-				B09D3E28133C095F007BF420 /* TrackPiece.h in Headers */,
 				B073720E13423A2100163303 /* glm.h in Headers */,
+				B073721B13424E8600163303 /* TrackPiece.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,8 +503,8 @@
 				B0E7838B13390808003FA6CB /* PhysicalEntity.cpp in Sources */,
 				B089524B133BD6110076FED5 /* Obstacle.cpp in Sources */,
 				B0385E33133BE208003D302E /* ObstacleManager.cpp in Sources */,
-				B09D3E27133C095F007BF420 /* TrackPiece.cpp in Sources */,
 				B073720D13423A2100163303 /* glm.cpp in Sources */,
+				B073721A13424E8600163303 /* TrackPiece.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
