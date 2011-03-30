@@ -64,8 +64,6 @@ namespace Micromachines {
             glTranslatef(_position[0],_position[1],0.0);
             glRotatef(_carRotation, 0.0, 0.0, 1.0);
             glTranslatef(-_position[0],-_position[1],0.0);
-            cg::Vector2d min = _position - _size/2.0;
-            cg::Vector2d max = _position + _size/2.0;
             glTranslatef(_position[0], _position[1], -400);
             glRotated(90, 1.0, 0.0, 0.0);
             glRotated(180, 0.0, 1.0, 0.0);
