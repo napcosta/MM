@@ -50,17 +50,16 @@ namespace Micromachines {
 			keys[1] -= 1;
 			break;
 		case GLUT_KEY_LEFT:
-			_dirKeys[0]=-1;
+			_dirKeys[0]= _car->getRotationSpeed();
 			keys[0] -= 1;
 			break;
 		case GLUT_KEY_RIGHT:
-			_dirKeys[0]=1;
+			_dirKeys[0]= -_car->getRotationSpeed();
 			keys[0] += 1;
  			break;
 		}
 		_car->applyForce(_dirKeys);
 		_car->setArrowKeyPressed(keys);
-
 	}
 
 	void Controller::onSpecialKeyReleased(int key)
