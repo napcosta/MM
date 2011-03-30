@@ -67,6 +67,7 @@ namespace Micromachines {
             glTranslatef(_position[0], _position[1], -400);
             glRotated(90, 1.0, 0.0, 0.0);
             glRotated(180, 0.0, 1.0, 0.0);
+            glScalef(0.4, 0.4, 0.4);
             glmDraw(model,GLM_MATERIAL|GLM_SMOOTH);
 		glPopMatrix();
 	}
