@@ -28,11 +28,13 @@ namespace Micromachines {
 		cg::Vector2d _size;
 		cg::Vector2d _appForce;
 		cg::Vector2d _acceleration;
+		cg::Vector2d _arrowKeyPressed;
+		double _rotationSpeed;
+		double _carRotation;
 		double _atrittionFactor;
 		double _mass;
 		double _maxSpeed;
 		double _movForce;
-		cg::Vector2d _arrowKeyPressed;
                  
         GLMmodel *model;
 
@@ -48,6 +50,7 @@ namespace Micromachines {
 		void applyForce(cg::Vector2d force);
 		void setArrowKeyPressed(cg::Vector2d val);
 		void keyBreak(int direction);
+		double getRotationSpeed();
 		cg::Vector2d getArrowKeyPressed();
 	};
 

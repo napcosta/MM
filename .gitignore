@@ -2,3 +2,7 @@
 *~
 .DS_Store
 /src/.DS_Store
+Makefile
+Makefile.linux
+Makefile.macos
+Makefile.windows
