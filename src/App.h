@@ -16,6 +16,7 @@
 #include "Particle.h"
 #include "Car.h"
 #include "ObstacleManager.h"
+#include "TrackManager.h"
 
 namespace Micromachines {
 

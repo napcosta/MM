@@ -89,6 +89,8 @@
 		B0E7838A13390808003FA6CB /* ParticleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837B13390808003FA6CB /* ParticleManager.h */; };
 		B0E7838B13390808003FA6CB /* PhysicalEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837C13390808003FA6CB /* PhysicalEntity.cpp */; };
 		B0E7838C13390808003FA6CB /* PhysicalEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837D13390808003FA6CB /* PhysicalEntity.h */; };
+		B0EF578C1343D2AE00AB8CF4 /* TrackManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */; };
+		B0EF578D1343D2AE00AB8CF4 /* TrackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +186,8 @@
 		B0E7837B13390808003FA6CB /* ParticleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleManager.h; sourceTree = "<group>"; };
 		B0E7837C13390808003FA6CB /* PhysicalEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicalEntity.cpp; sourceTree = "<group>"; };
 		B0E7837D13390808003FA6CB /* PhysicalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalEntity.h; sourceTree = "<group>"; };
+		B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrackManager.cpp; sourceTree = "<group>"; };
+		B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +316,8 @@
 				B07372151342423300163303 /* Models */,
 				B0E7836F13390808003FA6CB /* App.cpp */,
 				B0E7837013390808003FA6CB /* App.h */,
+				B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */,
+				B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */,
 				B0E7837113390808003FA6CB /* BEVCamera.cpp */,
 				B0E7837213390808003FA6CB /* BEVCamera.h */,
 				B073720B13423A2100163303 /* glm.cpp */,
@@ -402,6 +408,7 @@
 				B0385E34133BE208003D302E /* ObstacleManager.h in Headers */,
 				B073720E13423A2100163303 /* glm.h in Headers */,
 				B073721B13424E8600163303 /* TrackPiece.h in Headers */,
+				B0EF578D1343D2AE00AB8CF4 /* TrackManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +512,7 @@
 				B0385E33133BE208003D302E /* ObstacleManager.cpp in Sources */,
 				B073720D13423A2100163303 /* glm.cpp in Sources */,
 				B073721A13424E8600163303 /* TrackPiece.cpp in Sources */,
+				B0EF578C1343D2AE00AB8CF4 /* TrackManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
