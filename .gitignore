@@ -6,3 +6,4 @@ Makefile
 Makefile.linux
 Makefile.macos
 Makefile.windows
+log.txt
