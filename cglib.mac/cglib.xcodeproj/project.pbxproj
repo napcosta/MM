@@ -66,6 +66,8 @@
 		74C3309011A0163400459BCC /* ReshapeEventNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307211A0161F00459BCC /* ReshapeEventNotifier.cpp */; };
 		74C3309111A0163400459BCC /* UpdateNotifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307311A0161F00459BCC /* UpdateNotifier.cpp */; };
 		74C3309211A0163400459BCC /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74C3307411A0161F00459BCC /* Util.cpp */; };
+		B027CC201344AD9D00209BF5 /* Lights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B027CC1E1344AD9D00209BF5 /* Lights.cpp */; };
+		B027CC211344AD9D00209BF5 /* Lights.h in Headers */ = {isa = PBXBuildFile; fileRef = B027CC1F1344AD9D00209BF5 /* Lights.h */; };
 		B0385E33133BE208003D302E /* ObstacleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0385E31133BE208003D302E /* ObstacleManager.cpp */; };
 		B0385E34133BE208003D302E /* ObstacleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0385E32133BE208003D302E /* ObstacleManager.h */; };
 		B073720D13423A2100163303 /* glm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B073720B13423A2100163303 /* glm.cpp */; };
@@ -161,6 +163,8 @@
 		74C3307211A0161F00459BCC /* ReshapeEventNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReshapeEventNotifier.cpp; path = ../cglib/src/ReshapeEventNotifier.cpp; sourceTree = SOURCE_ROOT; };
 		74C3307311A0161F00459BCC /* UpdateNotifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UpdateNotifier.cpp; path = ../cglib/src/UpdateNotifier.cpp; sourceTree = SOURCE_ROOT; };
 		74C3307411A0161F00459BCC /* Util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Util.cpp; path = ../cglib/src/Util.cpp; sourceTree = SOURCE_ROOT; };
+		B027CC1E1344AD9D00209BF5 /* Lights.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lights.cpp; sourceTree = "<group>"; };
+		B027CC1F1344AD9D00209BF5 /* Lights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lights.h; sourceTree = "<group>"; };
 		B0385E31133BE208003D302E /* ObstacleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObstacleManager.cpp; sourceTree = "<group>"; };
 		B0385E32133BE208003D302E /* ObstacleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObstacleManager.h; sourceTree = "<group>"; };
 		B073720B13423A2100163303 /* glm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glm.cpp; sourceTree = "<group>"; };
@@ -314,6 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				B07372151342423300163303 /* Models */,
+				B027CC1E1344AD9D00209BF5 /* Lights.cpp */,
+				B027CC1F1344AD9D00209BF5 /* Lights.h */,
 				B0E7836F13390808003FA6CB /* App.cpp */,
 				B0E7837013390808003FA6CB /* App.h */,
 				B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */,
@@ -409,6 +415,7 @@
 				B073720E13423A2100163303 /* glm.h in Headers */,
 				B073721B13424E8600163303 /* TrackPiece.h in Headers */,
 				B0EF578D1343D2AE00AB8CF4 /* TrackManager.h in Headers */,
+				B027CC211344AD9D00209BF5 /* Lights.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +520,7 @@
 				B073720D13423A2100163303 /* glm.cpp in Sources */,
 				B073721A13424E8600163303 /* TrackPiece.cpp in Sources */,
 				B0EF578C1343D2AE00AB8CF4 /* TrackManager.cpp in Sources */,
+				B027CC201344AD9D00209BF5 /* Lights.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

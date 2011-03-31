@@ -20,11 +20,12 @@ namespace Micromachines {
 	void App::createEntities()
 	{
 		addEntity(new BEVCamera());
+		addEntity(new Lights());
 		addEntity(new ParticleManager("ParticleMngr"));
 		addEntity(new Car("Car"));
 		addEntity(new Controller());
-        addEntity(new ObstacleManager("ObstacleManager"));
-        addEntity(new TrackManager("TrackManager"));
+		addEntity(new ObstacleManager("ObstacleManager"));
+		addEntity(new TrackManager("TrackManager"));
         
 	}
 

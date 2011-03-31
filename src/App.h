@@ -17,6 +17,7 @@
 #include "Car.h"
 #include "ObstacleManager.h"
 #include "TrackManager.h"
+#include "Lights.h"
 
 namespace Micromachines {
 
