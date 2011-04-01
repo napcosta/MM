@@ -42,11 +42,11 @@ namespace Micromachines {
 		cg::Vector2d keys = _car->getArrowKeyPressed();
 		switch (key) {
 		case GLUT_KEY_UP:
-			_dirKeys[1]=1;
+			_dirKeys[1]=0.02;
 			keys[1] += 1;
 			break;
 		case GLUT_KEY_DOWN:
-			_dirKeys[1]= -1;
+			_dirKeys[1]= -0.1;
 			keys[1] -= 1;
 			break;
 		case GLUT_KEY_LEFT:

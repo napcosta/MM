@@ -43,10 +43,7 @@ namespace Micromachines {
         	glmVertexNormals(model, 90.0);
  		glmScale(model, _size[0]);
 		_carRotation = 0;
-		
-		//The initial position: bottom left of the screen TODO: Should be on the config.ini
-	//	_position[0] = 100;
-	//	_position[1] = 100;
+
 	}
 	
 	double Car::getRotationSpeed() 
@@ -60,7 +57,7 @@ namespace Micromachines {
 		glLineWidth(1);        
 		glMatrixMode(GL_PROJECTION);
 		glPushMatrix();
-		glTranslatef(_position[0],_position[1]-0.17*_size[0],0.0);
+		glTranslatef(_position[0],_position[1]-0.17*_size[0],0.0); //TODO: Still doesn't rotate along it's front weels
             	glRotatef(_carRotation, 0.0, 0.0, 1.0);
             	glTranslatef(-_position[0],-_position[1]+0.17*_size[0],0.0);
             	glTranslatef(_position[0], _position[1], -400);
@@ -81,11 +78,9 @@ namespace Micromachines {
 		else if (_velocity > _maxSpeed)
 			_velocity = _maxSpeed;
 	
-
-		printf("_appForce[0] == %f\n", _appForce[0]);
-		printf("_arrowKeyPressed[0] == %f\n", _arrowKeyPressed[0]);
+		printf("_appForce[1]: %f\n", _appForce[1]);
 		_acceleration[1] = _appForce[1]/_mass;
-		_velocity += _acceleration[1]*time;
+		_velocity += _acceleration[1]*time - _velocity*_velocity/10;
 		
 		/**************************************************************************/
 		if (_appForce[1] >= 0 && _velocity > 0 && _arrowKeyPressed[1] == 0)
@@ -99,20 +94,21 @@ namespace Micromachines {
 			
 
 		if (_appForce[1] > 0 && _velocity<0) {
-			if (_velocity>=-0.07 && _arrowKeyPressed[1] != 1) {
+			if (_velocity>=-0.0007 && _arrowKeyPressed[1] != 1) {
 				_velocity=0;
 				_appForce[1]=0;
 				_acceleration[1]=0;
 			}
 		} else if (_appForce[1] < 0 && _velocity>0) {
-			if (_velocity<=0.07 && _arrowKeyPressed[1] != -1) {
+			if (_velocity<=0.0007 && _arrowKeyPressed[1] != -1) {
 				_velocity=0;
 				_appForce[1]=0;
 				_acceleration[1]=0;
 			}
 		}
-
 		
+		printf("_position[0] - %f _position[1] - %f \n", _position[0], _position[1]);
+		printf("_acceleration[1] == %f\n", _acceleration[1]);
 			
 		_carRotation += _appForce[0]; // BAD LAZY PROGRAMMING: _appForce, in this case, is the car rotation speed
 		_position[0] += cos(_carRotation * PI/180 + PI/2) * (_velocity*time + (_acceleration[1]*time*time)/2);
