@@ -14,6 +14,8 @@
 #include "cg.h"
 #include "glm.h"
 
+#define PI 3.14159265
+
 namespace Micromachines {
 
 	class Car : public cg::Entity,
@@ -24,11 +26,11 @@ namespace Micromachines {
 	private:
 		double _winHeight;
 		cg::Vector2d _position;
-		cg::Vector2d _velocity;
 		cg::Vector2d _size;
 		cg::Vector2d _appForce;
 		cg::Vector2d _acceleration;
 		cg::Vector2d _arrowKeyPressed;
+		double _velocity;
 		double _rotationSpeed;
 		double _carRotation;
 		double _atrittionFactor;

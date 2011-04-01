@@ -28,19 +28,19 @@ namespace Micromachines {
 		_rotationSpeed = cg::Properties::instance()->getDouble("CAR_ROTATION_SPEED");
 		_movForce = cg::Properties::instance()->getDouble("CAR_MOV_FORCE");
 		_winHeight = cg::Manager::instance()->getApp()->getWindow().height;
-		_velocity = cg::Vector2d(0.0, 0.0);
+		_velocity = 0.0;
 		_appForce = cg::Vector2d(0.0,0.0);
 		_acceleration = cg::Vector2d(0.0, 0.0);
 		_atrittionFactor = 100;
 		_mass = 500;
 		_arrowKeyPressed =cg::Vector2d(0.0, 0.0);
         
-        model = glmReadOBJ((char*)"src/Models/smart.obj");
+        	model = glmReadOBJ((char*)"src/Models/smart.obj");
 
         
 		glmUnitize(model);
-        glmFacetNormals(model);
-        glmVertexNormals(model, 90.0);
+        	glmFacetNormals(model);
+        	glmVertexNormals(model, 90.0);
  		glmScale(model, _size[0]);
 		_carRotation = 0;
 		
@@ -56,18 +56,17 @@ namespace Micromachines {
 	}
 	void Car::draw()
 	{	
-        glColor3d(0.2, 0.3, 0.4);
-		glLineWidth(1);
-        
+        	glColor3d(0.2, 0.3, 0.4);
+		glLineWidth(1);        
 		glMatrixMode(GL_PROJECTION);
 		glPushMatrix();
-            glTranslatef(_position[0],_position[1],0.0);
-            glRotatef(_carRotation, 0.0, 0.0, 1.0);
-            glTranslatef(-_position[0],-_position[1],0.0);
-            glTranslatef(_position[0], _position[1], -400);
-            glRotated(90, 1.0, 0.0, 0.0);
-            glRotated(180, 0.0, 1.0, 0.0);
-            glmDraw(model,GLM_MATERIAL|GLM_SMOOTH);
+		glTranslatef(_position[0],_position[1]-0.17*_size[0],0.0);
+            	glRotatef(_carRotation, 0.0, 0.0, 1.0);
+            	glTranslatef(-_position[0],-_position[1]+0.17*_size[0],0.0);
+            	glTranslatef(_position[0], _position[1], -400);
+            	glRotated(90, 1.0, 0.0, 0.0);
+            	glRotated(180, 0.0, 1.0, 0.0);
+            	glmDraw(model,GLM_MATERIAL|GLM_SMOOTH);
 		glPopMatrix();
 	}
 
@@ -77,47 +76,47 @@ namespace Micromachines {
 
 		double time = (double) elapsed_millis;
 
-		if (_velocity[1] < -_maxSpeed)
-			_velocity[1] = -_maxSpeed;
-		else if (_velocity[1] > _maxSpeed)
-			_velocity[1] = _maxSpeed;
+		if (_velocity < -_maxSpeed)
+			_velocity = -_maxSpeed;
+		else if (_velocity > _maxSpeed)
+			_velocity = _maxSpeed;
 	
-		printf("%f - %f -> %f \n", _position[0] , _position[1], _carRotation);
-		
+
+		printf("_appForce[0] == %f\n", _appForce[0]);
+		printf("_arrowKeyPressed[0] == %f\n", _arrowKeyPressed[0]);
 		_acceleration[1] = _appForce[1]/_mass;
-		_velocity[0] += _appForce[0]*time;	//turning velocity
-		_velocity[1] += _acceleration[1]*time;
+		_velocity += _acceleration[1]*time;
 		
 		/**************************************************************************/
-		if (_appForce[1] >= 0 && _velocity[1] > 0 && _arrowKeyPressed[1] == 0)
+		if (_appForce[1] >= 0 && _velocity > 0 && _arrowKeyPressed[1] == 0)
 			_appForce[1] = -_movForce;
 
-		else if (_appForce[1] <= 0 && _velocity[1] < 0 && _arrowKeyPressed[1] == 0)
+		else if (_appForce[1] <= 0 && _velocity < 0 && _arrowKeyPressed[1] == 0)
 			_appForce[1] = _movForce;
-
-
-		if (_appForce[1] > 0 && _velocity[1]<0) {
-			if (_velocity[1]>=-0.07 && _arrowKeyPressed[1] != 1) {
-				_velocity[1]=0;
-				_appForce[1]=0;
-				_acceleration[1]=0;
-			}
-		}
-
-		else if (_appForce[1] < 0 && _velocity[1]>0) {
-			if (_velocity[1]<=0.07 && _arrowKeyPressed[1] != -1) {
-				_velocity[1]=0;
-				_appForce[1]=0;
-				_acceleration[1]=0;
-			}
-		}
-		
-	//	if (_appForce[0] == 0)
-	//		_velocity[0] = 0;
 			
-		_carRotation = _velocity[0];
-		//_position[0] = _velocity[0]*time;//_rotationSpeed[0]*time; //_velocity[0]*time + (_acceleration[0]*time*time)/2;
-		_position[1] += _velocity[1]*time + (_acceleration[1]*time*time)/2;
+		if (_arrowKeyPressed[0] == 0)
+			_appForce[0] = 0;
+			
+
+		if (_appForce[1] > 0 && _velocity<0) {
+			if (_velocity>=-0.07 && _arrowKeyPressed[1] != 1) {
+				_velocity=0;
+				_appForce[1]=0;
+				_acceleration[1]=0;
+			}
+		} else if (_appForce[1] < 0 && _velocity>0) {
+			if (_velocity<=0.07 && _arrowKeyPressed[1] != -1) {
+				_velocity=0;
+				_appForce[1]=0;
+				_acceleration[1]=0;
+			}
+		}
+
+		
+			
+		_carRotation += _appForce[0]; // BAD LAZY PROGRAMMING: _appForce, in this case, is the car rotation speed
+		_position[0] += cos(_carRotation * PI/180 + PI/2) * (_velocity*time + (_acceleration[1]*time*time)/2);
+		_position[1] += sin(_carRotation * PI/180 + PI/2) * (_velocity*time + (_acceleration[1]*time*time)/2);
 	}
 
 	void Car::applyForce(cg::Vector2d force)
@@ -130,16 +129,16 @@ namespace Micromachines {
 
 		switch (direction) {
 		case 1: //LEFT
-			_appForce[0] = 0;
-		//	_velocity[0] = 0;
+			_appForce[0] -= _rotationSpeed;
+			_arrowKeyPressed[0] += 1;
 			break;
 		case 2: //UP
 			_appForce[1] = -_movForce;
 			_arrowKeyPressed[1] -= 1;
 			break;
 		case 3: //RIGHT
-			_appForce[0] = 0;
-			//_velocity[0] = 0;
+			_appForce[0] += _rotationSpeed;
+			_arrowKeyPressed[0] -= 1;
 			break;
 		case 4: //DOWN
 			_appForce[1] = _movForce;

@@ -46,15 +46,15 @@ namespace Micromachines {
 			keys[1] += 1;
 			break;
 		case GLUT_KEY_DOWN:
-			_dirKeys[1]=-1;
+			_dirKeys[1]= -1;
 			keys[1] -= 1;
 			break;
 		case GLUT_KEY_LEFT:
-			_dirKeys[0]= _car->getRotationSpeed();
+			_dirKeys[0] += _car->getRotationSpeed();
 			keys[0] -= 1;
 			break;
 		case GLUT_KEY_RIGHT:
-			_dirKeys[0]= -_car->getRotationSpeed();
+			_dirKeys[0] -= _car->getRotationSpeed();
 			keys[0] += 1;
  			break;
 		}
