@@ -19,7 +19,7 @@ namespace Micromachines {
 
 	void App::createEntities()
 	{
-		addEntity(new BEVCamera());
+		addEntity(new NearCamera());
 		addEntity(new Lights());
 		addEntity(new ParticleManager("ParticleMngr"));
 		addEntity(new Car("Car"));
