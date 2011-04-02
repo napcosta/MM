@@ -27,6 +27,7 @@ namespace Micromachines {
 	void BEVCamera::draw()
 	{
 		_position = -_car->getPosition();
+		_carRotation = _car->getRotation();
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
 	//	glOrtho(0, _winWidth, 0, _winHeight, 0, -100);
@@ -35,11 +36,10 @@ namespace Micromachines {
 		//glTranslatef(_position[0],_position[1],200);
 		//glTranslatef(0,0,0);
 		printf("_position[0] %f - _position[1] %f \n", _position[0], _position[1]);
-		gluLookAt(_position[0], 0 , -200, 0, 0, -500, 0, 1, 0);
+		gluLookAt(-(_position[0]-100)*cos(_carRotation*PI/180 + PI/2), -_position[1]*sin(_carRotation*PI/180 + PI/2), -200, -_position[0], -_position[1], -500, 0, 1, 0);
 	//	glViewport(0,0,400,200);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
-
 	}
 
 }
