@@ -162,6 +162,11 @@ namespace Micromachines {
 	{
 		return _position;	
 	}
+	
+	double Car::getRotation()
+	{
+		return _carRotation;
+	}
 
 	void Car::onMouse(int Button, int state, int x, int y)
 	{

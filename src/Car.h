@@ -53,6 +53,7 @@ namespace Micromachines {
 		void setArrowKeyPressed(cg::Vector2d val);
 		void keyBreak(int direction);
 		double getRotationSpeed();
+		double getRotation();
 		cg::Vector2d getPosition();
 		cg::Vector2d getArrowKeyPressed();
 	};
