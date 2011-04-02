@@ -36,7 +36,7 @@ namespace Micromachines {
 		//glTranslatef(_position[0],_position[1],200);
 		//glTranslatef(0,0,0);
 		printf("_position[0] %f - _position[1] %f \n", _position[0], _position[1]);
-		gluLookAt(-(_position[0]-100)*cos(_carRotation*PI/180 + PI/2), -_position[1]*sin(_carRotation*PI/180 + PI/2), -200, -_position[0], -_position[1], -500, 0, 1, 0);
+		gluLookAt(-(_position[0]+100*cos(_carRotation*PI/180 + PI/2)), -(_position[1]+100*sin(_carRotation*PI/180 + PI/2)), -300, -_position[0], -_position[1], -400, cos(_carRotation*PI/180 + PI/2), sin(_carRotation*PI/180 + PI/2), 0);
 	//	glViewport(0,0,400,200);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
