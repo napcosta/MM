@@ -113,7 +113,7 @@ namespace Micromachines {
 			}
 		}
 		
-		printf("_acceleration[0] == %f _acceleration[1] == %f\n", _acceleration[0], _acceleration[1]);
+//		printf("_position[0] == %f _position[1] == %f\n", _position[0], _position[1]);
 			
 		_carRotation += _appForce[0]; // BAD LAZY PROGRAMMING: _appForce, in this case, is the car rotation speed
 		_position[0] += cos(_carRotation * PI/180 + PI/2) * (_velocity*time + (_acceleration[1]*time*time)/2);
@@ -156,6 +156,11 @@ namespace Micromachines {
 	void Car::setArrowKeyPressed(cg::Vector2d val)
 	{
 		_arrowKeyPressed = val;
+	}
+	
+	cg::Vector2d Car::getPosition()
+	{
+		return _position;	
 	}
 
 	void Car::onMouse(int Button, int state, int x, int y)

@@ -8,6 +8,7 @@
 #ifndef BEVCAMERA_H_
 #define BEVCAMERA_H_
 #include "cg.h"
+#include "Car.h"
 
 namespace Micromachines {
 
@@ -15,6 +16,8 @@ namespace Micromachines {
 
 	private:
 		double _winWidth, _winHeight;
+		cg::Vector2d _position;
+		Car* _car;
 
 	public:
 		BEVCamera();
