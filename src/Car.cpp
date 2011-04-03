@@ -78,7 +78,7 @@ namespace Micromachines {
 		else if (_velocity > _maxSpeed)
 			_velocity = _maxSpeed;
 	
-		printf("_appForce[0]: %f _appForce[1]: %f\n", _appForce[0], _appForce[1]);
+//		printf("_appForce[0]: %f _appForce[1]: %f\n", _appForce[0], _appForce[1]);
 		_acceleration[1] = _appForce[1]/_mass;
 		_velocity += _acceleration[1]*time - _velocity*_velocity/10;
 		
