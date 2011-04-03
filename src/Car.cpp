@@ -60,7 +60,7 @@ namespace Micromachines {
 		glTranslatef(_position[0],_position[1]-0.17*_size[0],0.0); //TODO: Still doesn't rotate along it's front weels
             	glRotatef(_carRotation, 0.0, 0.0, 1.0);
             	glTranslatef(-_position[0],-_position[1]+0.17*_size[0],0.0);
-            	glTranslatef(_position[0], _position[1], -400);
+            	glTranslatef(_position[0], _position[1], -396);
             	glRotated(90, 1.0, 0.0, 0.0);
             	glRotated(180, 0.0, 1.0, 0.0);
             	glmDraw(model,GLM_MATERIAL|GLM_SMOOTH);
