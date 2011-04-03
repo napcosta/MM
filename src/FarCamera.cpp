@@ -5,26 +5,26 @@
  *      Author: pinto
  */
 
-#include "BEVCamera.h"
+#include "FarCamera.h"
 
 namespace Micromachines {
 
-	BEVCamera::BEVCamera() : Entity("BEVCamera")
+	FarCamera::FarCamera() : Entity("BEVCamera")
 	{
 	}
 
-	BEVCamera::~BEVCamera()
+	FarCamera::~FarCamera()
 	{
 	}
 
-	void BEVCamera::init() {
+	void FarCamera::init() {
 		cg::tWindow win = cg::Manager::instance()->getApp()->getWindow();
 		_car = (Car*) cg::Registry::instance()->get("Car");
 		_winWidth = win.width;
 		_winHeight = win.height;
 	}
 
-	void BEVCamera::draw()
+	void FarCamera::draw()
 	{
 		_position = -_car->getPosition();
 		_carRotation = _car->getRotation();

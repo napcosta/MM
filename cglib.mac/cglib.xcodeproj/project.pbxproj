@@ -78,8 +78,8 @@
 		B089524C133BD6110076FED5 /* Obstacle.h in Headers */ = {isa = PBXBuildFile; fileRef = B089524A133BD6110076FED5 /* Obstacle.h */; };
 		B0E7837E13390808003FA6CB /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7836F13390808003FA6CB /* App.cpp */; };
 		B0E7837F13390808003FA6CB /* App.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837013390808003FA6CB /* App.h */; };
-		B0E7838013390808003FA6CB /* BEVCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837113390808003FA6CB /* BEVCamera.cpp */; };
-		B0E7838113390808003FA6CB /* BEVCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837213390808003FA6CB /* BEVCamera.h */; };
+		B0E7838013390808003FA6CB /* FarCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837113390808003FA6CB /* FarCamera.cpp */; };
+		B0E7838113390808003FA6CB /* FarCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837213390808003FA6CB /* FarCamera.h */; };
 		B0E7838213390808003FA6CB /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837313390808003FA6CB /* Controller.cpp */; };
 		B0E7838313390808003FA6CB /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837413390808003FA6CB /* Controller.h */; };
 		B0E7838413390808003FA6CB /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837513390808003FA6CB /* Car.cpp */; };
@@ -175,10 +175,11 @@
 		B073721913424E8400163303 /* TrackPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPiece.h; sourceTree = "<group>"; };
 		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
 		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
+		B0C5FA8D1347C2BA001327BA /* road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = road.jpg; sourceTree = "<group>"; };
 		B0E7836F13390808003FA6CB /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		B0E7837013390808003FA6CB /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
-		B0E7837113390808003FA6CB /* BEVCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEVCamera.cpp; sourceTree = "<group>"; };
-		B0E7837213390808003FA6CB /* BEVCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEVCamera.h; sourceTree = "<group>"; };
+		B0E7837113390808003FA6CB /* FarCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FarCamera.cpp; sourceTree = "<group>"; };
+		B0E7837213390808003FA6CB /* FarCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FarCamera.h; sourceTree = "<group>"; };
 		B0E7837313390808003FA6CB /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		B0E7837413390808003FA6CB /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		B0E7837513390808003FA6CB /* Car.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Car.cpp; sourceTree = "<group>"; };
@@ -314,9 +315,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B0C5FA8C1347C2BA001327BA /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				B0C5FA8D1347C2BA001327BA /* road.jpg */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
 		B0E7836E13390808003FA6CB /* src */ = {
 			isa = PBXGroup;
 			children = (
+				B0C5FA8C1347C2BA001327BA /* Textures */,
 				B07372151342423300163303 /* Models */,
 				B027CC1E1344AD9D00209BF5 /* Lights.cpp */,
 				B027CC1F1344AD9D00209BF5 /* Lights.h */,
@@ -324,8 +334,8 @@
 				B0E7837013390808003FA6CB /* App.h */,
 				B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */,
 				B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */,
-				B0E7837113390808003FA6CB /* BEVCamera.cpp */,
-				B0E7837213390808003FA6CB /* BEVCamera.h */,
+				B0E7837113390808003FA6CB /* FarCamera.cpp */,
+				B0E7837213390808003FA6CB /* FarCamera.h */,
 				B073720B13423A2100163303 /* glm.cpp */,
 				B073720C13423A2100163303 /* glm.h */,
 				B0E7837313390808003FA6CB /* Controller.cpp */,
@@ -404,7 +414,7 @@
 			files = (
 				74B972AD11A7E5180095D288 /* cg.h in Headers */,
 				B0E7837F13390808003FA6CB /* App.h in Headers */,
-				B0E7838113390808003FA6CB /* BEVCamera.h in Headers */,
+				B0E7838113390808003FA6CB /* FarCamera.h in Headers */,
 				B0E7838313390808003FA6CB /* Controller.h in Headers */,
 				B0E7838513390808003FA6CB /* Car.h in Headers */,
 				B0E7838813390808003FA6CB /* Particle.h in Headers */,
@@ -508,7 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E7837E13390808003FA6CB /* App.cpp in Sources */,
-				B0E7838013390808003FA6CB /* BEVCamera.cpp in Sources */,
+				B0E7838013390808003FA6CB /* FarCamera.cpp in Sources */,
 				B0E7838213390808003FA6CB /* Controller.cpp in Sources */,
 				B0E7838413390808003FA6CB /* Car.cpp in Sources */,
 				B0E7838613390808003FA6CB /* main.cpp in Sources */,
