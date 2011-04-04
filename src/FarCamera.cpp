@@ -9,7 +9,7 @@
 
 namespace Micromachines {
 
-	FarCamera::FarCamera() : Entity("BEVCamera")
+	FarCamera::FarCamera() : Entity("FarCamera")
 	{
 	}
 

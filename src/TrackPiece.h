@@ -10,12 +10,14 @@
 #define TRACK_PIECE_H
 
 #include "cg.h"
+#include "ImageLoader.h"
 
 namespace Micromachines {
     class TrackPiece : public cg::Entity, public cg::IDrawListener{
     private:
         int _type, _direction;
         cg::Vector2d _position;
+	GLuint _textureID;
         
         void drawType1();
         void drawType2();
@@ -23,6 +25,7 @@ namespace Micromachines {
         void drawType4();
         void drawType5();
         void drawType6();
+	GLuint LoadTexture(Image *image);
         
     public:
         TrackPiece(std::string name, int type, cg::Vector2d position);

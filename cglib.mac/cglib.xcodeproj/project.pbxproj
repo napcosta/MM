@@ -76,6 +76,10 @@
 		B073721B13424E8600163303 /* TrackPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = B073721913424E8400163303 /* TrackPiece.h */; };
 		B089524B133BD6110076FED5 /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0895249133BD6110076FED5 /* Obstacle.cpp */; };
 		B089524C133BD6110076FED5 /* Obstacle.h in Headers */ = {isa = PBXBuildFile; fileRef = B089524A133BD6110076FED5 /* Obstacle.h */; };
+		B0D106761348E94000CD94F2 /* NearCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D106741348E94000CD94F2 /* NearCamera.cpp */; };
+		B0D106771348E94000CD94F2 /* NearCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = B0D106751348E94000CD94F2 /* NearCamera.h */; };
+		B0D1067E1348F37900CD94F2 /* ImageLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D1067C1348F37900CD94F2 /* ImageLoader.cpp */; };
+		B0D1067F1348F37900CD94F2 /* ImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = B0D1067D1348F37900CD94F2 /* ImageLoader.h */; };
 		B0E7837E13390808003FA6CB /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7836F13390808003FA6CB /* App.cpp */; };
 		B0E7837F13390808003FA6CB /* App.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837013390808003FA6CB /* App.h */; };
 		B0E7838013390808003FA6CB /* FarCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E7837113390808003FA6CB /* FarCamera.cpp */; };
@@ -175,7 +179,11 @@
 		B073721913424E8400163303 /* TrackPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPiece.h; sourceTree = "<group>"; };
 		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
 		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
-		B0C5FA8D1347C2BA001327BA /* road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = road.jpg; sourceTree = "<group>"; };
+		B0D106741348E94000CD94F2 /* NearCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NearCamera.cpp; sourceTree = "<group>"; };
+		B0D106751348E94000CD94F2 /* NearCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearCamera.h; sourceTree = "<group>"; };
+		B0D1067C1348F37900CD94F2 /* ImageLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageLoader.cpp; sourceTree = "<group>"; };
+		B0D1067D1348F37900CD94F2 /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
+		B0D106801348FB8300CD94F2 /* road.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = road.bmp; sourceTree = "<group>"; };
 		B0E7836F13390808003FA6CB /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		B0E7837013390808003FA6CB /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		B0E7837113390808003FA6CB /* FarCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FarCamera.cpp; sourceTree = "<group>"; };
@@ -318,7 +326,7 @@
 		B0C5FA8C1347C2BA001327BA /* Textures */ = {
 			isa = PBXGroup;
 			children = (
-				B0C5FA8D1347C2BA001327BA /* road.jpg */,
+				B0D106801348FB8300CD94F2 /* road.bmp */,
 			);
 			path = Textures;
 			sourceTree = "<group>";
@@ -330,12 +338,16 @@
 				B07372151342423300163303 /* Models */,
 				B027CC1E1344AD9D00209BF5 /* Lights.cpp */,
 				B027CC1F1344AD9D00209BF5 /* Lights.h */,
+				B0D1067C1348F37900CD94F2 /* ImageLoader.cpp */,
+				B0D1067D1348F37900CD94F2 /* ImageLoader.h */,
 				B0E7836F13390808003FA6CB /* App.cpp */,
 				B0E7837013390808003FA6CB /* App.h */,
 				B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */,
 				B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */,
 				B0E7837113390808003FA6CB /* FarCamera.cpp */,
 				B0E7837213390808003FA6CB /* FarCamera.h */,
+				B0D106741348E94000CD94F2 /* NearCamera.cpp */,
+				B0D106751348E94000CD94F2 /* NearCamera.h */,
 				B073720B13423A2100163303 /* glm.cpp */,
 				B073720C13423A2100163303 /* glm.h */,
 				B0E7837313390808003FA6CB /* Controller.cpp */,
@@ -426,6 +438,8 @@
 				B073721B13424E8600163303 /* TrackPiece.h in Headers */,
 				B0EF578D1343D2AE00AB8CF4 /* TrackManager.h in Headers */,
 				B027CC211344AD9D00209BF5 /* Lights.h in Headers */,
+				B0D106771348E94000CD94F2 /* NearCamera.h in Headers */,
+				B0D1067F1348F37900CD94F2 /* ImageLoader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +545,8 @@
 				B073721A13424E8600163303 /* TrackPiece.cpp in Sources */,
 				B0EF578C1343D2AE00AB8CF4 /* TrackManager.cpp in Sources */,
 				B027CC201344AD9D00209BF5 /* Lights.cpp in Sources */,
+				B0D106761348E94000CD94F2 /* NearCamera.cpp in Sources */,
+				B0D1067E1348F37900CD94F2 /* ImageLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

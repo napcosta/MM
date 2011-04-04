@@ -20,7 +20,7 @@ namespace Micromachines {
 	public cg::IUpdateListener
 	{
 	private:
-		int _type, _direction;
+		int _direction;
 		cg::Vector3d _position, _color, _initialPos;
 		double _winHeight, _winWidth;
 		bool _isMovable;
