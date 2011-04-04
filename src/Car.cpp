@@ -11,6 +11,7 @@
 
 #include "Car.h"
 
+
 namespace Micromachines {
 
 	Car::Car(std::string id) : cg::Entity(id)
@@ -43,6 +44,7 @@ namespace Micromachines {
         	glmVertexNormals(model, 90.0);
  		glmScale(model, _size[0]);
 		_carRotation = 0;
+		
 
 	}
 	
@@ -53,40 +55,47 @@ namespace Micromachines {
 	}
 	void Car::draw()
 	{	
-        	glColor3d(0.2, 0.3, 0.4);
+        	glColor3d(0.0, 0.0, 80.0);
 		glLineWidth(1);        
 		glMatrixMode(GL_PROJECTION);
 		glPushMatrix();
-		glTranslatef(_position[0],_position[1]-0.17*_size[0],0.0); //TODO: Still doesn't rotate along it's front weels
-            	glRotatef(_carRotation, 0.0, 0.0, 1.0);
-            	glTranslatef(-_position[0],-_position[1]+0.17*_size[0],0.0);
-            	glTranslatef(_position[0], _position[1], -396);
-            	glRotated(90, 1.0, 0.0, 0.0);
-            	glRotated(180, 0.0, 1.0, 0.0);
-            	glmDraw(model,GLM_MATERIAL|GLM_SMOOTH);
+			glTranslatef(_position[0],_position[1]-0.17*_size[0],0.0); //TODO: Still doesn't rotate along it's front weels
+		    	glRotatef(_carRotation, 0.0, 0.0, 1.0);
+		    	glTranslatef(-_position[0],-_position[1]+0.17*_size[0],0.0);
+		    	glTranslatef(_position[0], _position[1], -396);
+		    	glRotated(90, 1.0, 0.0, 0.0);
+		    	glRotated(180, 0.0, 1.0, 0.0);
+		    	glmDraw(model,GLM_MATERIAL|GLM_SMOOTH);
 		glPopMatrix();
 	}
 
 	void Car::update(unsigned long elapsed_millis)
 	{
-
+		
+		
 
 		double time = (double) elapsed_millis;
-
+		
+		printf("%f\n", _velocity);
+		
 		if (_velocity < -_maxSpeed)
 			_velocity = -_maxSpeed;
 		else if (_velocity > _maxSpeed)
 			_velocity = _maxSpeed;
-	
-//		printf("_appForce[0]: %f _appForce[1]: %f\n", _appForce[0], _appForce[1]);
+			
+			
 		_acceleration[1] = _appForce[1]/_mass;
-		_velocity += _acceleration[1]*time - _velocity*_velocity/10;
+		_velocity += _acceleration[1]*time ;
 		
 		if (_appForce[1] >= 0 && _velocity > 0 && _arrowKeyPressed[1] == 0)
 			_appForce[1] = -_movForce;
 
 		else if (_appForce[1] <= 0 && _velocity < 0 && _arrowKeyPressed[1] == 0)
 			_appForce[1] = _movForce;
+		
+	//	if (_appForce[1] < 0 && _velocity == 0)
+	//		_appForce[1] == 0.9;
+			
 		
 		/* UGLY HACK!! This prevents the arrow keys from not doing the turning
 		 * To reproduce the bug: While the car is deaccelerating quickly press
@@ -113,9 +122,12 @@ namespace Micromachines {
 			}
 		}
 		
-//		printf("_position[0] == %f _position[1] == %f\n", _position[0], _position[1]);
+		if (_velocity < -0.03)
+			_velocity = -0.03; 
+		
 			
-		_carRotation += _appForce[0]; // BAD LAZY PROGRAMMING: _appForce, in this case, is the car rotation speed
+		if (_velocity != 0) //
+			_carRotation += _appForce[0]; // BAD LAZY PROGRAMMING: _appForce, in this case, is the car rotation speed
 		_position[0] += cos(_carRotation * PI/180 + PI/2) * (_velocity*time + (_acceleration[1]*time*time)/2);
 		_position[1] += sin(_carRotation * PI/180 + PI/2) * (_velocity*time + (_acceleration[1]*time*time)/2);
 	}

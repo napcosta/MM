@@ -37,6 +37,8 @@ namespace Micromachines {
 		double _mass;
 		double _maxSpeed;
 		double _movForce;
+		
+		
                  
         GLMmodel *model;
 

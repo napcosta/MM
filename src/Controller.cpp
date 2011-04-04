@@ -46,7 +46,7 @@ namespace Micromachines {
 			keys[1] += 1;
 			break;
 		case GLUT_KEY_DOWN:
-			_dirKeys[1]= -0.1;
+			_dirKeys[1]= -0.05;
 			keys[1] -= 1;
 			break;
 		case GLUT_KEY_LEFT:
