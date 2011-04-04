@@ -132,6 +132,7 @@ namespace {
 	};
 }
 
+
 Image* loadBMP(const char* filename) {
 	ifstream input;
 	input.open(filename, ifstream::binary);
@@ -191,7 +192,7 @@ Image* loadBMP(const char* filename) {
 		for(int x = 0; x < width; x++) {
 			for(int c = 0; c < 3; c++) {
 				pixels2[3 * (width * y + x) + c] =
-					pixels[bytesPerRow * y + 3 * x + (2 - c)];
+				pixels[bytesPerRow * y + 3 * x + (2 - c)];
 			}
 		}
 	}
@@ -200,6 +201,18 @@ Image* loadBMP(const char* filename) {
 	return new Image(pixels2.release(), width, height);
 }
 
+
+GLuint LoadTexture(const char* filename)
+{
+	Image *image = loadBMP(filename);
+	GLuint textureID;
+	glGenTextures(1, &textureID);
+	glBindTexture(GL_TEXTURE_2D, textureID);
+	
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image->width, image->height, 0, GL_RGB, GL_UNSIGNED_BYTE, image->pixels);
+	
+	return textureID;
+}
 
 
 

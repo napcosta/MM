@@ -25,7 +25,6 @@ namespace Micromachines {
         void drawType4();
         void drawType5();
         void drawType6();
-	GLuint LoadTexture(Image *image);
         
     public:
         TrackPiece(std::string name, int type, cg::Vector2d position);

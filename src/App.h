@@ -18,6 +18,7 @@
 #include "ObstacleManager.h"
 #include "TrackManager.h"
 #include "Lights.h"
+#include "Room.h"
 
 namespace Micromachines {
 

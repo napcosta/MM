@@ -341,19 +341,8 @@ namespace Micromachines
     
 	void TrackPiece::init()
 	{
-		Image* image = loadBMP("src/Textures/road.bmp");
-		_textureID = LoadTexture(image);
-	}
-	
-	GLuint TrackPiece::LoadTexture(Image *image)
-	{
-		GLuint textureID;
-		glGenTextures(1, &textureID);
-		glBindTexture(GL_TEXTURE_2D, textureID);
-		
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image->width, image->height, 0, GL_RGB, GL_UNSIGNED_BYTE, image->pixels);
-		
-		return textureID;
+		//Image* image = loadBMP();
+		_textureID = LoadTexture("src/Textures/road.bmp");
 	}
     
 	void TrackPiece::draw()
