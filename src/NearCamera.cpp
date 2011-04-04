@@ -25,24 +25,28 @@ namespace Micromachines {
 	}
 
 	void NearCamera::draw()
-	{
-		_position = -_car->getPosition();
-		_carRotation = _car->getRotation();
-		glMatrixMode(GL_PROJECTION);
-		glLoadIdentity();
-	//	glOrtho(0, _winWidth, 0, _winHeight, 0, -100);
-	//	glViewport(-100,-100,_winWidth,_winHeight);
-		gluPerspective(60, _winWidth/_winHeight, 1, 1000);
-		//glTranslatef(_position[0],_position[1],200);
-		//glTranslatef(0,0,0);
-//		printf("_position[0] %f - _position[1] %f \n", _position[0], _position[1]);
-		gluLookAt(-_position[0]-50*cos(_carRotation*PI/180 + PI/2), 
-				-_position[1] - 50*sin(_carRotation*PI/180 + PI/2), 
-				-390, 
-				-_position[0], -_position[1], -400, 0, 0 , 1);
-	//	glViewport(0,0,400,200);
-		glMatrixMode(GL_MODELVIEW);
-		glLoadIdentity();
+	{	
+		_positionDelayed.push_back(_car->getPosition());
+		
+		if (_positionDelayed.size() > 20) {
+			_rotationDelayed.push_back(_car->getRotation());
+			if (_rotationDelayed.size() > 5) {
+				_position = (-_positionDelayed.front());
+				_rotation = (_rotationDelayed.front());
+
+				glMatrixMode(GL_PROJECTION);
+				glLoadIdentity();
+				gluPerspective(60, _winWidth/_winHeight, 1, 1000);
+				gluLookAt(-_position[0]-50*cos(_rotation*PI/180 + PI/2), 
+						-_position[1] - 50*sin(_rotation*PI/180 + PI/2), 
+						-390, 
+						-_position[0], -_position[1], -400, 0, 0 , 1);
+				glMatrixMode(GL_MODELVIEW);
+				glLoadIdentity();
+				_positionDelayed.erase(_positionDelayed.begin());
+				_rotationDelayed.erase(_rotationDelayed.begin());
+			}
+		}
 	}
 
 }
