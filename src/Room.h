@@ -16,7 +16,11 @@ namespace Micromachines {
 	class Room : public cg::Entity, public cg::IDrawListener
 	{
 	private:
-		GLuint _textureWall, _textureFloor;
+		GLuint _textureWall, _textureFloor, _textureCarpet;
+		
+		void drawWalls();
+		void drawFloor();
+		void drawCarpet();
 		
 	public:
 		Room();

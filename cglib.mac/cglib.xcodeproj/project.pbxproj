@@ -183,6 +183,7 @@
 		B073721913424E8400163303 /* TrackPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPiece.h; sourceTree = "<group>"; };
 		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
 		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
+		B08FDC25134B8FB400C32C90 /* carpet.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = carpet.bmp; sourceTree = "<group>"; };
 		B0CD19F7134A77F3004AC5AD /* wall.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = wall.bmp; sourceTree = "<group>"; };
 		B0CD19FA134A84E3004AC5AD /* floor.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = floor.bmp; sourceTree = "<group>"; };
 		B0D106741348E94000CD94F2 /* NearCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NearCamera.cpp; sourceTree = "<group>"; };
@@ -332,6 +333,7 @@
 		B0C5FA8C1347C2BA001327BA /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				B08FDC25134B8FB400C32C90 /* carpet.bmp */,
 				B0CD19FA134A84E3004AC5AD /* floor.bmp */,
 				B0CD19F7134A77F3004AC5AD /* wall.bmp */,
 				B0D106801348FB8300CD94F2 /* road.bmp */,
