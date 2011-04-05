@@ -76,7 +76,7 @@ namespace Micromachines {
 
 		double time = (double) elapsed_millis;
 		
-		printf("%f\n", _velocity);
+	//	printf("%f\n", _velocity);
 		
 		if (_velocity < -_maxSpeed)
 			_velocity = -_maxSpeed;
