@@ -30,40 +30,40 @@ namespace Micromachines {
 		
 		glBegin(GL_QUADS);
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(-1000, 1000, -400);
+			glVertex3d(-700, 700, -400);
 			glTexCoord2d(0.9, 0.1);
-			glVertex3d(1000, 1000, -400);
+			glVertex3d(700, 700, -400);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(1000, 1000, 400);
+			glVertex3d(700, 700, 400);
 			glTexCoord2d(0.1, 0.9);
-			glVertex3d(-1000, 1000, 400);
+			glVertex3d(-700, 700, 400);
 		
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(1000, -1000, -400);
+			glVertex3d(700, -700, -400);
 			glTexCoord2d(0.9, 0.1);
-			glVertex3d(1000, 1000, -400);
+			glVertex3d(700, 700, -400);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(1000, 1000, 400);
+			glVertex3d(700, 700, 400);
 			glTexCoord2d(0.1, 0.9);
-			glVertex3d(1000, -1000, 400);
+			glVertex3d(700, -700, 400);
 		
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(-1000, -1000, -400);
+			glVertex3d(-700, -700, -400);
 			glTexCoord2d(0.9, 0.1);
-			glVertex3d(1000, -1000, -400);
+			glVertex3d(700, -700, -400);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(1000, -1000, 400);
+			glVertex3d(700, -700, 400);
 			glTexCoord2d(0.1, 0.9);
-			glVertex3d(-1000, -1000, 400);
+			glVertex3d(-700, -700, 400);
 		
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(-1000, 1000, -400);
+			glVertex3d(-700, 700, -400);
 			glTexCoord2d(0.9, 0.1);
-			glVertex3d(-1000, -1000, -400);
+			glVertex3d(-700, -700, -400);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(-1000, -1000, 400);
+			glVertex3d(-700, -700, 400);
 			glTexCoord2d(0.1, 0.9);
-			glVertex3d(-1000, 1000, 400);
+			glVertex3d(-700, 700, 400);
 		glEnd();
 		glDisable(GL_TEXTURE_2D);
 		
