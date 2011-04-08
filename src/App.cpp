@@ -26,7 +26,8 @@ namespace Micromachines {
 		addEntity(new Controller());
 		addEntity(new ObstacleManager("ObstacleManager"));
 		addEntity(new TrackManager("TrackManager"));
-		addEntity(new Room());
+		addEntity(new Room()); //there should be a RoomManager where all the rooms would be!
+		addEntity(new HUD());
         
 	}
 

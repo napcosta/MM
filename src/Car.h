@@ -20,7 +20,7 @@ namespace Micromachines {
 
 	class Car : public cg::Entity,
 		     public cg::IDrawListener,
-		     public cg::IMouseEventListener,
+		//     public cg::IMouseEventListener,
 		     public cg::IUpdateListener {
 
 	private:
@@ -47,9 +47,6 @@ namespace Micromachines {
 		~Car();
 		void init();
 		void draw();
-		void onMouse(int button, int state, int x, int y);
-		void onMouseMotion(int x, int y);
-		void onMousePassiveMotion(int x, int y);
 		void update(unsigned long elapsed_millis);
 		void applyForce(cg::Vector2d force);
 		void setArrowKeyPressed(cg::Vector2d val);

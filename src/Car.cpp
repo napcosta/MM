@@ -179,18 +179,4 @@ namespace Micromachines {
 	{
 		return _carRotation;
 	}
-
-	void Car::onMouse(int Button, int state, int x, int y)
-	{
-	}
-
-	void Car::onMouseMotion(int x, int y)
-	{
-	}
-
-	void Car::onMousePassiveMotion(int x, int y)
-	{
-		_position[0] = x;
-		_position[1] = _winHeight -y;
-	}
 }
