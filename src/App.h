@@ -19,6 +19,7 @@
 #include "TrackManager.h"
 #include "Lights.h"
 #include "Room.h"
+#include "HUD.h"
 
 namespace Micromachines {
 

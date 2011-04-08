@@ -52,13 +52,13 @@ namespace Micromachines {
 			glVertex3d(_floorSize[1], _floorSize[0], 400);
 		
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(_floorSize[0], _floorSize[0], -410);
-			glTexCoord2d(0.9, 0.1);
 			glVertex3d(_floorSize[1], _floorSize[0], -410);
+			glTexCoord2d(0.9, 0.1);
+			glVertex3d(_floorSize[0], _floorSize[0], -410);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(_floorSize[1], _floorSize[0], 400);
-			glTexCoord2d(0.1, 0.9);
 			glVertex3d(_floorSize[0], _floorSize[0], 400);
+			glTexCoord2d(0.1, 0.9);
+			glVertex3d(_floorSize[1], _floorSize[0], 400);
 		
 			glTexCoord2d(0.1, 0.1);
 			glVertex3d(_floorSize[0], _floorSize[1], -410);
