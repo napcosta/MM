@@ -84,11 +84,11 @@ namespace Micromachines {
 		glBegin(GL_QUADS);
 			glTexCoord2d(0, 0);
 			glVertex3d(_floorSize[0], _floorSize[0], -400.15);
-			glTexCoord2d(6, 0);
+			glTexCoord2d(50, 0);
 			glVertex3d(_floorSize[1], _floorSize[0], -400.15);
-			glTexCoord2d(6, 6);
+			glTexCoord2d(50, 50);
 			glVertex3d(_floorSize[1], _floorSize[1], -400.15);
-			glTexCoord2d(0, 6);
+			glTexCoord2d(0, 50);
 			glVertex3d(_floorSize[0], _floorSize[1], -400.15);
 		glEnd();
 		
