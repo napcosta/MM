@@ -48,13 +48,13 @@ namespace Micromachines {
 			glVertex3d(1000, -1000, 400);
 		
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(-1000, -1000, -400);
-			glTexCoord2d(0.9, 0.1);
 			glVertex3d(1000, -1000, -400);
+			glTexCoord2d(0.9, 0.1);
+			glVertex3d(-1000, -1000, -400);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(1000, -1000, 400);
-			glTexCoord2d(0.1, 0.9);
 			glVertex3d(-1000, -1000, 400);
+			glTexCoord2d(0.1, 0.9);
+			glVertex3d(1000, -1000, 400);
 		
 			glTexCoord2d(0.1, 0.1);
 			glVertex3d(-1000, 1000, -400);
@@ -77,11 +77,11 @@ namespace Micromachines {
 		glBegin(GL_QUADS);
 			glTexCoord2d(0, 0);
 			glVertex3d(-1010, -1010, -400.1);
-			glTexCoord2d(6, 0);
+			glTexCoord2d(50, 0);
 			glVertex3d(1010, -1010, -400.1);
-			glTexCoord2d(6, 6);
+			glTexCoord2d(50, 50);
 			glVertex3d(1010, 1010, -400.1);
-			glTexCoord2d(0, 6);
+			glTexCoord2d(0, 50);
 			glVertex3d(-1010, 1010, -400.1);
 			glEnd();
 		glDisable(GL_TEXTURE_2D);
