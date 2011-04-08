@@ -25,9 +25,7 @@ namespace Micromachines {
 		addEntity(new Car("Car"));
 		addEntity(new Controller());
 		addEntity(new ObstacleManager("ObstacleManager"));
-		addEntity(new TrackManager("TrackManager"));
-		addEntity(new Room());
-        
+		addEntity(new TrackManager("TrackManager", 2020));
 	}
 
 }

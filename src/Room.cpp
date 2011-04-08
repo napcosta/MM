@@ -9,7 +9,10 @@
 #include "Room.h"
 
 namespace Micromachines {
-	Room::Room() : cg::Entity("Room"){}
+	Room::Room(int floorSize) : cg::Entity("Room")
+	{
+		_floorSize = cg::Vector2d(-(floorSize/2), floorSize/2);
+	}
 	
 	Room::~Room(){}
 	
@@ -17,7 +20,8 @@ namespace Micromachines {
 	{
 		_textureWall = LoadTexture("src/Textures/wall.bmp");
 		_textureFloor = LoadTexture("src/Textures/floor.bmp");
-		_textureCarpet = LoadTexture("src/Textures/carpet.bmp");
+		//_textureCarpet = LoadTexture("src/Textures/carpet.bmp");
+		//_table = glmReadOBJ((char*)"src/Models/table.obj");
 	}
 	
 	void Room::drawWalls()
@@ -30,40 +34,40 @@ namespace Micromachines {
 		
 		glBegin(GL_QUADS);
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(-700, 700, -400);
+			glVertex3d(_floorSize[0], _floorSize[1], -410);
 			glTexCoord2d(0.9, 0.1);
-			glVertex3d(700, 700, -400);
+			glVertex3d(_floorSize[1], _floorSize[1], -410);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(700, 700, 400);
+			glVertex3d(_floorSize[1], _floorSize[1], 400);
 			glTexCoord2d(0.1, 0.9);
-			glVertex3d(-700, 700, 400);
+			glVertex3d(_floorSize[0], _floorSize[1], 400);
 		
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(700, -700, -400);
+			glVertex3d(_floorSize[1], _floorSize[0], -410);
 			glTexCoord2d(0.9, 0.1);
-			glVertex3d(700, 700, -400);
+			glVertex3d(_floorSize[1], _floorSize[1], -410);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(700, 700, 400);
+			glVertex3d(_floorSize[1], _floorSize[1], 400);
 			glTexCoord2d(0.1, 0.9);
-			glVertex3d(700, -700, 400);
+			glVertex3d(_floorSize[1], _floorSize[0], 400);
 		
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(-700, -700, -400);
+			glVertex3d(_floorSize[0], _floorSize[0], -410);
 			glTexCoord2d(0.9, 0.1);
-			glVertex3d(700, -700, -400);
+			glVertex3d(_floorSize[1], _floorSize[0], -410);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(700, -700, 400);
+			glVertex3d(_floorSize[1], _floorSize[0], 400);
 			glTexCoord2d(0.1, 0.9);
-			glVertex3d(-700, -700, 400);
+			glVertex3d(_floorSize[0], _floorSize[0], 400);
 		
 			glTexCoord2d(0.1, 0.1);
-			glVertex3d(-700, 700, -400);
+			glVertex3d(_floorSize[0], _floorSize[1], -410);
 			glTexCoord2d(0.9, 0.1);
-			glVertex3d(-700, -700, -400);
+			glVertex3d(_floorSize[0], _floorSize[0], -410);
 			glTexCoord2d(0.9, 0.9);
-			glVertex3d(-700, -700, 400);
+			glVertex3d(_floorSize[0], _floorSize[0], 400);
 			glTexCoord2d(0.1, 0.9);
-			glVertex3d(-700, 700, 400);
+			glVertex3d(_floorSize[0], _floorSize[1], 400);
 		glEnd();
 		
 		glDisable(GL_TEXTURE_2D);
@@ -79,13 +83,13 @@ namespace Micromachines {
 		
 		glBegin(GL_QUADS);
 			glTexCoord2d(0, 0);
-			glVertex3d(-1010, -1010, -400.15);
+			glVertex3d(_floorSize[0], _floorSize[0], -400.15);
 			glTexCoord2d(6, 0);
-			glVertex3d(1010, -1010, -400.15);
+			glVertex3d(_floorSize[1], _floorSize[0], -400.15);
 			glTexCoord2d(6, 6);
-			glVertex3d(1010, 1010, -400.15);
+			glVertex3d(_floorSize[1], _floorSize[1], -400.15);
 			glTexCoord2d(0, 6);
-			glVertex3d(-1010, 1010, -400.15);
+			glVertex3d(_floorSize[0], _floorSize[1], -400.15);
 		glEnd();
 		
 		glDisable(GL_TEXTURE_2D);
@@ -102,11 +106,11 @@ namespace Micromachines {
 		glBegin(GL_QUADS);
 			glTexCoord2d(0, 0);
 			glVertex3d(0, 0, -400.05);
-			glTexCoord2d(5, 0);
+			glTexCoord2d(10, 0);
 			glVertex3d(600, 0, -400.05);
-			glTexCoord2d(5, 5);
+			glTexCoord2d(10, 10);
 			glVertex3d(600, 500, -400.05);
-			glTexCoord2d(0, 5);
+			glTexCoord2d(0, 10);
 			glVertex3d(0, 500, -400.05);
 		glEnd();
 		
@@ -114,10 +118,23 @@ namespace Micromachines {
 		
 	}
 	
+	void Room::drawTable()
+	{
+		glMatrixMode(GL_PROJECTION);
+		glPushMatrix();
+		glTranslatef(100,100,-400);
+		glRotated(90, 1.0, 0.0, 0.0);
+		glRotated(180, 0.0, 1.0, 0.0);
+		glmDraw(_table,GLM_MATERIAL|GLM_SMOOTH);
+		glPopMatrix();
+		
+	}
+	
 	void Room::draw()
 	{
 		drawWalls();
 		drawFloor();
-		drawCarpet();
+		//drawCarpet();
+		//drawTable();
 	}
 }

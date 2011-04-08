@@ -181,6 +181,8 @@
 		B07372171342423300163303 /* smart.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart.obj; sourceTree = "<group>"; };
 		B073721813424E8400163303 /* TrackPiece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrackPiece.cpp; sourceTree = "<group>"; };
 		B073721913424E8400163303 /* TrackPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPiece.h; sourceTree = "<group>"; };
+		B075687F134E094F00EAE4A0 /* table.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = table.mtl; sourceTree = "<group>"; };
+		B0756880134E094F00EAE4A0 /* table.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = table.obj; sourceTree = "<group>"; };
 		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
 		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
 		B08FDC25134B8FB400C32C90 /* carpet.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = carpet.bmp; sourceTree = "<group>"; };
@@ -324,6 +326,8 @@
 		B07372151342423300163303 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B075687F134E094F00EAE4A0 /* table.mtl */,
+				B0756880134E094F00EAE4A0 /* table.obj */,
 				B07372161342423300163303 /* smart.mtl */,
 				B07372171342423300163303 /* smart.obj */,
 			);
