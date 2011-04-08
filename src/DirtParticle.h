@@ -1,18 +1,17 @@
 /*
- * Particle.h
+ * DirtParticle.h
  *
  *  Created on: Jul 21, 2010
  *      Author: pinto
  */
 
-#ifndef PARTICLE_H_
-#define PARTICLE_H_
+#ifndef DirtParticle_H_
+#define DirtParticle_H_
 #include "cg.h"
+#include "Particle.h"
 namespace Micromachines {
 
-	class Particle : public cg::Entity,
-			 public cg::IDrawListener,
-			 public cg::IUpdateListener
+	class DirtParticle : public Particle
 	{
 
 	private:
@@ -24,18 +23,13 @@ namespace Micromachines {
 		double randomBetween(double min, double max);
 
 	public:
-		Particle(std::string id);
-		~Particle();
+		DirtParticle(std::string id, cg::Vector3d size, cg::Vector3d position, cg::Vector3d color, cg::Vector3d velocity);
+		~DirtParticle();
 		void init();
-		void draw();
 		void reset(cg::Vector3d position);
 		void update(unsigned long elapsed_millis);
-		void setSize(cg::Vector3d size);
-		void setPosition(cg::Vector3d position);
-		void setColor(cg::Vector3d color);
-		void setVelocity(cg::Vector3d velocity);
 	};
 
 }
 
-#endif /* PARTICLE_H_ */
+#endif /* DirtParticle_H_ */

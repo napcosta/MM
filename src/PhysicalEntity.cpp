@@ -11,13 +11,16 @@ namespace Micromachines{
 
 	PhysicalEntity::PhysicalEntity()
 	{
-		// TODO Auto-generated constructor stub
-
 	}
 
 	PhysicalEntity::~PhysicalEntity()
 	{
-		// TODO Auto-generated destructor stub
 	}
+	
+	void PhysicalEntity::update(unsigned long elapsed_millis)
+	{
+			
+	}
+	
 
 }

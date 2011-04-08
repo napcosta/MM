@@ -20,9 +20,9 @@ namespace Micromachines {
 	private:
 		double _winWidth, _winHeight;
 		double _rotation;
-		std::vector <cg::Vector2d> _positionDelayed; //this vector will hold a list of previous car positions
+		std::vector <cg::Vector3d> _positionDelayed; //this vector will hold a list of previous car positions
 		std::vector <double> _rotationDelayed;
-		cg::Vector2d _position;
+		cg::Vector3d _position;
 		Car* _car;
 
 	public:

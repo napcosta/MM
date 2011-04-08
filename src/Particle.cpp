@@ -39,23 +39,64 @@ namespace Micromachines {
 		_velocity = cg::Vector3d(randomBetween(-10,10), randomBetween(-10,10), randomBetween(10, 20));
 
 	}
-
+	
+	void Particle::setSize(cg::Vector3d size)
+	{
+		_size = size;
+	}
+	
+	void Particle::setPosition(cg::Vector3d position)
+	{
+		_position = position;
+	}
+	
+	void Particle::setColor(cg::Vector3d color)
+	{
+		_color = color;
+	}
+	
+	void Particle::setVelocity(cg::Vector3d velocity)
+	{
+		_velocity = velocity;
+	}
+	
 	void Particle::draw()
 	{
 		cg::Vector3d min = _position - _size/100.0;
 		cg::Vector3d max = _position + _size/100.0;
+	//	printf("P ->%f, %f, %f \n", min[0], min[1], min[2]);
 		glColor3dv(_color.get());
 		//glLineWidth(1.5);
-		glBegin(GL_POLYGON);
+		glBegin(GL_QUADS);
 			glVertex3d(min[0], min[1], min[2]);
 			glVertex3d(max[0], min[1], min[2]);
 			glVertex3d(max[0], max[1], min[2]);
 			glVertex3d(min[0], max[1], min[2]);
+			
 			glVertex3d(min[0], min[1], max[2]);
 			glVertex3d(max[0], min[1], max[2]);
 			glVertex3d(max[0], max[1], max[2]);
 			glVertex3d(min[0], max[1], max[2]);
-		//	glVertex3d(min[0], max[1]*2, 10);
+			
+			glVertex3d(min[0], min[1], min[2]);
+			glVertex3d(max[0], min[1], min[2]);
+			glVertex3d(max[0], min[1], max[2]);
+			glVertex3d(min[0], min[1], max[2]);
+			
+			glVertex3d(min[0], min[1], min[2]);
+			glVertex3d(min[0], max[1], min[2]);
+			glVertex3d(min[0], max[1], max[2]);
+			glVertex3d(min[0], min[1], max[2]);
+			
+			glVertex3d(min[0], min[1], min[2]);
+			glVertex3d(min[0], min[1], max[2]);
+			glVertex3d(min[0], max[1], max[2]);
+			glVertex3d(min[0], max[1], min[2]);
+			
+			glVertex3d(max[0], min[1], min[2]);
+			glVertex3d(max[0], min[1], max[2]);
+			glVertex3d(max[0], max[1], max[2]);
+			glVertex3d(max[0], max[1], min[2]);
 		glEnd();
 	}
 

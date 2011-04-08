@@ -18,7 +18,7 @@ namespace Micromachines {
 	private:
 		double _winWidth, _winHeight;
 		double _carRotation;
-		cg::Vector2d _position;
+		cg::Vector3d _position;
 		Car* _car;
 
 	public:

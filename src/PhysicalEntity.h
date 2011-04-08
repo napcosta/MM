@@ -12,10 +12,13 @@
 
 namespace Micromachines {
 
-	class PhysicalEntity {
+	class PhysicalEntity : public cg::IUpdateListener,
+          		     public cg::IReshapeEventListener{
+	
 	public:
 		PhysicalEntity();
 		virtual ~PhysicalEntity();
+		void update(unsigned long elapsed_millis);
 	};
 
 	}

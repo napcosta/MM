@@ -13,8 +13,7 @@ namespace Micromachines {
 
 	class ParticleManager : public cg::Entity,
 				public cg::IDrawListener,
-				public cg::IUpdateListener,
-				public cg::IDrawOverlayListener {
+				public cg::IUpdateListener {
 
 	private:
 		std::vector<Particle*> _particles;
@@ -27,7 +26,6 @@ namespace Micromachines {
 		void init();
 		void update(unsigned long elapsed_millis);
 		void draw();
-		void drawOverlay();
 	};
 
 

@@ -19,14 +19,13 @@
 namespace Micromachines {
 
 	class Car : public cg::Entity,
-		     public cg::IDrawListener,
-		//     public cg::IMouseEventListener,
-		     public cg::IUpdateListener {
+		    public cg::IDrawListener,
+		    public cg::IUpdateListener {
 
 	private:
 		double _winHeight;
-		cg::Vector2d _position;
-		cg::Vector2d _size;
+		cg::Vector3d _position;
+		cg::Vector3d _size;
 		cg::Vector2d _appForce;
 		cg::Vector2d _acceleration;
 		cg::Vector2d _arrowKeyPressed;
@@ -50,10 +49,10 @@ namespace Micromachines {
 		void update(unsigned long elapsed_millis);
 		void applyForce(cg::Vector2d force);
 		void setArrowKeyPressed(cg::Vector2d val);
-		void keyBreak(int direction);
 		double getRotationSpeed();
 		double getRotation();
-		cg::Vector2d getPosition();
+		double getMovForce();
+		cg::Vector3d getPosition();
 		cg::Vector2d getArrowKeyPressed();
 	};
 
