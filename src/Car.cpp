@@ -81,21 +81,17 @@ namespace Micromachines {
 
 	void Car::update(unsigned long elapsed_millis)
 	{
-		printf("%f - %f\n", _appForce[0], _appForce[1]);
-		
 
 		double time = (double) elapsed_millis;
-		
-	//	printf("%f\n", _velocity);
 		
 		if (_velocity < -_maxSpeed)
 			_velocity = -_maxSpeed;
 		else if (_velocity > _maxSpeed)
 			_velocity = _maxSpeed;
 			
-			
+		
 		_acceleration[1] = _appForce[1]/_mass;
-		_velocity += _acceleration[1]*time ;
+		_velocity += _acceleration[1]*time;
 		
 		if (_appForce[1] >= 0 && _velocity > 0 && _arrowKeyPressed[1] == 0)
 			_appForce[1] = -_movForce;

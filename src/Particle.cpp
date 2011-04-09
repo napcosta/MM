@@ -37,6 +37,7 @@ namespace Micromachines {
 		_size = cg::Vector3d(randomBetween(min_size, max_size), randomBetween(min_size, max_size), randomBetween(min_size, max_size));
 		_color = cg::Vector3d(1,1,1);
 		_velocity = cg::Vector3d(randomBetween(-10,10), randomBetween(-10,10), randomBetween(10, 20));
+		
 
 	}
 	
@@ -58,6 +59,17 @@ namespace Micromachines {
 	void Particle::setVelocity(cg::Vector3d velocity)
 	{
 		_velocity = velocity;
+	}
+	
+	void Particle::setMass(double mass)
+	{
+		_mass = mass;
+		GFORCE = _mass*G;
+	}
+	
+	cg::Vector3d Particle::getAcceleration()
+	{
+		return _acceleration;
 	}
 	
 	void Particle::draw()
@@ -104,7 +116,7 @@ namespace Micromachines {
 	void Particle::update(unsigned long elapsed_millis)
 	{
 		double elapsed_seconds = elapsed_millis / 1000.0;
-		_position -= _velocity * elapsed_seconds;
+	//	_position += _velocity * elapsed_seconds + 1/2*GFORCE*elapsed_seconds*elapsed_seconds;
 		if (_position[0] < 0) {
 			_position[0] = randomBetween(0, _winWidth);
 			_position[1] = randomBetween(0, _winHeight);

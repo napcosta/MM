@@ -17,8 +17,9 @@ namespace Micromachines {
 	private:
 		cg::Vector3d _position, _size;
 		cg::Vector3d _color;
-		cg::Vector3d _velocity;
+		cg::Vector3d _velocity, _acceleration;
 		double _winWidth, _winHeight;
+		
 
 		double randomBetween(double min, double max);
 

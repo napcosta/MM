@@ -16,6 +16,7 @@ namespace Micromachines {
 		Particle::setPosition(position);
 		Particle::setColor(color);
 		Particle::setVelocity(velocity);
+		Particle::setMass(cg::Properties::instance()->getDouble("DIRT_PARTICLE_MASS"));
 		_size = size;
 		_position = position;
 		_color = color;
@@ -46,29 +47,19 @@ namespace Micromachines {
 
 	void DirtParticle::update(unsigned long elapsed_millis)
 	{
-		double elapsed_seconds = elapsed_millis / 1000.0;
-		_position -= _velocity * elapsed_seconds;
-		if (_position[0] < 0) {
-			_position[0] = randomBetween(0, _winWidth);
-			_position[1] = randomBetween(0, _winHeight);
-			_position[2] = 0;
-		} if (_position[0] > _winWidth) {
-			_position[0] = randomBetween(0, _winWidth);
-			_position[1] = randomBetween(0, _winHeight);
-			_position[2] = 0;
-		} if (_position[1] < 0) {
-			_position[0] = randomBetween(0, _winWidth);
-			_position[1] = randomBetween(0, _winHeight);
-			_position[2] = 0;
-		} if (_position[1] > _winHeight) {
-			_position[0] = randomBetween(0, _winWidth);
-			_position[1] = randomBetween(0, _winHeight);
-			_position[2] = 0;
-		} if (_position[2] < -399) {
-			_position[0] = randomBetween(0, _winWidth);
-			_position[1] = randomBetween(0, _winHeight);
-			_position[2] = -250;
+		double time = (elapsed_millis / 1000.0);
+		_velocity[2] += G*time;
+		_position[2] += -(_velocity[2] * time + (G*time*time)/2);
+		printf("%f - %f\n", _position[2], _velocity[2]);
+		Particle::setPosition(_position);
+		if (_position[2] < -405) {
+			_velocity[2] = 0;
+			_position[2] = -300;
+			Particle::setPosition(_position);
 		}
+		//printf("position %f\n", _position[2]);
+		//printf("_velocity[2] %f\n", _velocity[2]);
 	}
+	
 }
 

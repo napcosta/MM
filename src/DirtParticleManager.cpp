@@ -24,10 +24,11 @@ namespace Micromachines
 	void DirtParticleManager::init()
 	{
 		_car = (Car*) cg::Registry::instance()->get("Car");
-		_position = _car->getPosition();
+		_position = cg::Vector3d(0, 200, -300); //_car->getPosition();
 		_size = cg::Vector3d(100, 100, 100);
 		_color = cg::Vector3d(0.0, 1.0, 1.0);
 		_velocity = cg::Vector3d(0,0, 0);
+		cg::Vector3d tmp = _car->getPosition();
 		int nDirtParticle = cg::Properties::instance()->getInt("NDIRTPARTICLE");
 		for (int i=0; i < nDirtParticle; i++) {
 			std::ostringstream os;
