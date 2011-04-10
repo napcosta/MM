@@ -33,6 +33,7 @@ namespace Micromachines {
 		void init();
 		void update(unsigned long elapsed_millis);
 		void draw();
+		double randomBetween(double min, double max);
 	};
 
 

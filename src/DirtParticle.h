@@ -9,6 +9,7 @@
 #define DirtParticle_H_
 #include "cg.h"
 #include "Particle.h"
+#include "Car.h"
 namespace Micromachines {
 
 	class DirtParticle : public Particle
@@ -19,12 +20,12 @@ namespace Micromachines {
 		cg::Vector3d _color;
 		cg::Vector3d _velocity, _acceleration;
 		double _winWidth, _winHeight;
-		
+		Car* _car;
 
-		double randomBetween(double min, double max);
+	//	double randomBetween(double min, double max);
 
 	public:
-		DirtParticle(std::string id, cg::Vector3d size, cg::Vector3d position, cg::Vector3d color, cg::Vector3d velocity);
+		DirtParticle(std::string id, cg::Vector3d color, cg::Vector3d velocity);
 		~DirtParticle();
 		void init();
 		void reset(cg::Vector3d position);

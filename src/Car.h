@@ -52,6 +52,7 @@ namespace Micromachines {
 		double getRotationSpeed();
 		double getRotation();
 		double getMovForce();
+		double getVelocity();
 		cg::Vector3d getPosition();
 		cg::Vector2d getArrowKeyPressed();
 	};

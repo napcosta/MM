@@ -44,6 +44,7 @@ namespace Micromachines {
         	glmVertexNormals(model, 90.0);
  		glmScale(model, _size[0]);
 		_carRotation = 0;
+		_position[2] = -396;
 		
 
 	}
@@ -160,5 +161,10 @@ namespace Micromachines {
 	double Car::getRotation()
 	{
 		return _carRotation;
+	}
+	
+	double Car::getVelocity()
+	{
+		return _velocity;
 	}
 }
