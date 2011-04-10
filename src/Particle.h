@@ -25,6 +25,7 @@ namespace Micromachines {
 		double _mass;
 		double _winWidth, _winHeight;
 		cg::Vector3d _acceleration;
+		bool DRAW;
 		
 	public:
 		double GFORCE;
@@ -40,6 +41,7 @@ namespace Micromachines {
 		void setColor(cg::Vector3d color);
 		void setVelocity(cg::Vector3d velocity);
 		void setMass(double mass);
+		void setDRAW(bool draw);
 		cg::Vector3d getAcceleration();
 	};
 

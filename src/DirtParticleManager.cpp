@@ -26,7 +26,7 @@ namespace Micromachines
 		_car = (Car*) cg::Registry::instance()->get("Car");
 		_position = cg::Vector3d(0, 200, -380); //_car->getPosition();
 	//	_size = cg::Vector3d(100, 100, 100);
-		_color = cg::Vector3d(165.0, 42.0, 42.0);
+		_color = cg::Vector3d(0.2, 0.13, 0.00);
 		_velocity = cg::Vector3d(0,0, 0);
 		cg::Vector3d tmp = _car->getPosition();
 		int nDirtParticle = cg::Properties::instance()->getInt("NDIRTPARTICLE");
