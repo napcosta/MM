@@ -27,12 +27,12 @@ namespace Micromachines {
 	    
 		void addTrack(int _type, double posX, double posY);
 		std::vector<int> posToMatrix(double posX, double posY);
-		void trackType1(cg::Vector2d pos, int x, int y);
-		void trackType2(cg::Vector2d pos, int x, int y);
-		void trackType3(cg::Vector2d pos, int x, int y);
-		void trackType4(cg::Vector2d pos, int x, int y);
-		void trackType5(cg::Vector2d pos, int x, int y);
-		void trackType6(cg::Vector2d pos, int x, int y);
+		void trackType1(cg::Vector3d pos, int x, int y);
+		void trackType2(cg::Vector3d pos, int x, int y);
+		void trackType3(cg::Vector3d pos, int x, int y);
+		void trackType4(cg::Vector3d pos, int x, int y);
+		void trackType5(cg::Vector3d pos, int x, int y);
+		void trackType6(cg::Vector3d pos, int x, int y);
 		std::vector<int> range(int x, int y);
 	    
 	protected:

@@ -95,7 +95,7 @@ namespace Micromachines {
 		return range;
 	}
 	
-	void TrackManager::trackType1(cg::Vector2d pos, int x, int y)
+	void TrackManager::trackType1(cg::Vector3d pos, int x, int y)
 	{
 		std::vector<int> ranges = range(x, y);
 		
@@ -106,7 +106,7 @@ namespace Micromachines {
 		
 	}
 	
-	void TrackManager::trackType2(cg::Vector2d pos, int x, int y)
+	void TrackManager::trackType2(cg::Vector3d pos, int x, int y)
 	{
 		std::vector<int> ranges = range(x, y);
 		
@@ -127,7 +127,7 @@ namespace Micromachines {
 		//else std::cout << "Estou dentro" << std::endl;
 	}
 	
-	void TrackManager::trackType3(cg::Vector2d pos, int x, int y)
+	void TrackManager::trackType3(cg::Vector3d pos, int x, int y)
 	{
 		std::vector<int> ranges = range(x,y);
 		
@@ -149,7 +149,7 @@ namespace Micromachines {
 		
 	}
 	
-	void TrackManager::trackType4(cg::Vector2d pos, int x, int y)
+	void TrackManager::trackType4(cg::Vector3d pos, int x, int y)
 	{
 		std::vector<int> ranges = range(x,y);
 		
@@ -174,7 +174,7 @@ namespace Micromachines {
 		
 	}
 	
-	void TrackManager::trackType5(cg::Vector2d pos, int x, int y)
+	void TrackManager::trackType5(cg::Vector3d pos, int x, int y)
 	{
 		std::vector<int> ranges = range(x,y);
 		
@@ -199,7 +199,7 @@ namespace Micromachines {
 		
 	}
 	
-	void TrackManager::trackType6(cg::Vector2d pos, int x, int y)
+	void TrackManager::trackType6(cg::Vector3d pos, int x, int y)
 	{
 		std::vector<int> ranges = range(x, y);
 		
@@ -212,7 +212,7 @@ namespace Micromachines {
 	
 	void TrackManager::update(unsigned long elapsed_millis)
 	{
-		cg::Vector2d pos = _car->getPosition();
+		cg::Vector3d pos = _car->getPosition();
 		std::vector<int> mat = posToMatrix(pos[0], pos[1]);
 		
 		int type = getTypeFromMatrix(mat[0], mat[1]);
