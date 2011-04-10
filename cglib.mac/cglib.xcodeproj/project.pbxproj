@@ -80,6 +80,10 @@
 		B073721B13424E8600163303 /* TrackPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = B073721913424E8400163303 /* TrackPiece.h */; };
 		B089524B133BD6110076FED5 /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0895249133BD6110076FED5 /* Obstacle.cpp */; };
 		B089524C133BD6110076FED5 /* Obstacle.h in Headers */ = {isa = PBXBuildFile; fileRef = B089524A133BD6110076FED5 /* Obstacle.h */; };
+		B0CC6C18135230C2000C33FF /* DirtParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CC6C14135230C1000C33FF /* DirtParticle.cpp */; };
+		B0CC6C19135230C2000C33FF /* DirtParticle.h in Headers */ = {isa = PBXBuildFile; fileRef = B0CC6C15135230C1000C33FF /* DirtParticle.h */; };
+		B0CC6C1A135230C2000C33FF /* DirtParticleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CC6C16135230C1000C33FF /* DirtParticleManager.cpp */; };
+		B0CC6C1B135230C2000C33FF /* DirtParticleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0CC6C17135230C1000C33FF /* DirtParticleManager.h */; };
 		B0D106761348E94000CD94F2 /* NearCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D106741348E94000CD94F2 /* NearCamera.cpp */; };
 		B0D106771348E94000CD94F2 /* NearCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = B0D106751348E94000CD94F2 /* NearCamera.h */; };
 		B0D1067E1348F37900CD94F2 /* ImageLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D1067C1348F37900CD94F2 /* ImageLoader.cpp */; };
@@ -188,6 +192,10 @@
 		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
 		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
 		B08FDC25134B8FB400C32C90 /* carpet.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = carpet.bmp; sourceTree = "<group>"; };
+		B0CC6C14135230C1000C33FF /* DirtParticle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirtParticle.cpp; sourceTree = "<group>"; };
+		B0CC6C15135230C1000C33FF /* DirtParticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirtParticle.h; sourceTree = "<group>"; };
+		B0CC6C16135230C1000C33FF /* DirtParticleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirtParticleManager.cpp; sourceTree = "<group>"; };
+		B0CC6C17135230C1000C33FF /* DirtParticleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirtParticleManager.h; sourceTree = "<group>"; };
 		B0CD19F7134A77F3004AC5AD /* wall.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = wall.bmp; sourceTree = "<group>"; };
 		B0CD19FA134A84E3004AC5AD /* floor.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = floor.bmp; sourceTree = "<group>"; };
 		B0D106741348E94000CD94F2 /* NearCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NearCamera.cpp; sourceTree = "<group>"; };
@@ -350,6 +358,10 @@
 			children = (
 				B0C5FA8C1347C2BA001327BA /* Textures */,
 				B07372151342423300163303 /* Models */,
+				B0CC6C14135230C1000C33FF /* DirtParticle.cpp */,
+				B0CC6C15135230C1000C33FF /* DirtParticle.h */,
+				B0CC6C16135230C1000C33FF /* DirtParticleManager.cpp */,
+				B0CC6C17135230C1000C33FF /* DirtParticleManager.h */,
 				B027CC1E1344AD9D00209BF5 /* Lights.cpp */,
 				B000B17D134F9896008E2AF9 /* HUD.cpp */,
 				B000B17E134F9896008E2AF9 /* HUD.h */,
@@ -460,6 +472,8 @@
 				B0D1067F1348F37900CD94F2 /* ImageLoader.h in Headers */,
 				B01B299D134A491100EF6438 /* Room.h in Headers */,
 				B000B180134F9896008E2AF9 /* HUD.h in Headers */,
+				B0CC6C19135230C2000C33FF /* DirtParticle.h in Headers */,
+				B0CC6C1B135230C2000C33FF /* DirtParticleManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +583,8 @@
 				B0D1067E1348F37900CD94F2 /* ImageLoader.cpp in Sources */,
 				B01B299C134A491100EF6438 /* Room.cpp in Sources */,
 				B000B17F134F9896008E2AF9 /* HUD.cpp in Sources */,
+				B0CC6C18135230C2000C33FF /* DirtParticle.cpp in Sources */,
+				B0CC6C1A135230C2000C33FF /* DirtParticleManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
