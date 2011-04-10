@@ -12,6 +12,9 @@
 
 /* includes */
 
+#ifndef GLM_H
+#define GLM_H
+
 #include "cg.h"
 
 #ifndef M_PI
@@ -237,3 +240,5 @@ GLuint glmList(GLMmodel * model, GLuint mode);
 GLvoid glmWeld(GLMmodel * model, GLfloat epsilon);
 GLMmodel *glmCopy(GLMmodel *source);
 GLuint * glmInterpolate(GLMmodel *source, GLMmodel *dest, unsigned int steps);
+
+#endif

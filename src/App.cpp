@@ -26,10 +26,8 @@ namespace Micromachines {
 		addEntity(new Car("Car"));
 		addEntity(new Controller());
 		addEntity(new ObstacleManager("ObstacleManager"));
-		addEntity(new TrackManager("TrackManager"));
-		addEntity(new Room()); //there should be a RoomManager where all the rooms would be!
+		addEntity(new TrackManager("TrackManager", 2020));
 		addEntity(new HUD());
-        
 	}
 
 }
