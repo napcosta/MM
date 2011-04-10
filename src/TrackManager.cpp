@@ -100,9 +100,9 @@ namespace Micromachines {
 		std::vector<int> ranges = range(x, y);
 		
 		if (pos[0] < ranges[0]+ 27 || pos[0] > ranges[1] - 27){
-			//std::cout << "Estou fora" << std::endl;
+			std::cout << "Estou fora" << std::endl;
 		}
-		//else std::cout << "Estou dentro" << std::endl;
+		else std::cout << "Estou dentro" << std::endl;
 		
 	}
 	
@@ -122,9 +122,9 @@ namespace Micromachines {
 		double m4 = (double)((ranges[2]+9)-(ranges[2]+27))/((ranges[0]+81)-(ranges[0]+99));
 		double b4 = (ranges[2]+9) - m4*(ranges[0]+81);
 		
-		if ((pos[0] < ranges[0]+ 27) || (pos[1] > ranges[3] - 27) || (pos[1] > pos[0]*m1 + b1) || (pos[1] > pos[0]*m2 + b2) || (pos[1] > pos[0]*m3+b3) || ((pos[1] < pos[0]*m4+b4) && (pos[0] > ranges[1] - 27) && (pos[1] < ranges[2] + 27)));
-			//std::cout << "Estou fora" << std::endl;
-		//else std::cout << "Estou dentro" << std::endl;
+		if ((pos[0] < ranges[0]+ 27) || (pos[1] > ranges[3] - 27) || (pos[1] > pos[0]*m1 + b1) || (pos[1] > pos[0]*m2 + b2) || (pos[1] > pos[0]*m3+b3) || ((pos[1] < pos[0]*m4+b4) && (pos[0] > ranges[1] - 27) && (pos[1] < ranges[2] + 27)))
+			std::cout << "Estou fora" << std::endl;
+		else std::cout << "Estou dentro" << std::endl;
 	}
 	
 	void TrackManager::trackType3(cg::Vector3d pos, int x, int y)
@@ -143,9 +143,9 @@ namespace Micromachines {
 		double m4 = (double)((ranges[2]+9)-(ranges[2]+27))/((ranges[0]+27)-(ranges[0]+9));
 		double b4 = (ranges[2]+9) - m4*(ranges[0]+27);
 		
-		if ((pos[0] > ranges[1]-27) || (pos[1] > ranges[3] - 27) || (pos[1] < pos[0]*m1 + b1) || (pos[1] > pos[0]*m2 + b2) || (pos[1] > pos[0]*m3+b3) || ((pos[1] < pos[0]*m4+b4) && (pos[0] > ranges[0] + 27) && (pos[1] < ranges[2] + 27)));
-			//std::cout << "Estou fora" << std::endl;
-		//else std::cout << "Estou dentro" << std::endl;
+		if ((pos[0] > ranges[1]-27) || (pos[1] > ranges[3] - 27) || (pos[1] < pos[0]*m1 + b1) || (pos[1] > pos[0]*m2 + b2) || (pos[1] > pos[0]*m3+b3) || ((pos[1] < pos[0]*m4+b4) && (pos[0] > ranges[0] + 27) && (pos[1] < ranges[2] + 27)))
+			std::cout << "Estou fora" << std::endl;
+		else std::cout << "Estou dentro" << std::endl;
 		
 	}
 	
@@ -166,10 +166,10 @@ namespace Micromachines {
 		double b4 = (ranges[3]-9) - m4*(ranges[1]-27);
 		
 		if ((pos[0] < ranges[0]+27) || (pos[1] < ranges[2] + 27) || (pos[1] < pos[0]*m1 + b1) || (pos[1] < pos[0]*m2 + b2) || (pos[1] < pos[0]*m3+b3) || ((pos[1] > pos[0]*m4+b4) && (pos[0] > ranges[0] + 27) && (pos[1] > ranges[2] + 27))){
-			//std::cout << "Estou fora" << std::endl;
+			std::cout << "Estou fora" << std::endl;
 		}
 		else { 
-			//std::cout << "Estou dentro" << std::endl;
+			std::cout << "Estou dentro" << std::endl;
 		}
 		
 	}
@@ -191,10 +191,10 @@ namespace Micromachines {
 		double b4 = (ranges[3]-9) - m4*(ranges[1]-27);
 		
 		if ((pos[0] > ranges[1]-27) || (pos[1] < ranges[2] + 27) || (pos[1] < pos[0]*m1 + b1) || (pos[1] < pos[0]*m2 + b2) || (pos[1] < pos[0]*m3+b3) || ((pos[1] > pos[0]*m4+b4) && (pos[0] < ranges[0] + 27) && (pos[1] > ranges[3] - 27))){
-			//std::cout << "Estou fora" << std::endl;
+			std::cout << "Estou fora" << std::endl;
 		}
 		else {
-			//std::cout << "Estou dentro" << std::endl;
+			std::cout << "Estou dentro" << std::endl;
 		}
 		
 	}
@@ -204,9 +204,9 @@ namespace Micromachines {
 		std::vector<int> ranges = range(x, y);
 		
 		if (pos[1] < ranges[2]+ 27 || pos[1] > ranges[3] - 27){
-			//std::cout << "Estou fora" << std::endl;
+			std::cout << "Estou fora" << std::endl;
 		}
-		//else std::cout << "Estou dentro" << std::endl;
+		else std::cout << "Estou dentro" << std::endl;
 		
 	}
 	
@@ -219,7 +219,7 @@ namespace Micromachines {
 		switch (type) {
 				
 			case 0:
-				//std::cout << "Estou fora" << std::endl;
+				std::cout << "Estou fora" << std::endl;
 				break;
 			case 1:
 				trackType1(pos, mat[0], mat[1]);
