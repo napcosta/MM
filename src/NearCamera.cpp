@@ -33,7 +33,6 @@ namespace Micromachines {
 			if (_rotationDelayed.size() > 5) {
 				_position = (-_positionDelayed.front());
 				_rotation = (_rotationDelayed.front());
-		//		printf("_positionDelayed[0] %f -- _positionDelayed[1] %f\n", _position[0], _positionD[1]);
 				glMatrixMode(GL_PROJECTION);
 				glLoadIdentity();
 				gluPerspective(60, _winWidth/_winHeight, 1, 3000);

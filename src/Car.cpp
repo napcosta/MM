@@ -44,15 +44,26 @@ namespace Micromachines {
         	glmVertexNormals(model, 90.0);
  		glmScale(model, _size[0]);
 		_carRotation = 0;
+		_position[2] = -396;
 		
 
 	}
 	
 	double Car::getRotationSpeed() 
 	{
-		cg::Vector2d min = _position - _size/2.0;
 		return _rotationSpeed;
 	}
+	
+	double Car::getMovForce()
+	{
+		return _movForce;
+	}
+	
+//	void Car::setRotationSpeed(int rotSpeed)
+//	{
+//		_rotationSpeed = rotSpeed;
+//	}
+	
 	void Car::draw()
 	{	
         	glColor3d(0.0, 0.0, 80.0);
@@ -62,7 +73,7 @@ namespace Micromachines {
 			glTranslatef(_position[0],_position[1]-0.17*_size[0],0.0); //TODO: Still doesn't rotate along it's front weels
 		    	glRotatef(_carRotation, 0.0, 0.0, 1.0);
 		    	glTranslatef(-_position[0],-_position[1]+0.17*_size[0],0.0);
-		    	glTranslatef(_position[0], _position[1], -396);
+		    	glTranslatef(_position[0], _position[1], -396);//-396
 		    	glRotated(90, 1.0, 0.0, 0.0);
 		    	glRotated(180, 0.0, 1.0, 0.0);
 		    	glmDraw(model,GLM_MATERIAL|GLM_SMOOTH);
@@ -71,21 +82,17 @@ namespace Micromachines {
 
 	void Car::update(unsigned long elapsed_millis)
 	{
-		
-		
 
 		double time = (double) elapsed_millis;
-		
-	//	printf("%f\n", _velocity);
 		
 		if (_velocity < -_maxSpeed)
 			_velocity = -_maxSpeed;
 		else if (_velocity > _maxSpeed)
 			_velocity = _maxSpeed;
 			
-			
+		
 		_acceleration[1] = _appForce[1]/_mass;
-		_velocity += _acceleration[1]*time ;
+		_velocity += _acceleration[1]*time;
 		
 		if (_appForce[1] >= 0 && _velocity > 0 && _arrowKeyPressed[1] == 0)
 			_appForce[1] = -_movForce;
@@ -137,30 +144,6 @@ namespace Micromachines {
 		_appForce = force;
 	}
 
-	void Car::keyBreak(int direction) //TODO devia estar no controller.cpp
-	{
-
-		switch (direction) {
-		case 1: //LEFT
-			_appForce[0] -= _rotationSpeed;
-			_arrowKeyPressed[0] += 1;
-			break;
-		case 2: //UP
-			_appForce[1] = -_movForce;
-			_arrowKeyPressed[1] -= 1;
-			break;
-		case 3: //RIGHT
-			_appForce[0] += _rotationSpeed;
-			_arrowKeyPressed[0] -= 1;
-			break;
-		case 4: //DOWN
-			_appForce[1] = _movForce;
-			_arrowKeyPressed[1] += 1;
-			break;
-
-		}
-	}
-
 	cg::Vector2d Car::getArrowKeyPressed() {
 		return _arrowKeyPressed;
 	}
@@ -170,7 +153,7 @@ namespace Micromachines {
 		_arrowKeyPressed = val;
 	}
 	
-	cg::Vector2d Car::getPosition()
+	cg::Vector3d Car::getPosition()
 	{
 		return _position;	
 	}
@@ -178,5 +161,10 @@ namespace Micromachines {
 	double Car::getRotation()
 	{
 		return _carRotation;
+	}
+	
+	double Car::getVelocity()
+	{
+		return _velocity;
 	}
 }

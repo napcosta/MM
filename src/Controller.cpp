@@ -64,27 +64,27 @@ namespace Micromachines {
 
 	void Controller::onSpecialKeyReleased(int key)
 	{
-		int left=1;
-		int up=2;
-		int right=3;
-		int down=4;
+		cg::Vector2d arrowKeyPressed = _car->getArrowKeyPressed();
 		switch (key) {
 		case GLUT_KEY_UP:
-			_dirKeys[1]=0;
-			_car->keyBreak(up);
+			_dirKeys[1] = -_car->getMovForce();
+			arrowKeyPressed[1] -=1;
 			break;
 		case GLUT_KEY_DOWN:
-			_dirKeys[1]=0;
-			_car->keyBreak(down);
+			_dirKeys[1] = _car->getMovForce();
+			arrowKeyPressed[1] += 1;
 			break;
 		case GLUT_KEY_LEFT:
-			_dirKeys[0]=0;
-			_car->keyBreak(left);
+			_dirKeys[0] -= _car->getRotationSpeed();
+			arrowKeyPressed[0] += 1;
 			break;
 		case GLUT_KEY_RIGHT:
-			_dirKeys[0]=0;
-			_car->keyBreak(right);
+			_dirKeys[0] += _car->getRotationSpeed();
+			arrowKeyPressed[0] -= 1;
 			break;
 		}
+		_car->applyForce(_dirKeys);
+		_car->setArrowKeyPressed(arrowKeyPressed);
 	}
+
 }

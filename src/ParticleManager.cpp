@@ -46,11 +46,5 @@ namespace Micromachines
 			(*i)->draw();
 		}
 	}
-
-	void ParticleManager::drawOverlay()
-	{
-		glColor3d(0.9, 0.1, 0.1);
-		cg::Util::instance()->drawBitmapString(nparticleMessage,10,10);
-	}
 }
 

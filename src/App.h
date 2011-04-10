@@ -11,6 +11,7 @@
 #include "cg.h"
 
 #include "ParticleManager.h"
+#include "DirtParticleManager.h"
 #include "Controller.h"
 #include "NearCamera.h"
 #include "Particle.h"

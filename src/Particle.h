@@ -8,6 +8,9 @@
 #ifndef PARTICLE_H_
 #define PARTICLE_H_
 #include "cg.h"
+#include <math.h>
+
+#define G 270
 namespace Micromachines {
 
 	class Particle : public cg::Entity,
@@ -19,18 +22,27 @@ namespace Micromachines {
 		cg::Vector3d _position, _size;
 		cg::Vector3d _color;
 		cg::Vector3d _velocity;
+		double _mass;
 		double _winWidth, _winHeight;
-
-		double randomBetween(double min, double max);
-
+		cg::Vector3d _acceleration;
+		bool DRAW;
+		
 	public:
+		double GFORCE;
+		double randomBetween(double min, double max);
 		Particle(std::string id);
 		~Particle();
 		void init();
 		void draw();
 		void reset(cg::Vector3d position);
 		void update(unsigned long elapsed_millis);
-
+		void setSize(cg::Vector3d size);
+		void setPosition(cg::Vector3d position);
+		void setColor(cg::Vector3d color);
+		void setVelocity(cg::Vector3d velocity);
+		void setMass(double mass);
+		void setDRAW(bool draw);
+		cg::Vector3d getAcceleration();
 	};
 
 }
