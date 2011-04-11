@@ -37,41 +37,41 @@ namespace Micromachines {
 	{
 		glColor3d(_color[0], _color[1], _color[2]);
 		glBegin(GL_QUADS);
-		//top
-		glVertex3d(_position[0]-27, _position[1]+18, -400);       
-		glVertex3d(_position[0]-27, _position[1]-18, -400);       
-		glVertex3d(_position[0]+27, _position[1]-18, -400);       
-		glVertex3d(_position[0]+27, _position[1]+18, -400);
+			//top
+			glVertex3d(_position[0]-27, _position[1]+18, -400);       
+			glVertex3d(_position[0]-27, _position[1]-18, -400);       
+			glVertex3d(_position[0]+27, _position[1]-18, -400);       
+			glVertex3d(_position[0]+27, _position[1]+18, -400);
 		
-		//bottom
-		glVertex3d(_position[0]-27, _position[1]+18, -395);       
-		glVertex3d(_position[0]-27, _position[1]-18, -395);       
-		glVertex3d(_position[0]+27, _position[1]-18, -395);       
-		glVertex3d(_position[0]+27, _position[1]+18, -395);
+			//bottom
+			glVertex3d(_position[0]-27, _position[1]+18, -395);       
+			glVertex3d(_position[0]-27, _position[1]-18, -395);       
+			glVertex3d(_position[0]+27, _position[1]-18, -395);       
+			glVertex3d(_position[0]+27, _position[1]+18, -395);
 		
-		//side1
-		glVertex3d(_position[0]-27, _position[1]-18, -400);
-		glVertex3d(_position[0]+27, _position[1]-18, -400);
-		glVertex3d(_position[0]+27, _position[1]-18, -395);
-		glVertex3d(_position[0]-27, _position[1]-18, -395);
+			//side1
+			glVertex3d(_position[0]-27, _position[1]-18, -400);
+			glVertex3d(_position[0]+27, _position[1]-18, -400);
+			glVertex3d(_position[0]+27, _position[1]-18, -395);
+			glVertex3d(_position[0]-27, _position[1]-18, -395);
 		
-		//side2
-		glVertex3d(_position[0]+27, _position[1]-18, -400);
-		glVertex3d(_position[0]+27, _position[1]+18, -400);
-		glVertex3d(_position[0]+27, _position[1]+18, -395);
-		glVertex3d(_position[0]+27, _position[1]-18, -395);
+			//side2
+			glVertex3d(_position[0]+27, _position[1]-18, -400);
+			glVertex3d(_position[0]+27, _position[1]+18, -400);
+			glVertex3d(_position[0]+27, _position[1]+18, -395);
+			glVertex3d(_position[0]+27, _position[1]-18, -395);
+			
+			//side3
+			glVertex3d(_position[0]-27, _position[1]+18, -400);
+			glVertex3d(_position[0]+27, _position[1]+18, -400);
+			glVertex3d(_position[0]+27, _position[1]+18, -395);
+			glVertex3d(_position[0]-27, _position[1]+18, -395);
 		
-		//side3
-		glVertex3d(_position[0]-27, _position[1]+18, -400);
-		glVertex3d(_position[0]+27, _position[1]+18, -400);
-		glVertex3d(_position[0]+27, _position[1]+18, -395);
-		glVertex3d(_position[0]-27, _position[1]+18, -395);
-		
-		//side4
-		glVertex3d(_position[0]-27, _position[1]-18, -400);
-		glVertex3d(_position[0]-27, _position[1]+18, -400);
-		glVertex3d(_position[0]-27, _position[1]+18, -395);
-		glVertex3d(_position[0]-27, _position[1]-18, -395);
+			//side4
+			glVertex3d(_position[0]-27, _position[1]-18, -400);
+			glVertex3d(_position[0]-27, _position[1]+18, -400);
+			glVertex3d(_position[0]-27, _position[1]+18, -395);
+			glVertex3d(_position[0]-27, _position[1]-18, -395);
 		
 		glEnd();
 	}

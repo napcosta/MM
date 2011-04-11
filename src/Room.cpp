@@ -103,6 +103,8 @@ namespace Micromachines {
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 		
+		glColor3d(0, 0, 0);
+		
 		glBegin(GL_QUADS);
 			glTexCoord2d(0, 0);
 			glVertex3d(0, 0, -400.05);
