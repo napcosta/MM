@@ -36,10 +36,9 @@ namespace Micromachines {
 		double _mass;
 		double _maxSpeed;
 		double _movForce;
-		
-		
+		int _life;
                  
-        GLMmodel *model;
+		GLMmodel *model;
 
 	public:
 		Car(std::string id);
@@ -55,6 +54,9 @@ namespace Micromachines {
 		double getVelocity();
 		cg::Vector3d getPosition();
 		cg::Vector2d getArrowKeyPressed();
+		int getLife();
+		bool isCollision(cg::Vector3d pos, cg::Vector2d size);
+		void decreaseLife();
 		void setMovForce(double force);
 	};
 

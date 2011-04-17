@@ -27,6 +27,9 @@ namespace Micromachines {
 		_maxSpeed = cg::Properties::instance()->getDouble("CAR_MAX_SPEED");
 		_rotationSpeed = cg::Properties::instance()->getDouble("CAR_ROTATION_SPEED");
 		_movForce = cg::Properties::instance()->getDouble("CAR_MOV_FORCE");
+		_life = cg::Properties::instance()->getInt("CAR_MAX_LIFE");
+		
+		
 		_winHeight = cg::Manager::instance()->getApp()->getWindow().height;
 		_velocity = 0.0;
 		_appForce = cg::Vector2d(0.0,0.0);
@@ -169,5 +172,21 @@ namespace Micromachines {
 	double Car::getVelocity()
 	{
 		return _velocity;
+	}
+	
+	int Car::getLife()
+	{
+		return _life;
+	}
+	
+	bool Car::isCollision(cg::Vector3d pos, cg::Vector2d size)
+	{
+		return (_position[0] > pos[0]-size[0] && _position[0] < pos[0]+size[0] && _position[1] > pos[1]-size[1] && _position[1] < pos[1]+size[1]); 
+	}
+	
+	void Car::decreaseLife()
+	{	
+		if (_life > 0)
+			_life -= 10;
 	}
 }
