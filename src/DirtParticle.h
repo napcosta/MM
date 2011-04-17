@@ -10,6 +10,7 @@
 #include "cg.h"
 #include "Particle.h"
 #include "Car.h"
+#include "TrackManager.h"
 namespace Micromachines {
 
 	class DirtParticle : public Particle
@@ -20,7 +21,9 @@ namespace Micromachines {
 		cg::Vector3d _color;
 		cg::Vector3d _velocity, _acceleration;
 		double _winWidth, _winHeight;
+		bool _carOfTrack;
 		Car* _car;
+		TrackManager* _trackManager;
 
 	//	double randomBetween(double min, double max);
 

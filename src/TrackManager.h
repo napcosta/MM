@@ -34,6 +34,8 @@ namespace Micromachines {
 		void trackType5(cg::Vector3d pos, int x, int y);
 		void trackType6(cg::Vector3d pos, int x, int y);
 		std::vector<int> range(int x, int y);
+		
+		bool _ofTrack; 
 	    
 	protected:
 		void createEntities();
@@ -43,6 +45,7 @@ namespace Micromachines {
 		~TrackManager();
 		void update(unsigned long elapsed_millis);
 		int getTypeFromMatrix(int x, int y);
+		bool isOfTrack();
 	};
 }
 

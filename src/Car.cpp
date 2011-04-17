@@ -35,10 +35,7 @@ namespace Micromachines {
 		_atrittionFactor = 100;
 		_mass = 500;
 		_arrowKeyPressed =cg::Vector2d(0.0, 0.0);
-        
         	model = glmReadOBJ((char*)"src/Models/smart.obj");
-
-        
 		glmUnitize(model);
         	glmFacetNormals(model);
         	glmVertexNormals(model, 90.0);
