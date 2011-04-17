@@ -2,6 +2,7 @@
 #define HUD_H
 
 #include "cg.h"
+#include "Car.h"
 
 
 namespace Micromachines {
@@ -9,6 +10,14 @@ namespace Micromachines {
 	class HUD : public cg::IDrawOverlayListener,
 		    public cg::Entity {
 		
+		private:
+			Car *_car;
+			int _winWidth;
+			int _winHeight;
+			    int _max;
+			    
+			void drawLifeBar();
+			    
 		public: 
 			HUD();
 			~HUD();

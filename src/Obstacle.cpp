@@ -31,6 +31,7 @@ namespace Micromachines {
 		} else _isMovable = false;
 		_initialPos = _position;
 		_direction = -1;
+		_car = (Car*) cg::Registry::instance()->get("Car");
 	}
     
 	void Obstacle::draw()
@@ -99,6 +100,12 @@ namespace Micromachines {
 			if (_position[0] > _initialPos[0] && _direction == 1){
 				_position[0] += VELOCITY;
 			}
+		}
+		
+		cg::Vector2d size = cg::Vector2d(27, 18);
+		if (_car->isCollision(_position, size)) {
+			std::cout << "Bati" << std::endl;
+			_car->decreaseLife();
 		}
 	}
     
