@@ -72,11 +72,11 @@ namespace Micromachines {
 					if(_car->getVelocity()*80 < randomBetween(1, 10)) {
 						Particle::setDRAW(false);
 					}
-				}
-				else if (carKeyPressed[1] == 1 && _trackManager->isOfTrack() == true) // If the car accelerates, all particles should be visible
+				} else if (carKeyPressed[1] == 1 && _trackManager->isOfTrack() == true) { // If the car accelerates, all particles should be visible
 					Particle::setDRAW(true);
-				else if (_trackManager->isOfTrack() == false) // If the car gets of track, no particle should be visible
+				} else if (_trackManager->isOfTrack() == false) { // If the car gets of track, no particle should be visible
 					Particle::setDRAW(false);
+				}
 				Particle::setPosition(_position);
 			
 		}

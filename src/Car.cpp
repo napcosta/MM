@@ -7,7 +7,6 @@
 
 //TODO: Code must be cleaned. Most of it belongs in Controller.cpp and PhysicalEntity.cpp
 // and the .ini file should be updated with the physical parameters for the matter.
-//TODO: Speed should be normalized
 
 #include "Car.h"
 
@@ -59,6 +58,11 @@ namespace Micromachines {
 		return _movForce;
 	}
 	
+	void Car::setMovForce(double force)
+	{
+		_movForce = force;
+	}
+	
 //	void Car::setRotationSpeed(int rotSpeed)
 //	{
 //		_rotationSpeed = rotSpeed;
@@ -82,6 +86,8 @@ namespace Micromachines {
 
 	void Car::update(unsigned long elapsed_millis)
 	{
+		
+		printf("%f\n", _velocity);
 
 		double time = (double) elapsed_millis;
 		
@@ -91,14 +97,14 @@ namespace Micromachines {
 			_velocity = _maxSpeed;
 			
 		
-		_acceleration[1] = _appForce[1]/_mass;
-		_velocity += _acceleration[1]*time;
+		_acceleration[1] = _appForce[1]/_mass ;
+		_velocity += _acceleration[1]*time - _velocity*_movForce;
 		
 		if (_appForce[1] >= 0 && _velocity > 0 && _arrowKeyPressed[1] == 0)
-			_appForce[1] = -_movForce;
+			_appForce[1] = -_movForce/2;
 
 		else if (_appForce[1] <= 0 && _velocity < 0 && _arrowKeyPressed[1] == 0)
-			_appForce[1] = _movForce;
+			_appForce[1] = _movForce/2;
 		
 	//	if (_appForce[1] < 0 && _velocity == 0)
 	//		_appForce[1] == 0.9;
