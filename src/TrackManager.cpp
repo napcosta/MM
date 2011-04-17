@@ -211,7 +211,7 @@ namespace Micromachines {
 		double b3 = (ranges[3]-45) - m3*(ranges[1]-45);
 		
 		double m4 = (double)((ranges[3]-9)-(ranges[3]-27))/((ranges[0]+27)-(ranges[0]+9));
-		double b4 = (ranges[3]-9) - m4*(ranges[1]-27);
+		double b4 = (ranges[3]-9) - m4*(ranges[0]+27);
 		
 		if ((pos[0] > ranges[1]-27) || (pos[1] < ranges[2] + 27) || (pos[1] < pos[0]*m1 + b1) ||
 		    (pos[1] < pos[0]*m2 + b2) || (pos[1] < pos[0]*m3+b3) || ((pos[1] > pos[0]*m4+b4) && 
