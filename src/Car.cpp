@@ -84,7 +84,7 @@ namespace Micromachines {
 	void Car::update(unsigned long elapsed_millis)
 	{
 		
-		printf("%f\n", _velocity);
+//		printf("%f\n", _velocity);
 
 		double time = (double) elapsed_millis;
 		
