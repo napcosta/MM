@@ -55,6 +55,7 @@ namespace Micromachines {
 		double getVelocity();
 		cg::Vector3d getPosition();
 		cg::Vector2d getArrowKeyPressed();
+		void setMovForce(double force);
 	};
 
 }

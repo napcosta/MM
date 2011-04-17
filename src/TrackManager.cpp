@@ -19,6 +19,8 @@ namespace Micromachines {
 		_floor = std::vector<std::vector<int> >(_size, std::vector<int>(_size, 0));
 		_car = (Car*) cg::Registry::instance()->get("Car");
 		_ofTrack = false;
+		_ofTrackForce = cg::Properties::instance()->getDouble("CAR_OUT_OF_TRACK_FORCE");
+		_onTrackForce = cg::Properties::instance()->getDouble("CAR_MOV_FORCE");
 	}
     
 	TrackManager::~TrackManager(){}
@@ -106,11 +108,13 @@ namespace Micromachines {
 		std::vector<int> ranges = range(x, y);
 		
 		if (pos[0] < ranges[0]+ 27 || pos[0] > ranges[1] - 27){
-			std::cout << "Estou fora" << std::endl;
+		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
+			_car->setMovForce(_ofTrackForce);
 		} else { 
-			std::cout << "Estou dentro" << std::endl;
+		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
+			_car->setMovForce(_onTrackForce);
 		}
 	}
 	
@@ -133,11 +137,13 @@ namespace Micromachines {
 		if ((pos[0] < ranges[0]+ 27) || (pos[1] > ranges[3] - 27) || (pos[1] > pos[0]*m1 + b1) ||
 		    (pos[1] > pos[0]*m2 + b2) || (pos[1] > pos[0]*m3+b3) || ((pos[1] < pos[0]*m4+b4) && 
 		    (pos[0] > ranges[1] - 27) && (pos[1] < ranges[2] + 27))) {
-			std::cout << "Estou fora" << std::endl;
+		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
+			_car->setMovForce(_ofTrackForce);
 		} else {
-			std::cout << "Estou dentro" << std::endl;
+		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
+			_car->setMovForce(_onTrackForce);
 		}
 	}
 	
@@ -160,11 +166,13 @@ namespace Micromachines {
 		if ((pos[0] > ranges[1]-27) || (pos[1] > ranges[3] - 27) || (pos[1] < pos[0]*m1 + b1) ||
 		    (pos[1] > pos[0]*m2 + b2) || (pos[1] > pos[0]*m3+b3) || ((pos[1] < pos[0]*m4+b4) &&
 		    (pos[0] > ranges[0] + 27) && (pos[1] < ranges[2] + 27))) {
-			std::cout << "Estou fora" << std::endl;
+		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
+			_car->setMovForce(_ofTrackForce);
 		} else { 
-			std::cout << "Estou dentro" << std::endl;
+		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
+			_car->setMovForce(_onTrackForce);
 		}
 		
 	}
@@ -188,11 +196,13 @@ namespace Micromachines {
 		if ((pos[0] < ranges[0]+27) || (pos[1] < ranges[2] + 27) || (pos[1] < pos[0]*m1 + b1) ||
 		    (pos[1] < pos[0]*m2 + b2) || (pos[1] < pos[0]*m3+b3) || ((pos[1] > pos[0]*m4+b4) &&
 		    (pos[0] > ranges[0] + 27) && (pos[1] > ranges[2] + 27))) {
-			std::cout << "Estou fora" << std::endl;
+		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
+			_car->setMovForce(_ofTrackForce);
 		} else { 
-			std::cout << "Estou dentro" << std::endl;
+		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
+			_car->setMovForce(_onTrackForce);
 		}
 		
 	}
@@ -216,11 +226,13 @@ namespace Micromachines {
 		if ((pos[0] > ranges[1]-27) || (pos[1] < ranges[2] + 27) || (pos[1] < pos[0]*m1 + b1) ||
 		    (pos[1] < pos[0]*m2 + b2) || (pos[1] < pos[0]*m3+b3) || ((pos[1] > pos[0]*m4+b4) && 
 		    (pos[0] < ranges[0] + 27) && (pos[1] > ranges[3] - 27))) {
-			std::cout << "Estou fora" << std::endl;
+		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
+			_car->setMovForce(_ofTrackForce);
 		} else {
-			std::cout << "Estou dentro" << std::endl;
+		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
+			_car->setMovForce(_onTrackForce);
 		}
 		
 	}
@@ -230,11 +242,13 @@ namespace Micromachines {
 		std::vector<int> ranges = range(x, y);
 		
 		if (pos[1] < ranges[2]+ 27 || pos[1] > ranges[3] - 27) {
-			std::cout << "Estou fora" << std::endl;
+		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
+			_car->setMovForce(_ofTrackForce);
 		} else { 
-			std::cout << "Estou dentro" << std::endl;
+			//std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
+			_car->setMovForce(_onTrackForce);
 		}
 	}
 	
@@ -247,7 +261,9 @@ namespace Micromachines {
 		switch (type) {
 				
 			case 0:
-				std::cout << "Estou fora" << std::endl;
+				_ofTrack = true;
+				_car->setMovForce(_ofTrackForce);
+			//	std::cout << "Estou fora" << std::endl;
 				break;
 			case 1:
 				trackType1(pos, mat[0], mat[1]);
