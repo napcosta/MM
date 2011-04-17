@@ -58,13 +58,14 @@ namespace Micromachines {
 	{
 		std::string s = "1st";
 		glColor3f(0.0f, 0.0f, 0.0f);
-		glRasterPos2d(0, 0);
+		glRasterPos2d(300, 450);
 		
        		for (int i = 0; s[i] != '\0'; i++) {
 
         		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, s[i]);
         	}
         	
+        	/********************OVERLAY ELAPSED TIME***********************/
         	int minutes = (glutGet(GLUT_ELAPSED_TIME)/60000)%60;
         	int seconds = (glutGet(GLUT_ELAPSED_TIME)/1000)%60;
         	int tenthsecs = (glutGet(GLUT_ELAPSED_TIME)/10) % 100;
@@ -79,13 +80,18 @@ namespace Micromachines {
 
         		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, strtime[j]);
         	}
+		/*******************************************************************/
 		
+		/************************ OVERLAY SPEED ****************************/
 		std::ostringstream vel;
-		vel << _car->getVelocity();
+		vel << (int) (_car->getVelocity()*1200) << " km/h";
 		std::string velocity = vel.str();
+		glColor3f(0.3f, 1.0f, 1.0f);
+		glRasterPos2d(50, 50);
+		for(int k = 0; velocity[k] != '\0'; k++)
+			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, velocity[k]);
 		
-		glRasterPos2d(20, 300);
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, velocity[0]);
+		/*******************************************************************/
 		
 		drawLifeBar();
 	}
