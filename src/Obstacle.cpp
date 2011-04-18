@@ -106,6 +106,10 @@ namespace Micromachines {
 		if (_car->isCollision(_position, size)) {
 			std::cout << "Bati" << std::endl;
 			_car->decreaseLife();
+			if (_car->getVelocity() >= 0)
+				_car->setVelocity(-1);
+			else
+				_car->setVelocity(0.3);
 		}
 	}
     

@@ -174,6 +174,11 @@ namespace Micromachines {
 		return _velocity;
 	}
 	
+	void Car::setVelocity(double velocity)
+	{
+		_velocity = velocity;
+	}
+	
 	int Car::getLife()
 	{
 		return _life;
