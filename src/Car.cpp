@@ -152,6 +152,11 @@ namespace Micromachines {
 	{
 		_appForce = force;
 	}
+	
+	double Car::getAppForce()
+	{
+		return _appForce[1];
+	}
 
 	cg::Vector2d Car::getArrowKeyPressed() {
 		return _arrowKeyPressed;

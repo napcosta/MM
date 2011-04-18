@@ -59,6 +59,7 @@ namespace Micromachines {
 		void decreaseLife();
 		void setMovForce(double force);
 		void setVelocity(double velocity);
+		double getAppForce();
 	};
 
 }
