@@ -102,14 +102,20 @@ namespace Micromachines {
 			}
 		}
 		
+		bool frontCollision;
+		
 		cg::Vector2d size = cg::Vector2d(27, 18);
 		if (_car->isCollision(_position, size)) {
-			std::cout << "Bati" << std::endl;
 			_car->decreaseLife();
 			if (_car->getVelocity() >= 0)
-				_car->setVelocity(-1);
+				frontCollision = true;
 			else
+				frontCollision = false;
+			if (_car->getVelocity() >= 0 && frontCollision == true) {
+				_car->setVelocity(-1);
+			} else if (_car->getVelocity()<0 && frontCollision == false) {
 				_car->setVelocity(0.3);
+			}
 		}
 	}
     

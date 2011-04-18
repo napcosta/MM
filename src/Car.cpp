@@ -42,8 +42,10 @@ namespace Micromachines {
         	glmFacetNormals(model);
         	glmVertexNormals(model, 90.0);
  		glmScale(model, _size[0]);
-		_carRotation = 0;
+		_carRotation = -90;
 		_position[2] = -396;
+		_position[0] = -4;
+		_position[1] = -113;
 		
 
 	}
@@ -143,6 +145,7 @@ namespace Micromachines {
 			_carRotation += _appForce[0]; // BAD LAZY PROGRAMMING: _appForce, in this case, is the car rotation speed
 		_position[0] += cos(_carRotation * PI/180 + PI/2) * (_velocity*time + (_acceleration[1]*time*time)/2);
 		_position[1] += sin(_carRotation * PI/180 + PI/2) * (_velocity*time + (_acceleration[1]*time*time)/2);
+	//	printf("%f - %f\n", _position[0], _position[1]);
 	}
 
 	void Car::applyForce(cg::Vector2d force)
