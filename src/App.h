@@ -21,6 +21,7 @@
 #include "Lights.h"
 #include "Room.h"
 #include "HUD.h"
+#include "ReactiveObject.h"
 
 namespace Micromachines {
 

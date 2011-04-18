@@ -80,6 +80,8 @@
 		B073721B13424E8600163303 /* TrackPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = B073721913424E8400163303 /* TrackPiece.h */; };
 		B089524B133BD6110076FED5 /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0895249133BD6110076FED5 /* Obstacle.cpp */; };
 		B089524C133BD6110076FED5 /* Obstacle.h in Headers */ = {isa = PBXBuildFile; fileRef = B089524A133BD6110076FED5 /* Obstacle.h */; };
+		B0C846EA135C87E900CDC0B8 /* ReactiveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0C846E8135C87E900CDC0B8 /* ReactiveObject.cpp */; };
+		B0C846EB135C87E900CDC0B8 /* ReactiveObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B0C846E9135C87E900CDC0B8 /* ReactiveObject.h */; };
 		B0CC6C18135230C2000C33FF /* DirtParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CC6C14135230C1000C33FF /* DirtParticle.cpp */; };
 		B0CC6C19135230C2000C33FF /* DirtParticle.h in Headers */ = {isa = PBXBuildFile; fileRef = B0CC6C15135230C1000C33FF /* DirtParticle.h */; };
 		B0CC6C1A135230C2000C33FF /* DirtParticleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CC6C16135230C1000C33FF /* DirtParticleManager.cpp */; };
@@ -192,6 +194,9 @@
 		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
 		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
 		B08FDC25134B8FB400C32C90 /* carpet.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = carpet.bmp; sourceTree = "<group>"; };
+		B0A75D59135B584C007E9BB8 /* config.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = config.ini; path = ../config.ini; sourceTree = "<group>"; };
+		B0C846E8135C87E900CDC0B8 /* ReactiveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReactiveObject.cpp; sourceTree = "<group>"; };
+		B0C846E9135C87E900CDC0B8 /* ReactiveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveObject.h; sourceTree = "<group>"; };
 		B0CC6C14135230C1000C33FF /* DirtParticle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirtParticle.cpp; sourceTree = "<group>"; };
 		B0CC6C15135230C1000C33FF /* DirtParticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirtParticle.h; sourceTree = "<group>"; };
 		B0CC6C16135230C1000C33FF /* DirtParticleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirtParticleManager.cpp; sourceTree = "<group>"; };
@@ -356,6 +361,7 @@
 		B0E7836E13390808003FA6CB /* src */ = {
 			isa = PBXGroup;
 			children = (
+				B0A75D59135B584C007E9BB8 /* config.ini */,
 				B0C5FA8C1347C2BA001327BA /* Textures */,
 				B07372151342423300163303 /* Models */,
 				B0CC6C14135230C1000C33FF /* DirtParticle.cpp */,
@@ -397,6 +403,8 @@
 				B073721913424E8400163303 /* TrackPiece.h */,
 				B01B299A134A491100EF6438 /* Room.cpp */,
 				B01B299B134A491100EF6438 /* Room.h */,
+				B0C846E8135C87E900CDC0B8 /* ReactiveObject.cpp */,
+				B0C846E9135C87E900CDC0B8 /* ReactiveObject.h */,
 			);
 			name = src;
 			path = ../src;
@@ -474,6 +482,7 @@
 				B000B180134F9896008E2AF9 /* HUD.h in Headers */,
 				B0CC6C19135230C2000C33FF /* DirtParticle.h in Headers */,
 				B0CC6C1B135230C2000C33FF /* DirtParticleManager.h in Headers */,
+				B0C846EB135C87E900CDC0B8 /* ReactiveObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +594,7 @@
 				B000B17F134F9896008E2AF9 /* HUD.cpp in Sources */,
 				B0CC6C18135230C2000C33FF /* DirtParticle.cpp in Sources */,
 				B0CC6C1A135230C2000C33FF /* DirtParticleManager.cpp in Sources */,
+				B0C846EA135C87E900CDC0B8 /* ReactiveObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

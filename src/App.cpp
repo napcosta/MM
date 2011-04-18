@@ -28,6 +28,11 @@ namespace Micromachines {
 		addEntity(new ObstacleManager("ObstacleManager"));
 		addEntity(new TrackManager("TrackManager", 2020));
 		addEntity(new HUD());
+		cg::Vector3d reactPos;
+		reactPos[0] = -160;
+		reactPos[1] = -52;
+		reactPos[2] = -400;
+		addEntity(new ReactiveObject(reactPos));
 	}
 
 }
