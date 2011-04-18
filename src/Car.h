@@ -58,6 +58,7 @@ namespace Micromachines {
 		bool isCollision(cg::Vector3d pos, cg::Vector2d size);
 		void decreaseLife();
 		void setMovForce(double force);
+		void setVelocity(double velocity);
 	};
 
 }
