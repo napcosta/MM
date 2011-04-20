@@ -194,7 +194,7 @@ namespace Micromachines {
 	
 	bool Car::isCollision(cg::Vector3d pos, cg::Vector2d size)
 	{
-		return (_position[0] > pos[0]-size[0] && _position[0] < pos[0]+size[0] && _position[1] > pos[1]-size[1] && _position[1] < pos[1]+size[1]); 
+		return (_position[0]+5 > pos[0]-size[0] && _position[0]-5 < pos[0]+size[0] && _position[1]+5 > pos[1]-size[1] && _position[1]-5 < pos[1]+size[1]); 
 	}
 	
 	void Car::decreaseLife()

@@ -25,7 +25,8 @@ namespace Micromachines {
 	}
 	
 	void Room::drawWalls()
-	{
+	{	
+		glColor3d(1, 1, 1);
 		glEnable(GL_TEXTURE_2D);
 		glBindTexture(GL_TEXTURE_2D, _textureWall);
 		

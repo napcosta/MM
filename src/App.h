@@ -21,7 +21,7 @@
 #include "Lights.h"
 #include "Room.h"
 #include "HUD.h"
-#include "ReactiveObject.h"
+#include "CollisionManager.h"
 
 namespace Micromachines {
 

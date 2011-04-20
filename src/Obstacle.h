@@ -35,6 +35,7 @@ namespace Micromachines {
 	public:
 		Obstacle(std::string name);
 		~Obstacle();
+		cg::Vector3d getPosition();
 		void init();
 		void draw();
 		void update(unsigned long elapsed_millis);

@@ -107,6 +107,8 @@
 		B0E7838C13390808003FA6CB /* PhysicalEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837D13390808003FA6CB /* PhysicalEntity.h */; };
 		B0EF578C1343D2AE00AB8CF4 /* TrackManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */; };
 		B0EF578D1343D2AE00AB8CF4 /* TrackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */; };
+		B0FB07BF135F745500227FE4 /* CollisionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0FB07BD135F745500227FE4 /* CollisionManager.cpp */; };
+		B0FB07C0135F745500227FE4 /* CollisionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0FB07BE135F745500227FE4 /* CollisionManager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +227,8 @@
 		B0E7837D13390808003FA6CB /* PhysicalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalEntity.h; sourceTree = "<group>"; };
 		B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrackManager.cpp; sourceTree = "<group>"; };
 		B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackManager.h; sourceTree = "<group>"; };
+		B0FB07BD135F745500227FE4 /* CollisionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
+		B0FB07BE135F745500227FE4 /* CollisionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,6 +409,8 @@
 				B01B299B134A491100EF6438 /* Room.h */,
 				B0C846E8135C87E900CDC0B8 /* ReactiveObject.cpp */,
 				B0C846E9135C87E900CDC0B8 /* ReactiveObject.h */,
+				B0FB07BD135F745500227FE4 /* CollisionManager.cpp */,
+				B0FB07BE135F745500227FE4 /* CollisionManager.h */,
 			);
 			name = src;
 			path = ../src;
@@ -483,6 +489,7 @@
 				B0CC6C19135230C2000C33FF /* DirtParticle.h in Headers */,
 				B0CC6C1B135230C2000C33FF /* DirtParticleManager.h in Headers */,
 				B0C846EB135C87E900CDC0B8 /* ReactiveObject.h in Headers */,
+				B0FB07C0135F745500227FE4 /* CollisionManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +602,7 @@
 				B0CC6C18135230C2000C33FF /* DirtParticle.cpp in Sources */,
 				B0CC6C1A135230C2000C33FF /* DirtParticleManager.cpp in Sources */,
 				B0C846EA135C87E900CDC0B8 /* ReactiveObject.cpp in Sources */,
+				B0FB07BF135F745500227FE4 /* CollisionManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

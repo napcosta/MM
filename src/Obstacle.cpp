@@ -101,23 +101,11 @@ namespace Micromachines {
 				_position[0] += VELOCITY;
 			}
 		}
-		
-		bool frontCollision;
-		
-		cg::Vector2d size = cg::Vector2d(27, 18);
-		if (_car->getAppForce() >= 0)
-			frontCollision = true;
-		else
-			frontCollision = false;
-		if (_car->isCollision(_position, size)) {
-			_car->decreaseLife();
-			if (frontCollision == true)
-				_car->setVelocity(-0.1);
-			else if (frontCollision == false) {
-				_car->setVelocity(0.06);
-				puts("here!");
-			}
-		}
+	}
+	
+	cg::Vector3d Obstacle::getPosition()
+	{
+		return _position;
 	}
     
 }

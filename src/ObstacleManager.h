@@ -16,6 +16,7 @@
 #include <cstdlib>
 #include "cg.h"
 #include "Obstacle.h"
+#include "ReactiveObject.h"
 
 namespace Micromachines {
     
@@ -25,6 +26,10 @@ namespace Micromachines {
                             public cg::IDrawOverlayListener {
 	private:
 		std::string _obstacleMessage;
+		std::vector<Obstacle*> _obstacles;
+		std::vector<ReactiveObject*> _reactObstacles;
+		typedef std::vector<Obstacle*>::iterator tObstacleIterator;
+		typedef std::vector<ReactiveObject*>::iterator tReactObstaclesIterator;
                                 
 	protected:
 		void createEntities();
@@ -34,6 +39,10 @@ namespace Micromachines {
 		ObstacleManager(std::string id);
 		~ObstacleManager();
 		void drawOverlay();
+		void draw();
+		void update(unsigned long elapsed_millis);
+		std::vector<Obstacle*> getObstacles();
+		std::vector<ReactiveObject*> getReactObstacles();
                                 
 	};
     

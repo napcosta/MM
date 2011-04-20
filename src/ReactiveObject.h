@@ -27,6 +27,7 @@ namespace Micromachines {
 		void init();
 		void draw();
 		void update(unsigned long elapsed_millis);
+		cg::Vector3d getPosition();
 	};
 }
 
