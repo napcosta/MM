@@ -109,6 +109,8 @@
 		B0EF578D1343D2AE00AB8CF4 /* TrackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */; };
 		B0FB07BF135F745500227FE4 /* CollisionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0FB07BD135F745500227FE4 /* CollisionManager.cpp */; };
 		B0FB07C0135F745500227FE4 /* CollisionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0FB07BE135F745500227FE4 /* CollisionManager.h */; };
+		B0FB07C3135FABC200227FE4 /* DoubleCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */; };
+		B0FB07C4135FABC200227FE4 /* DoubleCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = B0FB07C2135FABC200227FE4 /* DoubleCamera.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +231,8 @@
 		B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackManager.h; sourceTree = "<group>"; };
 		B0FB07BD135F745500227FE4 /* CollisionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
 		B0FB07BE135F745500227FE4 /* CollisionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionManager.h; sourceTree = "<group>"; };
+		B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleCamera.cpp; sourceTree = "<group>"; };
+		B0FB07C2135FABC200227FE4 /* DoubleCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleCamera.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +374,8 @@
 				B07372151342423300163303 /* Models */,
 				B0CC6C14135230C1000C33FF /* DirtParticle.cpp */,
 				B0CC6C15135230C1000C33FF /* DirtParticle.h */,
+				B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */,
+				B0FB07C2135FABC200227FE4 /* DoubleCamera.h */,
 				B0CC6C16135230C1000C33FF /* DirtParticleManager.cpp */,
 				B0CC6C17135230C1000C33FF /* DirtParticleManager.h */,
 				B000B17D134F9896008E2AF9 /* HUD.cpp */,
@@ -490,6 +496,7 @@
 				B0CC6C1B135230C2000C33FF /* DirtParticleManager.h in Headers */,
 				B0C846EB135C87E900CDC0B8 /* ReactiveObject.h in Headers */,
 				B0FB07C0135F745500227FE4 /* CollisionManager.h in Headers */,
+				B0FB07C4135FABC200227FE4 /* DoubleCamera.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +610,7 @@
 				B0CC6C1A135230C2000C33FF /* DirtParticleManager.cpp in Sources */,
 				B0C846EA135C87E900CDC0B8 /* ReactiveObject.cpp in Sources */,
 				B0FB07BF135F745500227FE4 /* CollisionManager.cpp in Sources */,
+				B0FB07C3135FABC200227FE4 /* DoubleCamera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
