@@ -82,9 +82,7 @@ namespace Micromachines {
 		if (DRAW) {
 			cg::Vector3d min = _position - _size/100.0;
 			cg::Vector3d max = _position + _size/100.0;
-		//	printf("P ->%f, %f, %f \n", min[0], min[1], min[2]);
 			glColor3dv(_color.get());
-			//glLineWidth(1.5);
 			glBegin(GL_QUADS);
 				glVertex3d(min[0], min[1], min[2]);
 				glVertex3d(max[0], min[1], min[2]);
@@ -121,7 +119,6 @@ namespace Micromachines {
 	void Particle::update(unsigned long elapsed_millis)
 	{
 		double elapsed_seconds = elapsed_millis / 1000.0;
-	//	_position += _velocity * elapsed_seconds + 1/2*GFORCE*elapsed_seconds*elapsed_seconds;
 		if (_position[0] < 0) {
 			_position[0] = randomBetween(0, _winWidth);
 			_position[1] = randomBetween(0, _winHeight);

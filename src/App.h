@@ -13,7 +13,7 @@
 #include "ParticleManager.h"
 #include "DirtParticleManager.h"
 #include "Controller.h"
-//#include "NearCamera.h"
+#include "NearCamera.h"
 #include "DoubleCamera.h"
 #include "Particle.h"
 #include "Car.h"

@@ -60,8 +60,8 @@ namespace Micromachines {
 				_velocity[1] = Particle::randomBetween(-50*(sin(_car->getRotation()*PI/180 + PI/2))-10,
 								       -50*(sin(_car->getRotation()*PI/180 + PI/2))+10); // y direction
 				_position[2] = -400;
-				_position[0] = Particle::randomBetween(_position[0]-3, _position[0]+3);
-				_position[1] = Particle::randomBetween(_position[1]-3, _position[1]+3);
+				_position[0] = Particle::randomBetween(_position[0]-4, _position[0]+4);
+				_position[1] = Particle::randomBetween(_position[1]-4, _position[1]+4);
 				
 				/* If the speed drops, I want less and less particles to become visible on screen.
 				   I will select particles not to be drawn randomly when the speed drops */
@@ -78,7 +78,6 @@ namespace Micromachines {
 					Particle::setDRAW(false);
 				}
 				Particle::setPosition(_position);
-			
 		}
 	}
 }
