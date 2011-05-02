@@ -28,7 +28,7 @@ namespace Micromachines {
 	//	double randomBetween(double min, double max);
 
 	public:
-		DirtParticle(std::string id, cg::Vector3d color, cg::Vector3d velocity);
+		DirtParticle(std::string id, cg::Vector3d color, cg::Vector3d velocity, Car* car);
 		~DirtParticle();
 		void init();
 		void reset(cg::Vector3d position);

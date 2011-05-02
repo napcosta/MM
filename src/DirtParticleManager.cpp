@@ -10,8 +10,9 @@
 namespace Micromachines
 	{
 
-	DirtParticleManager::DirtParticleManager(std::string id) : cg::Entity(id)
+	DirtParticleManager::DirtParticleManager(std::string id, Car* car) : cg::Entity(id)
 	{
+		_car = car;
 	}
 
 	DirtParticleManager::~DirtParticleManager()
@@ -23,17 +24,13 @@ namespace Micromachines
 
 	void DirtParticleManager::init()
 	{
-		_car = (Car*) cg::Registry::instance()->get("Car");
-		_position = cg::Vector3d(0, 200, -380); //_car->getPosition();
-	//	_size = cg::Vector3d(100, 100, 100);
 		_color = cg::Vector3d(0.2, 0.13, 0.00);
 		_velocity = cg::Vector3d(0,0, 0);
-		cg::Vector3d tmp = _car->getPosition();
 		int nDirtParticle = cg::Properties::instance()->getInt("NDIRTPARTICLE");
 		for (int i=0; i < nDirtParticle; i++) {
 			std::ostringstream os;
 			os << "DirtParticle" << i;
-			DirtParticle *dirtParticle = new DirtParticle(os.str(), _color, _velocity);
+			DirtParticle *dirtParticle = new DirtParticle(os.str(), _color, _velocity, _car);
 			dirtParticle->init();
 			_DirtParticles.push_back(dirtParticle);
 		}

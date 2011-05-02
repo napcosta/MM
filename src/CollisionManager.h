@@ -16,7 +16,7 @@
 namespace Micromachines {
 	class CollisionManager : public cg::Entity, public cg::IUpdateListener {
 	private:
-		Car* _car;
+		std::vector<Car*> _players;
 		ObstacleManager* _obstacleManager;
 		typedef std::vector<Obstacle*>::iterator tObstacleIterator;
 		typedef std::vector<ReactiveObject*>::iterator tReactObstaclesIterator;

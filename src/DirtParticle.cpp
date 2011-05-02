@@ -9,13 +9,14 @@
 
 namespace Micromachines {
 
-	DirtParticle::DirtParticle(std::string id, cg::Vector3d color, cg::Vector3d velocity) : Particle(id)
+	DirtParticle::DirtParticle(std::string id, cg::Vector3d color, cg::Vector3d velocity, Car* car) : Particle(id)
 	{
 		Particle::setColor(color);
 		Particle::setVelocity(velocity);
 		Particle::setMass(cg::Properties::instance()->getDouble("DIRT_PARTICLE_MASS"));
 		_color = color;
 		_velocity = velocity;
+		_car = car;
 	}
 
 	DirtParticle::~DirtParticle()
@@ -32,7 +33,6 @@ namespace Micromachines {
 		cg::tWindow win = cg::Manager::instance()->getApp()->getWindow();
 		_winWidth = win.width;
 		_winHeight = win.height;
-		_car = (Car*) cg::Registry::instance()->get("Car");
 		_trackManager = (TrackManager*) cg::Registry::instance()->get("TrackManager");
 		_position = _car->getPosition();
 		_position[2] = -420;

@@ -20,7 +20,7 @@ namespace Micromachines {
 	
 	void ReactiveObject::init()
 	{
-		_car = (Car*)cg::Registry::instance()->get("Car");
+		_car = (Car*)cg::Registry::instance()->get("Player1");
 		_initPos = _position;
 	}
 	

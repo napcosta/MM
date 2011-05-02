@@ -18,7 +18,8 @@ namespace Micromachines{
 	
 	void CollisionManager::init()
 	{
-		_car = (Car*)cg::Registry::instance()->get("Car");
+		_players.push_back((Car*)cg::Registry::instance()->get("Player1"));
+		_players.push_back((Car*)cg::Registry::instance()->get("Player2"));
 		_obstacleManager = (ObstacleManager*)cg::Registry::instance()->get("ObstacleManager");
 	}
 	
@@ -28,34 +29,39 @@ namespace Micromachines{
 		
 		for(tObstacleIterator i = _obstacleManager->getObstacles().begin(); i != _obstacleManager->getObstacles().end(); i++){
 			cg::Vector2d size = cg::Vector2d(27, 18);
-			if (_car->getAppForce() >= 0)
-				frontCollision = true;
-			else
-				frontCollision = false;
-			if (_car->isCollision((*i)->getPosition(), size)) {
-				_car->decreaseLife();
-				if (frontCollision == true)
-					_car->setVelocity(-0.1);
-				else if (frontCollision == false) {
-					_car->setVelocity(0.06);
-					puts("here!");
+			
+			for (int j = 0; j < _players.size(); j++) {
+				if (_players[j]->getAppForce() >= 0)
+					frontCollision = true;
+				else
+					frontCollision = false;
+				if (_players[j]->isCollision((*i)->getPosition(), size)) {
+					_players[j]->decreaseLife();
+					if (frontCollision == true)
+						_players[j]->setVelocity(-0.1);
+					else if (frontCollision == false) {
+						_players[j]->setVelocity(0.06);
+						puts("here!");
+					}
 				}
 			}
 		}
 		
 		for(tReactObstaclesIterator i = _obstacleManager->getReactObstacles().begin(); i != _obstacleManager->getReactObstacles().end(); i++){
 			cg::Vector2d size = cg::Vector2d(27, 18);
-			if (_car->getAppForce() >= 0)
-				frontCollision = true;
-			else
-				frontCollision = false;
-			if (_car->isCollision((*i)->getPosition(), size)) {
-				_car->decreaseLife();
-				if (frontCollision == true)
-					_car->setVelocity(-0.1);
-				else if (frontCollision == false) {
-					_car->setVelocity(0.06);
-					puts("here!");
+			for (int j = 0; j < _players.size(); j++) {
+				if (_players[j]->getAppForce() >= 0)
+					frontCollision = true;
+				else
+					frontCollision = false;
+				if (_players[j]->isCollision((*i)->getPosition(), size)) {
+					_players[j]->decreaseLife();
+					if (frontCollision == true)
+						_players[j]->setVelocity(-0.1);
+					else if (frontCollision == false) {
+						_players[j]->setVelocity(0.06);
+						puts("here!");
+					}
 				}
 			}
 		}

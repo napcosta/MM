@@ -10,14 +10,11 @@
 
 #include "cg.h"
 
-#include "ParticleManager.h"
-#include "DirtParticleManager.h"
 #include "Controller.h"
 //#include "NearCamera.h"
 #include "DoubleCamera.h"
-#include "Particle.h"
-#include "Car.h"
 #include "ObstacleManager.h"
+#include "DirtParticleManager.h"
 #include "TrackManager.h"
 #include "Lights.h"
 #include "Room.h"

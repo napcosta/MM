@@ -13,7 +13,6 @@
 #define VELOCITY 0.1
 
 #include "cg.h"
-#include "Car.h"
 
 namespace Micromachines {
 	class Obstacle : public cg::Entity,
@@ -25,7 +24,6 @@ namespace Micromachines {
 		cg::Vector3d _position, _color, _initialPos;
 		double _winHeight, _winWidth;
 		bool _isMovable;
-		Car* _car;
         
 		int RandomBeetween(int min, int max);
 		void drawCircle();

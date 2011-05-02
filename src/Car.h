@@ -37,11 +37,12 @@ namespace Micromachines {
 		double _maxSpeed;
 		double _movForce;
 		int _life;
+		int _player;
                  
 		GLMmodel *model;
 
 	public:
-		Car(std::string id);
+		Car(std::string id, int player);
 		~Car();
 		void init();
 		void draw();

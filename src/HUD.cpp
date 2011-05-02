@@ -12,7 +12,7 @@ namespace Micromachines {
 	
 	void HUD::init()
 	{
-		_car = (Car*) cg::Registry::instance()->get("Car");
+		_car = (Car*) cg::Registry::instance()->get("Player1");
 		cg::tWindow win = cg::Manager::instance()->getApp()->getWindow();
 		_winWidth = win.width;
 		_winHeight = win.height;

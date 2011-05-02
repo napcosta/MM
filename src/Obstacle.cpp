@@ -31,7 +31,6 @@ namespace Micromachines {
 		} else _isMovable = false;
 		_initialPos = _position;
 		_direction = -1;
-		_car = (Car*) cg::Registry::instance()->get("Car");
 	}
     
 	void Obstacle::draw()

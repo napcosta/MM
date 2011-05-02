@@ -229,6 +229,8 @@
 		B0E7837D13390808003FA6CB /* PhysicalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalEntity.h; sourceTree = "<group>"; };
 		B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrackManager.cpp; sourceTree = "<group>"; };
 		B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackManager.h; sourceTree = "<group>"; };
+		B0F4D57A136F444100ECC7F2 /* smart2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart2.mtl; sourceTree = "<group>"; };
+		B0F4D57B136F444100ECC7F2 /* smart2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart2.obj; sourceTree = "<group>"; };
 		B0FB07BD135F745500227FE4 /* CollisionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
 		B0FB07BE135F745500227FE4 /* CollisionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionManager.h; sourceTree = "<group>"; };
 		B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleCamera.cpp; sourceTree = "<group>"; };
@@ -349,6 +351,8 @@
 		B07372151342423300163303 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B0F4D57A136F444100ECC7F2 /* smart2.mtl */,
+				B0F4D57B136F444100ECC7F2 /* smart2.obj */,
 				B07372161342423300163303 /* smart.mtl */,
 				B07372171342423300163303 /* smart.obj */,
 			);
@@ -384,8 +388,8 @@
 				B027CC1F1344AD9D00209BF5 /* Lights.h */,
 				B0D1067C1348F37900CD94F2 /* ImageLoader.cpp */,
 				B0D1067D1348F37900CD94F2 /* ImageLoader.h */,
-				B0E7836F13390808003FA6CB /* App.cpp */,
 				B0E7837013390808003FA6CB /* App.h */,
+				B0E7836F13390808003FA6CB /* App.cpp */,
 				B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */,
 				B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */,
 				B0E7837113390808003FA6CB /* FarCamera.cpp */,

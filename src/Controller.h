@@ -17,8 +17,9 @@ namespace Micromachines {
 			   public cg::IKeyboardEventListener {
 
 	private:
-		Car* _car;
-		cg::Vector2d _dirKeys;
+		Car* _player1;
+		Car* _player2;
+		cg::Vector2d _dirKeysP1, _dirKeysP2;
 
 
 

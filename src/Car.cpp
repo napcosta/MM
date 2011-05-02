@@ -13,8 +13,9 @@
 
 namespace Micromachines {
 
-	Car::Car(std::string id) : cg::Entity(id)
+	Car::Car(std::string id, int player) : cg::Entity(id)
 	{
+		_player = player;
 	}
 
 	Car::~Car()
@@ -37,15 +38,24 @@ namespace Micromachines {
 		_atrittionFactor = 100;
 		_mass = 500;
 		_arrowKeyPressed =cg::Vector2d(0.0, 0.0);
-        	model = glmReadOBJ((char*)"src/Models/smart.obj");
+		if (_player==1){
+			model = glmReadOBJ((char*)"src/Models/smart.obj");
+			_position[0] = -4;
+			_position[1] = -113;
+			_position[2] = -396;
+		}
+		else {
+			model = glmReadOBJ((char*)"src/Models/smart2.obj");
+			_position[0] = -4;
+			_position[1] = -95;
+			_position[2] = -396;
+		}
 		glmUnitize(model);
         	glmFacetNormals(model);
         	glmVertexNormals(model, 90.0);
  		glmScale(model, _size[0]);
 		_carRotation = -90;
-		_position[2] = -396;
-		_position[0] = -4;
-		_position[1] = -113;
+		
 		
 
 	}

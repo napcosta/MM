@@ -21,70 +21,120 @@ namespace Micromachines {
 
 	void Controller::init()
 	{
-		_car = (Car*) cg::Registry::instance()->get("Car");
-		_dirKeys = cg::Vector2d(0.0, 0.0);
+		_player1 = (Car*) cg::Registry::instance()->get("Player1");
+		_player2 = (Car*) cg::Registry::instance()->get("Player2");
+		_dirKeysP1 = cg::Vector2d(0.0, 0.0);
+		_dirKeysP2 = cg::Vector2d(0.0, 0.0);
 	}
 
 	void Controller::onKeyPressed(unsigned char key)
 	{
 		if (key == 27) {
 			cg::Manager::instance()->shutdownApp();
+		} else {
+			//for player2
+			cg::Vector2d keys = _player2->getArrowKeyPressed();
+			switch (key) {
+				case 'w':
+					_dirKeysP2[1]=0.02;
+					keys[1] += 1;
+					break;
+				case 's':
+					_dirKeysP2[1]= -0.05;
+					keys[1] -= 1;
+					break;
+				case 'a':
+					_dirKeysP2[0] += _player2->getRotationSpeed();
+					keys[0] -= 1;
+					break;
+				case 'd':
+					_dirKeysP2[0] -= _player2->getRotationSpeed();
+					keys[0] += 1;
+					break;
+			}
+			_player2->applyForce(_dirKeysP2);
+			_player2->setArrowKeyPressed(keys);
 		}
 	}
 
 	void Controller::onKeyReleased(unsigned char key)
 	{
-
+		//for player2
+		cg::Vector2d arrowKeyPressed = _player2->getArrowKeyPressed();
+		switch (key) {
+			case 'w':
+				_dirKeysP2[1] = -_player2->getMovForce();
+				arrowKeyPressed[1] -=1;
+				break;
+			case 's':
+				_dirKeysP2[1] = _player2->getMovForce();
+				arrowKeyPressed[1] += 1;
+				break;
+			case 'a':
+				_dirKeysP2[0] -= _player2->getRotationSpeed();
+				arrowKeyPressed[0] += 1;
+				break;
+			case 'd':
+				_dirKeysP2[0] += _player2->getRotationSpeed();
+				arrowKeyPressed[0] -= 1;
+				break;
+		}
+		_player2->applyForce(_dirKeysP2);
+		_player2->setArrowKeyPressed(arrowKeyPressed);
 	}
 
 	void Controller::onSpecialKeyPressed(int key)
 	{
-		cg::Vector2d keys = _car->getArrowKeyPressed();
+		//for player1
+		cg::Vector2d keys = _player1->getArrowKeyPressed();
 		switch (key) {
 		case GLUT_KEY_UP:
-			_dirKeys[1]=0.02;
+			_dirKeysP1[1]=0.02;
 			keys[1] += 1;
 			break;
 		case GLUT_KEY_DOWN:
-			_dirKeys[1]= -0.05;
+			_dirKeysP1[1]= -0.05;
 			keys[1] -= 1;
 			break;
 		case GLUT_KEY_LEFT:
-			_dirKeys[0] += _car->getRotationSpeed();
+			_dirKeysP1[0] += _player1->getRotationSpeed();
 			keys[0] -= 1;
 			break;
 		case GLUT_KEY_RIGHT:
-			_dirKeys[0] -= _car->getRotationSpeed();
+			_dirKeysP1[0] -= _player1->getRotationSpeed();
 			keys[0] += 1;
  			break;
 		}
-		_car->applyForce(_dirKeys);
-		_car->setArrowKeyPressed(keys);
+		_player1->applyForce(_dirKeysP1);
+		_player1->setArrowKeyPressed(keys);
+		
 	}
 
 	void Controller::onSpecialKeyReleased(int key)
 	{
-		cg::Vector2d arrowKeyPressed = _car->getArrowKeyPressed();
+		//for player1
+		cg::Vector2d arrowKeyPressed = _player1->getArrowKeyPressed();
 		switch (key) {
 		case GLUT_KEY_UP:
-			_dirKeys[1] = -_car->getMovForce();
+			_dirKeysP1[1] = -_player1->getMovForce();
 			arrowKeyPressed[1] -=1;
 			break;
 		case GLUT_KEY_DOWN:
-			_dirKeys[1] = _car->getMovForce();
+			_dirKeysP1[1] = _player1->getMovForce();
 			arrowKeyPressed[1] += 1;
 			break;
 		case GLUT_KEY_LEFT:
-			_dirKeys[0] -= _car->getRotationSpeed();
+			_dirKeysP1[0] -= _player1->getRotationSpeed();
 			arrowKeyPressed[0] += 1;
 			break;
 		case GLUT_KEY_RIGHT:
-			_dirKeys[0] += _car->getRotationSpeed();
+			_dirKeysP1[0] += _player1->getRotationSpeed();
 			arrowKeyPressed[0] -= 1;
 			break;
 		}
-		_car->applyForce(_dirKeys);
-		_car->setArrowKeyPressed(arrowKeyPressed);
+		_player1->applyForce(_dirKeysP1);
+		_player1->setArrowKeyPressed(arrowKeyPressed);
+		
 	}
 
 }

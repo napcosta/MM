@@ -23,8 +23,17 @@ namespace Micromachines {
 		addEntity(new DoubleCamera());
 		addEntity(new Lights());
 		//addEntity(new ParticleManager("ParticleMngr"));
-		addEntity(new DirtParticleManager("DirtParticleMngr"));
-		addEntity(new Car("Car"));
+		
+		//add player1
+		addEntity(new Car("Player1", 1));
+		Car *_car = (Car*)cg::Registry::instance()->get("Player1");
+		addEntity(new DirtParticleManager("DPM1", _car));
+		
+		//add Player2
+		addEntity(new Car("Player2", 2));
+		_car = (Car*)cg::Registry::instance()->get("Player2");
+		addEntity(new DirtParticleManager("DPM2", _car));
+		
 		addEntity(new Controller());
 		addEntity(new ObstacleManager("ObstacleManager"));
 		addEntity(new TrackManager("TrackManager", 2020));

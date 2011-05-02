@@ -28,7 +28,7 @@ namespace Micromachines {
 		
 
 	public:
-		DirtParticleManager(std::string id);
+		DirtParticleManager(std::string id, Car* car);
 		~DirtParticleManager();
 		void init();
 		void update(unsigned long elapsed_millis);

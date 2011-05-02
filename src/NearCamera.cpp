@@ -19,7 +19,7 @@ namespace Micromachines {
 
 	void NearCamera::init() {
 		cg::tWindow win = cg::Manager::instance()->getApp()->getWindow();
-		_car = (Car*) cg::Registry::instance()->get("Car");
+		_car = (Car*) cg::Registry::instance()->get("Player1");
 		_winWidth = win.width;
 		_winHeight = win.height;
 	}
