@@ -20,13 +20,14 @@ namespace Micromachines {
 	void App::createEntities()
 	{
 		//addEntity(new NearCamera());
-		addEntity(new NearCamera());
-		addEntity(new Lights());
+		addEntity(new DoubleCamera());
 		//addEntity(new ParticleManager("ParticleMngr"));
 		addEntity(new DirtParticleManager("DirtParticleMngr"));
+		addEntity(new PowerUpManager("PowerUpManager"));
 		addEntity(new Car("Car"));
 		addEntity(new Controller());
-		addEntity(new ObstacleManager("ObstacleManager"));
+		//addEntity(new ObstacleManager("OM"));
+		
 		addEntity(new TrackManager("TrackManager", 2020));
 		addEntity(new HUD());
 		cg::Vector3d reactPos;
@@ -34,6 +35,7 @@ namespace Micromachines {
 		reactPos[1] = -52;
 		reactPos[2] = -400;
 		addEntity(new ReactiveObject(reactPos));
+		addEntity(new Lights());
 	}
 
 }

@@ -32,7 +32,7 @@ namespace Micromachines {
 				glMatrixMode(GL_PROJECTION);
 				glLoadIdentity();
 				gluPerspective(60, _winWidth/_winHeight, 1, 3000);
-				gluLookAt(-_position[0], -_position[1] +0.01, -355, 
+				gluLookAt(-_position[0] -100 , -_position[1], -355, 
 						-_position[0], -_position[1], -396, 
 						0, 0 , 1);
 				glMatrixMode(GL_MODELVIEW);
