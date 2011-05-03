@@ -107,6 +107,10 @@
 		B0E7838C13390808003FA6CB /* PhysicalEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E7837D13390808003FA6CB /* PhysicalEntity.h */; };
 		B0EF578C1343D2AE00AB8CF4 /* TrackManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0EF578A1343D2AE00AB8CF4 /* TrackManager.cpp */; };
 		B0EF578D1343D2AE00AB8CF4 /* TrackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */; };
+		B0F4D595136F89B400ECC7F2 /* PowerUp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0F4D591136F89B300ECC7F2 /* PowerUp.cpp */; };
+		B0F4D596136F89B400ECC7F2 /* PowerUp.h in Headers */ = {isa = PBXBuildFile; fileRef = B0F4D592136F89B300ECC7F2 /* PowerUp.h */; };
+		B0F4D597136F89B400ECC7F2 /* PowerUpManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0F4D593136F89B300ECC7F2 /* PowerUpManager.cpp */; };
+		B0F4D598136F89B400ECC7F2 /* PowerUpManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0F4D594136F89B400ECC7F2 /* PowerUpManager.h */; };
 		B0FB07BF135F745500227FE4 /* CollisionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0FB07BD135F745500227FE4 /* CollisionManager.cpp */; };
 		B0FB07C0135F745500227FE4 /* CollisionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0FB07BE135F745500227FE4 /* CollisionManager.h */; };
 		B0FB07C3135FABC200227FE4 /* DoubleCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */; };
@@ -231,6 +235,10 @@
 		B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackManager.h; sourceTree = "<group>"; };
 		B0F4D57A136F444100ECC7F2 /* smart2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart2.mtl; sourceTree = "<group>"; };
 		B0F4D57B136F444100ECC7F2 /* smart2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart2.obj; sourceTree = "<group>"; };
+		B0F4D591136F89B300ECC7F2 /* PowerUp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PowerUp.cpp; sourceTree = "<group>"; };
+		B0F4D592136F89B300ECC7F2 /* PowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUp.h; sourceTree = "<group>"; };
+		B0F4D593136F89B300ECC7F2 /* PowerUpManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PowerUpManager.cpp; sourceTree = "<group>"; };
+		B0F4D594136F89B400ECC7F2 /* PowerUpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUpManager.h; sourceTree = "<group>"; };
 		B0FB07BD135F745500227FE4 /* CollisionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
 		B0FB07BE135F745500227FE4 /* CollisionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionManager.h; sourceTree = "<group>"; };
 		B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleCamera.cpp; sourceTree = "<group>"; };
@@ -376,6 +384,10 @@
 				B0A75D59135B584C007E9BB8 /* config.ini */,
 				B0C5FA8C1347C2BA001327BA /* Textures */,
 				B07372151342423300163303 /* Models */,
+				B0F4D591136F89B300ECC7F2 /* PowerUp.cpp */,
+				B0F4D592136F89B300ECC7F2 /* PowerUp.h */,
+				B0F4D593136F89B300ECC7F2 /* PowerUpManager.cpp */,
+				B0F4D594136F89B400ECC7F2 /* PowerUpManager.h */,
 				B0CC6C14135230C1000C33FF /* DirtParticle.cpp */,
 				B0CC6C15135230C1000C33FF /* DirtParticle.h */,
 				B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */,
@@ -501,6 +513,8 @@
 				B0C846EB135C87E900CDC0B8 /* ReactiveObject.h in Headers */,
 				B0FB07C0135F745500227FE4 /* CollisionManager.h in Headers */,
 				B0FB07C4135FABC200227FE4 /* DoubleCamera.h in Headers */,
+				B0F4D596136F89B400ECC7F2 /* PowerUp.h in Headers */,
+				B0F4D598136F89B400ECC7F2 /* PowerUpManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +629,8 @@
 				B0C846EA135C87E900CDC0B8 /* ReactiveObject.cpp in Sources */,
 				B0FB07BF135F745500227FE4 /* CollisionManager.cpp in Sources */,
 				B0FB07C3135FABC200227FE4 /* DoubleCamera.cpp in Sources */,
+				B0F4D595136F89B400ECC7F2 /* PowerUp.cpp in Sources */,
+				B0F4D597136F89B400ECC7F2 /* PowerUpManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

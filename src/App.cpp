@@ -39,6 +39,7 @@ namespace Micromachines {
 		
 		addEntity(new TrackManager("TrackManager", 2020));
 		addEntity(new HUD());
+		addEntity(new ObstacleManager("OM"));
 		addEntity(new CollisionManager());
 		addEntity(new Lights());
 	}
