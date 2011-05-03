@@ -20,7 +20,7 @@ namespace Micromachines{
 	{
 		_players.push_back((Car*)cg::Registry::instance()->get("Player1"));
 		_players.push_back((Car*)cg::Registry::instance()->get("Player2"));
-		_obstacleManager = (ObstacleManager*)cg::Registry::instance()->get("ObstacleManager");
+		_obstacleManager = (ObstacleManager*)cg::Registry::instance()->get("OM");
 	}
 	
 	void CollisionManager::update(unsigned long elapsed_millis)
