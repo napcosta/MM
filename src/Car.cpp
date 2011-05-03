@@ -86,9 +86,9 @@ namespace Micromachines {
 		glLineWidth(1);        
 		glMatrixMode(GL_PROJECTION);
 		glPushMatrix();
-			glTranslatef(_position[0],_position[1]-0.17*_size[0],0.0); //TODO: Still doesn't rotate along it's front weels
+			glTranslatef(_position[0],_position[1]-_size[0]*0.75,0.0);
 		    	glRotatef(_carRotation, 0.0, 0.0, 1.0);
-		    	glTranslatef(-_position[0],-_position[1]+0.17*_size[0],0.0);
+		    	glTranslatef(-_position[0],-_position[1]+_size[0]*0.75,0.0);
 		    	glTranslatef(_position[0], _position[1], -396);//-396
 		    	glRotated(90, 1.0, 0.0, 0.0);
 		    	glRotated(180, 0.0, 1.0, 0.0);
@@ -98,8 +98,6 @@ namespace Micromachines {
 
 	void Car::update(unsigned long elapsed_millis)
 	{
-		
-//		printf("%f\n", _velocity);
 
 		double time = (double) elapsed_millis;
 		
@@ -117,11 +115,7 @@ namespace Micromachines {
 
 		else if (_appForce[1] <= 0 && _velocity < 0 && _arrowKeyPressed[1] == 0)
 			_appForce[1] = _movForce/2;
-		
-	//	if (_appForce[1] < 0 && _velocity == 0)
-	//		_appForce[1] == 0.9;
-			
-		
+
 		/* UGLY HACK!! This prevents the arrow keys from not doing the turning
 		 * To reproduce the bug: While the car is deaccelerating quickly press
 		 * left (and let go), right (and keep it pressed) then press up */
@@ -179,7 +173,9 @@ namespace Micromachines {
 	
 	cg::Vector3d Car::getPosition()
 	{
-		return _position;	
+		cg::Vector3d pos = _position;
+		pos[1] -=_size[0]*0.75;	 //This is a workaround that has to do with the translation of the car...
+		return pos;
 	}
 	
 	double Car::getRotation()

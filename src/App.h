@@ -10,8 +10,11 @@
 
 #include "cg.h"
 
+#include "ParticleManager.h"
+#include "PowerUpManager.h"
+#include "DirtParticleManager.h"
 #include "Controller.h"
-//#include "NearCamera.h"
+#include "NearCamera.h"
 #include "DoubleCamera.h"
 #include "ObstacleManager.h"
 #include "DirtParticleManager.h"

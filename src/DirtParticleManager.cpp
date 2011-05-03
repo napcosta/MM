@@ -36,7 +36,7 @@ namespace Micromachines
 		}
 	}
 	
-		double DirtParticleManager::randomBetween(double min, double max)
+	double DirtParticleManager::randomBetween(double min, double max)
 	{
 		return (rand() / (double)RAND_MAX * (max-min)) + min;
 	}

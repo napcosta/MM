@@ -21,9 +21,8 @@ namespace Micromachines {
 	{
 		//addEntity(new NearCamera());
 		addEntity(new DoubleCamera());
-		addEntity(new Lights());
 		//addEntity(new ParticleManager("ParticleMngr"));
-		
+
 		//add player1
 		addEntity(new Car("Player1", 1));
 		Car *_car = (Car*)cg::Registry::instance()->get("Player1");
@@ -34,11 +33,14 @@ namespace Micromachines {
 		_car = (Car*)cg::Registry::instance()->get("Player2");
 		addEntity(new DirtParticleManager("DPM2", _car));
 		
+		addEntity(new PowerUpManager("PowerUpManager"));
 		addEntity(new Controller());
-		addEntity(new ObstacleManager("ObstacleManager"));
+		//addEntity(new ObstacleManager("OM"));
+		
 		addEntity(new TrackManager("TrackManager", 2020));
 		addEntity(new HUD());
 		addEntity(new CollisionManager());
+		addEntity(new Lights());
 	}
 
 }
