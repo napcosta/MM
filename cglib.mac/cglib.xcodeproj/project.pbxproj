@@ -82,6 +82,7 @@
 		B073721B13424E8600163303 /* TrackPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = B073721913424E8400163303 /* TrackPiece.h */; };
 		B089524B133BD6110076FED5 /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0895249133BD6110076FED5 /* Obstacle.cpp */; };
 		B089524C133BD6110076FED5 /* Obstacle.h in Headers */ = {isa = PBXBuildFile; fileRef = B089524A133BD6110076FED5 /* Obstacle.h */; };
+		B0B287BC1371EF580098BE03 /* Collidable.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B287BA1371EF580098BE03 /* Collidable.h */; };
 		B0C846EA135C87E900CDC0B8 /* ReactiveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0C846E8135C87E900CDC0B8 /* ReactiveObject.cpp */; };
 		B0C846EB135C87E900CDC0B8 /* ReactiveObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B0C846E9135C87E900CDC0B8 /* ReactiveObject.h */; };
 		B0CC6C18135230C2000C33FF /* DirtParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CC6C14135230C1000C33FF /* DirtParticle.cpp */; };
@@ -195,20 +196,21 @@
 		B027CC1F1344AD9D00209BF5 /* Lights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lights.h; sourceTree = "<group>"; };
 		B02B1B90137194BD00C25180 /* PlayerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerManager.cpp; sourceTree = "<group>"; };
 		B02B1B91137194BD00C25180 /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
-		B0385E31133BE208003D302E /* ObstacleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObstacleManager.cpp; sourceTree = "<group>"; };
-		B0385E32133BE208003D302E /* ObstacleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObstacleManager.h; sourceTree = "<group>"; };
+		B0385E31133BE208003D302E /* ObstacleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ObstacleManager.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		B0385E32133BE208003D302E /* ObstacleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ObstacleManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B073720B13423A2100163303 /* glm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glm.cpp; sourceTree = "<group>"; };
 		B073720C13423A2100163303 /* glm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glm.h; sourceTree = "<group>"; };
 		B07372161342423300163303 /* smart.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart.mtl; sourceTree = "<group>"; };
 		B07372171342423300163303 /* smart.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart.obj; sourceTree = "<group>"; };
 		B073721813424E8400163303 /* TrackPiece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrackPiece.cpp; sourceTree = "<group>"; };
 		B073721913424E8400163303 /* TrackPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPiece.h; sourceTree = "<group>"; };
-		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
-		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
+		B0895249133BD6110076FED5 /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Obstacle.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		B089524A133BD6110076FED5 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Obstacle.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B08FDC25134B8FB400C32C90 /* carpet.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = carpet.bmp; sourceTree = "<group>"; };
 		B0A75D59135B584C007E9BB8 /* config.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = config.ini; path = ../config.ini; sourceTree = "<group>"; };
-		B0C846E8135C87E900CDC0B8 /* ReactiveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReactiveObject.cpp; sourceTree = "<group>"; };
-		B0C846E9135C87E900CDC0B8 /* ReactiveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveObject.h; sourceTree = "<group>"; };
+		B0B287BA1371EF580098BE03 /* Collidable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collidable.h; sourceTree = "<group>"; };
+		B0C846E8135C87E900CDC0B8 /* ReactiveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ReactiveObject.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		B0C846E9135C87E900CDC0B8 /* ReactiveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReactiveObject.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B0CC6C14135230C1000C33FF /* DirtParticle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirtParticle.cpp; sourceTree = "<group>"; };
 		B0CC6C15135230C1000C33FF /* DirtParticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirtParticle.h; sourceTree = "<group>"; };
 		B0CC6C16135230C1000C33FF /* DirtParticleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirtParticleManager.cpp; sourceTree = "<group>"; };
@@ -239,12 +241,12 @@
 		B0EF578B1343D2AE00AB8CF4 /* TrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackManager.h; sourceTree = "<group>"; };
 		B0F4D57A136F444100ECC7F2 /* smart2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart2.mtl; sourceTree = "<group>"; };
 		B0F4D57B136F444100ECC7F2 /* smart2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = smart2.obj; sourceTree = "<group>"; };
-		B0F4D591136F89B300ECC7F2 /* PowerUp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PowerUp.cpp; sourceTree = "<group>"; };
-		B0F4D592136F89B300ECC7F2 /* PowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUp.h; sourceTree = "<group>"; };
+		B0F4D591136F89B300ECC7F2 /* PowerUp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = PowerUp.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		B0F4D592136F89B300ECC7F2 /* PowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PowerUp.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B0F4D593136F89B300ECC7F2 /* PowerUpManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PowerUpManager.cpp; sourceTree = "<group>"; };
 		B0F4D594136F89B400ECC7F2 /* PowerUpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUpManager.h; sourceTree = "<group>"; };
 		B0FB07BD135F745500227FE4 /* CollisionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
-		B0FB07BE135F745500227FE4 /* CollisionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionManager.h; sourceTree = "<group>"; };
+		B0FB07BE135F745500227FE4 /* CollisionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CollisionManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleCamera.cpp; sourceTree = "<group>"; };
 		B0FB07C2135FABC200227FE4 /* DoubleCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleCamera.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,6 +394,7 @@
 				B0F4D592136F89B300ECC7F2 /* PowerUp.h */,
 				B0F4D593136F89B300ECC7F2 /* PowerUpManager.cpp */,
 				B0F4D594136F89B400ECC7F2 /* PowerUpManager.h */,
+				B0B287BA1371EF580098BE03 /* Collidable.h */,
 				B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */,
 				B0FB07C2135FABC200227FE4 /* DoubleCamera.h */,
 				B0CC6C14135230C1000C33FF /* DirtParticle.cpp */,
@@ -522,6 +525,7 @@
 				B0F4D596136F89B400ECC7F2 /* PowerUp.h in Headers */,
 				B0F4D598136F89B400ECC7F2 /* PowerUpManager.h in Headers */,
 				B02B1B93137194BD00C25180 /* PlayerManager.h in Headers */,
+				B0B287BC1371EF580098BE03 /* Collidable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

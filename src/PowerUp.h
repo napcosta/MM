@@ -13,17 +13,16 @@
 #define VELOCITY 0.1
 
 #include "cg.h"
+#include "Collidable.h"
 
 namespace Micromachines {
-	class PowerUp : public cg::Entity,
-	public cg::IDrawListener,
-	public cg::IUpdateListener
+	class PowerUp : public Collidable
 	{
 	private:
 		int _direction;
 		cg::Vector3d _position, _color, _initialPos;
 		double _winHeight, _winWidth;
-
+		cg::Vector2d _size;
 		int RandomBeetween(int min, int max);
       //  	GLMmodel *model;
         
@@ -34,6 +33,7 @@ namespace Micromachines {
 		void draw();
 		void update(unsigned long elapsed_millis);
 		cg::Vector3d getPosition();
+		cg::Vector2d getSize();
 	};
 }
 

@@ -7,10 +7,13 @@
 
 #ifndef DirtParticleMANAGER_H_
 #define DirtParticleMANAGER_H_
-#include "DirtParticle.h"
-#include "Car.h"
+
+#include "cg.h"
 
 namespace Micromachines {
+	
+	class DirtParticle;
+	class Car;
 
 	class DirtParticleManager : public cg::Entity,
 				public cg::IDrawListener,

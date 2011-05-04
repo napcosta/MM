@@ -23,19 +23,18 @@ namespace Micromachines {
 		for(int i = 0; i < nObstacles; i++) {
 			std::ostringstream os;
 			os << "Obstacle" << i;
-			Obstacle *ob = new Obstacle(os.str());
+			Collidable *ob = new Obstacle(os.str());
 			ob->init();
 			_obstacles.push_back(ob);
 		}
-		_cm->setObstacles(_obstacles);
 		cg::Vector3d reactPos;
 		reactPos[0] = -160;
 		reactPos[1] = -52;
 		reactPos[2] = -400;
-		ReactiveObject *react = new ReactiveObject(reactPos);
+		Collidable *react = new ReactiveObject(reactPos);
 		react->init();
-		_reactObstacles.push_back(react);
-		_cm->setReactObstacles(_reactObstacles);
+		_obstacles.push_back(react);
+		_cm->setObstacles(_obstacles);
 	}
 	
 	void ObstacleManager::postInit() {
@@ -49,14 +48,9 @@ namespace Micromachines {
 		cg::Util::instance()->drawBitmapString(_obstacleMessage,10,10);
 	}
 	
-	std::vector<Obstacle*> ObstacleManager::getObstacles()
+	std::vector<Collidable*> ObstacleManager::getObstacles()
 	{
 		return _obstacles;
-	}
-	
-	std::vector<ReactiveObject*> ObstacleManager::getReactObstacles()
-	{
-		return _reactObstacles;
 	}
 	
 	void ObstacleManager::draw()
@@ -64,19 +58,11 @@ namespace Micromachines {
 		for(tObstacleIterator i = _obstacles.begin(); i != _obstacles.end(); i++) {
 			(*i)->draw();
 		}
-		
-		for(tReactObstaclesIterator i = _reactObstacles.begin(); i != _reactObstacles.end(); i++) {
-			(*i)->draw();
-		}
 	}
 	
 	void ObstacleManager::update(unsigned long elapsed_millis)
 	{
 		for(tObstacleIterator i = _obstacles.begin(); i != _obstacles.end(); i++) {
-			(*i)->update(elapsed_millis);
-		}
-		
-		for(tReactObstaclesIterator i = _reactObstacles.begin(); i != _reactObstacles.end(); i++) {
 			(*i)->update(elapsed_millis);
 		}
 	}

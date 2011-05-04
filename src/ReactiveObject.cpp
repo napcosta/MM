@@ -7,10 +7,12 @@
 //
 
 #include "ReactiveObject.h"
+#include "Car.h"
+#include "PlayerManager.h"
 
 namespace Micromachines {
 	
-	ReactiveObject::ReactiveObject(cg::Vector3d pos) : cg::Entity("REACTIVE_OBJ")
+	ReactiveObject::ReactiveObject(cg::Vector3d pos) : Collidable("REACTIVE_OBJ")
 	{
 		_position = pos;
 	}
@@ -23,6 +25,7 @@ namespace Micromachines {
 		//_car = (Car*)cg::Registry::instance()->get("Car");
 		_initPos = _position;
 		_pm = (PlayerManager*)cg::Registry::instance()->get("PlayerManager");
+		_size = cg::Vector2d(27, 18);
 	}
 	
 	void ReactiveObject::draw()
@@ -30,40 +33,40 @@ namespace Micromachines {
 		glColor3d(1, 1, 0);
 		glBegin(GL_QUADS);
 		//top
-		glVertex3d(_position[0]-27, _position[1]+18, -400);       
-		glVertex3d(_position[0]-27, _position[1]-18, -400);       
-		glVertex3d(_position[0]+27, _position[1]-18, -400);       
-		glVertex3d(_position[0]+27, _position[1]+18, -400);
+		glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -400);       
+		glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -400);       
+		glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -400);       
+		glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -400);
 		
 		//bottom
-		glVertex3d(_position[0]-27, _position[1]+18, -395);       
-		glVertex3d(_position[0]-27, _position[1]-18, -395);       
-		glVertex3d(_position[0]+27, _position[1]-18, -395);       
-		glVertex3d(_position[0]+27, _position[1]+18, -395);
+		glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -395);       
+		glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -395);       
+		glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -395);       
+		glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -395);
 		
 		//side1
-		glVertex3d(_position[0]-27, _position[1]-18, -400);
-		glVertex3d(_position[0]+27, _position[1]-18, -400);
-		glVertex3d(_position[0]+27, _position[1]-18, -395);
-		glVertex3d(_position[0]-27, _position[1]-18, -395);
+		glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -400);
+		glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -400);
+		glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -395);
+		glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -395);
 		
 		//side2
-		glVertex3d(_position[0]+27, _position[1]-18, -400);
-		glVertex3d(_position[0]+27, _position[1]+18, -400);
-		glVertex3d(_position[0]+27, _position[1]+18, -395);
-		glVertex3d(_position[0]+27, _position[1]-18, -395);
+		glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -400);
+		glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -400);
+		glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -395);
+		glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -395);
 		
 		//side3
-		glVertex3d(_position[0]-27, _position[1]+18, -400);
-		glVertex3d(_position[0]+27, _position[1]+18, -400);
-		glVertex3d(_position[0]+27, _position[1]+18, -395);
-		glVertex3d(_position[0]-27, _position[1]+18, -395);
+		glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -400);
+		glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -400);
+		glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -395);
+		glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -395);
 		
 		//side4
-		glVertex3d(_position[0]-27, _position[1]-18, -400);
-		glVertex3d(_position[0]-27, _position[1]+18, -400);
-		glVertex3d(_position[0]-27, _position[1]+18, -395);
-		glVertex3d(_position[0]-27, _position[1]-18, -395);
+		glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -400);
+		glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -400);
+		glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -395);
+		glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -395);
 		
 		glEnd();
 	}
@@ -91,5 +94,10 @@ namespace Micromachines {
 	cg::Vector3d ReactiveObject::getPosition()
 	{
 		return _position;
+	}
+	
+	cg::Vector2d ReactiveObject::getSize()
+	{
+		return _size;
 	}
 }

@@ -8,19 +8,18 @@
 #ifndef Car_H_
 #define Car_H_
 
-#include <string>
-#include <ctime>
-#include <math.h>
+
 #include "cg.h"
 #include "glm.h"
+#include "Collidable.h"
 
 #define PI 3.14159265
 
 namespace Micromachines {
+	
+	class CollisionManager;
 
-	class Car : public cg::Entity,
-		    public cg::IDrawListener,
-		    public cg::IUpdateListener {
+	class Car : public Collidable {
 
 	private:
 		double _winHeight;
@@ -39,8 +38,10 @@ namespace Micromachines {
 		int _life;
 		int _player;
 		int _powerUp;
+		cg::Vector2d _collisionSize;
                  
 		GLMmodel *model;
+		CollisionManager* _cm;
 
 	public:
 		Car(std::string id, int player);
@@ -55,6 +56,7 @@ namespace Micromachines {
 		double getMovForce();
 		double getVelocity();
 		cg::Vector3d getPosition();
+		cg::Vector2d getSize();
 		cg::Vector2d getArrowKeyPressed();
 		int getLife();
 		int getPowerUp();

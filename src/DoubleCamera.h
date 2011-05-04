@@ -9,12 +9,13 @@
 #define DOUBLECAMERA_H_
 
 #include "cg.h"
-#include "Car.h"
-#include "PlayerManager.h"
 
 #define PI 3.14159265
 
 namespace Micromachines {
+	
+	class PlayerManager;
+	class Car;
 
 	class DoubleCamera : public cg::Entity, public cg::IDrawListener {
 	

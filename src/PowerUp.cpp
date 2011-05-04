@@ -15,7 +15,7 @@ namespace Micromachines {
 		return (rand() % (max-min) + min);
 	}
     
-	PowerUp::PowerUp(std::string name, cg::Vector3d pos) : cg::Entity(name)
+	PowerUp::PowerUp(std::string name, cg::Vector3d pos) : Collidable(name)
 	{
 		_position = pos;
 	}
@@ -30,6 +30,7 @@ namespace Micromachines {
 		_color = cg::Vector3d(1.0, 0.0, 0.0);
 		_initialPos = _position;
 		_direction = -1;
+		_size = cg::Vector2d(0, 0);
 	}
     
 	void PowerUp::draw()
@@ -83,6 +84,11 @@ namespace Micromachines {
 	cg::Vector3d PowerUp::getPosition()
 	{
 		return _position;
+	}
+	
+	cg::Vector2d PowerUp::getSize()
+	{
+		return _size;
 	}
     
 }

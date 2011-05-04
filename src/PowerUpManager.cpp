@@ -6,6 +6,13 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#include <sstream>
+#include <string>
+#include <vector>
+#include <ctime>
+#include <cstdlib>
+#include "PowerUp.h"
+#include "CollisionManager.h"
 #include "PowerUpManager.h"
 
 namespace Micromachines {

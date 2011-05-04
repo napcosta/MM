@@ -27,10 +27,8 @@ namespace Micromachines {
                             public cg::IDrawOverlayListener {
 	private:
 		std::string _obstacleMessage;
-		std::vector<Obstacle*> _obstacles;
-		std::vector<ReactiveObject*> _reactObstacles;
-		typedef std::vector<Obstacle*>::iterator tObstacleIterator;
-		typedef std::vector<ReactiveObject*>::iterator tReactObstaclesIterator;
+		std::vector<Collidable*> _obstacles;
+		typedef std::vector<Collidable*>::iterator tObstacleIterator;
 		CollisionManager* _cm;
                                 
 	protected:
@@ -43,8 +41,7 @@ namespace Micromachines {
 		void drawOverlay();
 		void draw();
 		void update(unsigned long elapsed_millis);
-		std::vector<Obstacle*> getObstacles();
-		std::vector<ReactiveObject*> getReactObstacles();
+		std::vector<Collidable*> getObstacles();
                                 
 	};
     

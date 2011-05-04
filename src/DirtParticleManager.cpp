@@ -6,6 +6,8 @@
  */
 
 #include "DirtParticleManager.h"
+#include "DirtParticle.h"
+#include "Car.h"
 
 namespace Micromachines
 	{

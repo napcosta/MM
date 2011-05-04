@@ -15,7 +15,7 @@ namespace Micromachines {
 		return (rand() % (max-min) + min);
 	}
     
-	Obstacle::Obstacle(std::string name) : cg::Entity(name){}
+	Obstacle::Obstacle(std::string name) : Collidable(name){}
     
 	Obstacle::~Obstacle(){}
     
@@ -31,46 +31,47 @@ namespace Micromachines {
 		} else _isMovable = false;
 		_initialPos = _position;
 		_direction = -1;
+		_size = cg::Vector2d(27, 18);
 	}
     
 	void Obstacle::draw()
 	{
 		glColor3d(_color[0], _color[1], _color[2]);
 		glBegin(GL_QUADS);
-			glVertex3d(_position[0]-27, _position[1]+18, -400);       
-			glVertex3d(_position[0]-27, _position[1]-18, -400);       
-			glVertex3d(_position[0]+27, _position[1]-18, -400);       
-			glVertex3d(_position[0]+27, _position[1]+18, -400);
+			glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -400);       
+			glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -400);       
+			glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -400);       
+			glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -400);
 		
 			//bottom
-			glVertex3d(_position[0]-27, _position[1]+18, -395);       
-			glVertex3d(_position[0]-27, _position[1]-18, -395);       
-			glVertex3d(_position[0]+27, _position[1]-18, -395);       
-			glVertex3d(_position[0]+27, _position[1]+18, -395);
+			glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -395);       
+			glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -395);       
+			glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -395);       
+			glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -395);
 		
 			//side1
-			glVertex3d(_position[0]-27, _position[1]-18, -400);
-			glVertex3d(_position[0]+27, _position[1]-18, -400);
-			glVertex3d(_position[0]+27, _position[1]-18, -395);
-			glVertex3d(_position[0]-27, _position[1]-18, -395);
+			glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -400);
+			glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -400);
+			glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -395);
+			glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -395);
 		
 			//side2
-			glVertex3d(_position[0]+27, _position[1]-18, -400);
-			glVertex3d(_position[0]+27, _position[1]+18, -400);
-			glVertex3d(_position[0]+27, _position[1]+18, -395);
-			glVertex3d(_position[0]+27, _position[1]-18, -395);
+			glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -400);
+			glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -400);
+			glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -395);
+			glVertex3d(_position[0]+_size[0], _position[1]-_size[1], -395);
 			
 			//side3
-			glVertex3d(_position[0]-27, _position[1]+18, -400);
-			glVertex3d(_position[0]+27, _position[1]+18, -400);
-			glVertex3d(_position[0]+27, _position[1]+18, -395);
-			glVertex3d(_position[0]-27, _position[1]+18, -395);
+			glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -400);
+			glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -400);
+			glVertex3d(_position[0]+_size[0], _position[1]+_size[1], -395);
+			glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -395);
 		
 			//side4
-			glVertex3d(_position[0]-27, _position[1]-18, -400);
-			glVertex3d(_position[0]-27, _position[1]+18, -400);
-			glVertex3d(_position[0]-27, _position[1]+18, -395);
-			glVertex3d(_position[0]-27, _position[1]-18, -395);
+			glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -400);
+			glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -400);
+			glVertex3d(_position[0]-_size[0], _position[1]+_size[1], -395);
+			glVertex3d(_position[0]-_size[0], _position[1]-_size[1], -395);
 
 		
 		glEnd();
@@ -106,6 +107,11 @@ namespace Micromachines {
 	cg::Vector3d Obstacle::getPosition()
 	{
 		return _position;
+	}
+	
+	cg::Vector2d Obstacle::getSize()
+	{
+		return _size;
 	}
     
 }

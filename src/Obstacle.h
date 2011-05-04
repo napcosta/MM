@@ -13,19 +13,20 @@
 #define VELOCITY 0.1
 
 #include "cg.h"
-#include "Car.h"
+#include "Collidable.h"
 
 namespace Micromachines {
-	class Obstacle : public cg::Entity,
-	public cg::IDrawListener,
-	public cg::IUpdateListener
-	{
+	class Car;
+	
+	class Obstacle : public Collidable {
 	private:
 		int _direction;
 		cg::Vector3d _position, _color, _initialPos;
 		double _winHeight, _winWidth;
 		bool _isMovable;
         	Car* _car;
+		cg::Vector2d _size;
+		
 		int RandomBeetween(int min, int max);
 		void drawCircle();
 		void drawRectangle();
@@ -36,6 +37,7 @@ namespace Micromachines {
 		Obstacle(std::string name);
 		~Obstacle();
 		cg::Vector3d getPosition();
+		cg::Vector2d getSize();
 		void init();
 		void draw();
 		void update(unsigned long elapsed_millis);

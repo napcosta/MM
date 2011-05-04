@@ -7,6 +7,8 @@
 //
 
 #include "CollisionManager.h"
+#include "Car.h"
+#include "Collidable.h"
 
 namespace Micromachines{
 	
@@ -18,69 +20,50 @@ namespace Micromachines{
 	
 	void CollisionManager::init()
 	{	
-		_car = (Car*)cg::Registry::instance()->get("Car");
+		_pm = (PlayerManager*)cg::Registry::instance()->get("PlayerManager");
 	}
 	
 	void CollisionManager::update(unsigned long elapsed_millis)
 	{
+		_players = _pm->getPlayers();
 		bool frontCollision;
 		
-		for(tObstacleIterator i = _obstacles.begin(); i != _obstacles.end(); i++){
-			//	std::cout << (*i)->getId() << std::endl;
-			cg::Vector2d size = cg::Vector2d(27, 18);
-			if (_car->getAppForce() >= 0)
-				frontCollision = true;
-			else
-				frontCollision = false;
-			if (_car->isCollision((*i)->getPosition(), size)) {
-				_car->decreaseLife();
-				if (frontCollision == true)
-					_car->setVelocity(-0.1);
-				else if (frontCollision == false) {
-					_car->setVelocity(0.06);
+		for (tplayersIterator j = _players.begin(); j != _players.end(); j++) {
+			
+			for(tCollidableIterator i = _obstacles.begin(); i != _obstacles.end(); i++){
+				if ((*j)->getAppForce() >= 0)
+					frontCollision = true;
+				else
+					frontCollision = false;
+				if (((*j) != (*i)) && ((*j)->isCollision((*i)->getPosition(), (*i)->getSize()))) {
+					(*j)->decreaseLife();
+					if (frontCollision == true)
+						(*j)->setVelocity(-0.1);
+					else if (frontCollision == false) {
+						(*j)->setVelocity(0.06);
+					}
 				}
+				
 			}
 			
-		}
-		for(tReactObstaclesIterator i = _reactObstacles.begin(); i != _reactObstacles.end(); i++){
-			cg::Vector2d size = cg::Vector2d(27, 18);
-			//for (int j = 0; j < _players.size(); j++) {
-			if (_car->getAppForce() >= 0)
-				frontCollision = true;
-			else
-				frontCollision = false;
-			if (_car->isCollision((*i)->getPosition(), size)) {
-				_car->decreaseLife();
-				if (frontCollision == true)
-					_car->setVelocity(-0.1);
-				else if (frontCollision == false) {
-					_car->setVelocity(0.06);
+			for (tPowerUpIterator i = _powerUp.begin(); i != _powerUp.end(); i++) {
+				if ((*j)->isCollision((*i)->getPosition(), (*i)->getSize())) {
+					(*j)->incPowerUp();
+					puts("POWERUP");
 				}
 			}
 		}
-		
-		for (tPowerUpIterator i = _powerUp.begin(); i != _powerUp.end(); i++) {
-			cg::Vector2d size = cg::Vector2d(0, 0);
-			//std::cout << (*i)->getPosition() << std::endl;
-			if (_car->isCollision((*i)->getPosition(), size)) {
-				_car->incPowerUp();
-				puts("POWERUP");
-			}
-		}
 	}
 	
-	void CollisionManager::setObstacles(std::vector<Obstacle*> obstacles)
+	void CollisionManager::setObstacles(std::vector<Collidable*> obstacles)
 	{
-		_obstacles = obstacles;
-	}
-	
-	void CollisionManager::setReactObstacles(std::vector<ReactiveObject*> obstacles)
-	{
-		_reactObstacles = obstacles;
+		for (tCollidableIterator i = obstacles.begin(); i != obstacles.end(); i++)
+			_obstacles.push_back(*i);
 	}
 	
 	void CollisionManager::setPowerUps(std::vector<PowerUp*> powerUp)
 	{
-		_powerUp = powerUp;
+		for (tPowerUpIterator i = powerUp.begin(); i != powerUp.end(); i++) 
+			_powerUp.push_back(*i);
 	}
 }

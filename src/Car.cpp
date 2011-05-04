@@ -8,12 +8,16 @@
 //TODO: Code must be cleaned. Most of it belongs in Controller.cpp and PhysicalEntity.cpp
 // and the .ini file should be updated with the physical parameters for the matter.
 
+#include <string>
+#include <ctime>
+#include <math.h>
 #include "Car.h"
+#include "CollisionManager.h"
 
 
 namespace Micromachines {
 
-	Car::Car(std::string id, int player) : cg::Entity(id)
+	Car::Car(std::string id, int player) : Collidable(id)
 	{
 		_player = player;
 	}
@@ -30,6 +34,9 @@ namespace Micromachines {
 		_movForce = cg::Properties::instance()->getDouble("CAR_MOV_FORCE");
 		_life = cg::Properties::instance()->getInt("CAR_MAX_LIFE");
 		_powerUp = 0;
+		
+		_collisionSize = cg::Vector2d(2, 5);
+		_cm = (CollisionManager*)cg::Registry::instance()->get("COLLISION_MANAGER");
 		
 		_winHeight = cg::Manager::instance()->getApp()->getWindow().height;
 		_velocity = 0.0;
@@ -57,8 +64,9 @@ namespace Micromachines {
  		glmScale(model, _size[0]);
 		_carRotation = -90;
 		
-		
-
+		std::vector<Collidable*> thisCar;
+		thisCar.push_back(this);
+		_cm->setObstacles(thisCar);
 	}
 	
 	double Car::getRotationSpeed() 
@@ -206,7 +214,7 @@ namespace Micromachines {
 	
 	bool Car::isCollision(cg::Vector3d pos, cg::Vector2d size)
 	{
-		return (_position[0]+3 > pos[0]-size[0] && _position[0]-3 < pos[0]+size[0] && _position[1]+5 > pos[1]-size[1] && _position[1]-5 < pos[1]+size[1]); 
+		return (_position[0]+_collisionSize[0] > pos[0]-size[0] && _position[0]-_collisionSize[0] < pos[0]+size[0] && _position[1]+_collisionSize[1] > pos[1]-size[1] && _position[1]-_collisionSize[1] < pos[1]+size[1]); 
 	}
 	
 	void Car::decreaseLife()
@@ -220,5 +228,10 @@ namespace Micromachines {
 		_position = position;
 		_position[1] = position[1]+23;
 		_carRotation = rotation;
+	}
+	
+	cg::Vector2d Car::getSize()
+	{
+		return _collisionSize;
 	}
 }
