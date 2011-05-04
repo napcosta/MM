@@ -11,7 +11,7 @@
 
 #include "cg.h"
 #include "Car.h"
-//#include "ObstacleManager.h"
+#include "PowerUp.h"
 #include "Obstacle.h"
 #include "ReactiveObject.h"
 
@@ -24,8 +24,10 @@ namespace Micromachines {
 		//ObstacleManager* _obstacleManager;
 		typedef std::vector<Obstacle*>::iterator tObstacleIterator;
 		typedef std::vector<ReactiveObject*>::iterator tReactObstaclesIterator;
+		typedef std::vector<PowerUp*>::iterator tPowerUpIterator;
 		std::vector<Obstacle*> _obstacles;
-		std::vector<ReactiveObject*> _reactObstacles; 
+		std::vector<ReactiveObject*> _reactObstacles;
+		std::vector<PowerUp*> _powerUp;
 		
 	public:
 		CollisionManager();
@@ -34,6 +36,7 @@ namespace Micromachines {
 		void update(unsigned long elapsed_millis);
 		void setObstacles(std::vector<Obstacle*> obstacles);
 		void setReactObstacles(std::vector<ReactiveObject*> obstacles);
+		void setPowerUps(std::vector<PowerUp*> powerUp);
 	};
 }
 

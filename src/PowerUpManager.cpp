@@ -19,12 +19,17 @@ namespace Micromachines {
 	void PowerUpManager::createEntities() 
 	{
 		int nPowerUps = cg::Properties::instance()->getInt("N_POWERUPS");
+		_cm = (CollisionManager*)cg::Registry::instance()->get("COLLISION_MANAGER");
 		srand((unsigned)time(0));
 		for(int i = 0; i < nPowerUps; i++) {
 			cg::Vector3d pos = cg::Vector3d(-50,-125+i*20, -400);
 			std::ostringstream os;
 			os << "PowerUp" << i;
-			add(new PowerUp(os.str(), pos));
+			PowerUp *pu = new PowerUp(os.str(), pos);
+			pu->init();
+			_powerUp.push_back(pu);
+
 		}
+		_cm->setPowerUps(_powerUp);
 	}
 }

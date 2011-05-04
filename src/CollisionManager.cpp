@@ -25,41 +25,46 @@ namespace Micromachines{
 	{
 		bool frontCollision;
 		
-		//std::vector<Entity*>::iterator iend = _obstacleManager->end();
-		
 		for(tObstacleIterator i = _obstacles.begin(); i != _obstacles.end(); i++){
 			std::cout << (*i)->getId() << std::endl;
 			cg::Vector2d size = cg::Vector2d(27, 18);
-				if (_car->getAppForce() >= 0)
-					frontCollision = true;
-				else
-					frontCollision = false;
-				if (_car->isCollision((*i)->getPosition(), size)) {
-					_car->decreaseLife();
-					if (frontCollision == true)
-						_car->setVelocity(-0.1);
-					else if (frontCollision == false) {
-						_car->setVelocity(0.06);
-					}
+			if (_car->getAppForce() >= 0)
+				frontCollision = true;
+			else
+				frontCollision = false;
+			if (_car->isCollision((*i)->getPosition(), size)) {
+				_car->decreaseLife();
+				if (frontCollision == true)
+					_car->setVelocity(-0.1);
+				else if (frontCollision == false) {
+					_car->setVelocity(0.06);
 				}
+			}
 		
 		}
 		for(tReactObstaclesIterator i = _reactObstacles.begin(); i != _reactObstacles.end(); i++){
 			cg::Vector2d size = cg::Vector2d(27, 18);
 			//for (int j = 0; j < _players.size(); j++) {
-				if (_car->getAppForce() >= 0)
-					frontCollision = true;
-				else
-					frontCollision = false;
-				if (_car->isCollision((*i)->getPosition(), size)) {
-					_car->decreaseLife();
-					if (frontCollision == true)
-						_car->setVelocity(-0.1);
-					else if (frontCollision == false) {
-						_car->setVelocity(0.06);
-					}
+			if (_car->getAppForce() >= 0)
+				frontCollision = true;
+			else
+				frontCollision = false;
+			if (_car->isCollision((*i)->getPosition(), size)) {
+				_car->decreaseLife();
+				if (frontCollision == true)
+					_car->setVelocity(-0.1);
+				else if (frontCollision == false) {
+					_car->setVelocity(0.06);
 				}
-			
+			}
+		}
+		
+		for (tPowerUpIterator i = _powerUp.begin(); i != _powerUp.end(); i++) {
+			cg::Vector2d size = cg::Vector2d(27, 18);
+			//std::cout << (*i)->getPosition() << std::endl;
+			if (_car->isCollision((*i)->getPosition(), size)) {
+				puts("POWERUP");
+			}
 		}
 	}
 	
@@ -71,5 +76,10 @@ namespace Micromachines{
 	void CollisionManager::setReactObstacles(std::vector<ReactiveObject*> obstacles)
 	{
 		_reactObstacles = obstacles;
+	}
+	
+	void CollisionManager::setPowerUps(std::vector<PowerUp*> powerUp)
+	{
+		_powerUp = powerUp;
 	}
 }

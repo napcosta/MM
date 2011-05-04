@@ -77,5 +77,10 @@ namespace Micromachines {
 		
 		glEnd();
 	}
+	
+	cg::Vector3d PowerUp::getPosition()
+	{
+		return _position;
+	}
     
 }

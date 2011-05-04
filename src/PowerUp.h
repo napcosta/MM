@@ -32,6 +32,7 @@ namespace Micromachines {
 		~PowerUp();
 		void init();
 		void draw();
+		cg::Vector3d getPosition();
 	};
 }
 
