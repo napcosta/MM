@@ -13,7 +13,7 @@
 #define VELOCITY 0.1
 
 #include "cg.h"
-#include "Car.h"
+#include "PlayerManager.h"
 
 namespace Micromachines {
 	class PowerUp : public cg::Entity,
@@ -23,7 +23,7 @@ namespace Micromachines {
 		int _direction;
 		cg::Vector3d _position, _color, _initialPos;
 		double _winHeight, _winWidth;
-		Car* _car;
+		PlayerManager* _playerManager;
         
 		int RandomBeetween(int min, int max);
         

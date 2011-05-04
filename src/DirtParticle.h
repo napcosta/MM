@@ -7,10 +7,12 @@
 
 #ifndef DirtParticle_H_
 #define DirtParticle_H_
+
 #include "cg.h"
 #include "Particle.h"
 #include "Car.h"
 #include "TrackManager.h"
+
 namespace Micromachines {
 
 	class DirtParticle : public Particle

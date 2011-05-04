@@ -38,18 +38,18 @@ namespace Micromachines {
 		_atrittionFactor = 100;
 		_mass = 500;
 		_arrowKeyPressed =cg::Vector2d(0.0, 0.0);
-	//	if (_player==1){
+		if (_player==1){
 			model = glmReadOBJ((char*)"src/Models/smart.obj");
 			_position[0] = -4;
 			_position[1] = -113;
 			_position[2] = -396;
-	//	}
-/*		else {
+		}
+		else {
 			model = glmReadOBJ((char*)"src/Models/smart2.obj");
 			_position[0] = -4;
-			_position[1] = -95;
+			_position[1] = -90;
 			_position[2] = -396;
-		}*/
+		}
 		glmUnitize(model);
         	glmFacetNormals(model);
         	glmVertexNormals(model, 90.0);
@@ -81,7 +81,7 @@ namespace Micromachines {
 //	}
 	
 	void Car::draw()
-	{	
+	{
         	glColor3d(0.0, 0.0, 80.0);
 		glLineWidth(1);        
 		glMatrixMode(GL_PROJECTION);
@@ -100,7 +100,6 @@ namespace Micromachines {
 	{
 
 		double time = (double) elapsed_millis;
-		std::cout << "car " << _position << std::endl;
 		if (_velocity < -_maxSpeed)
 			_velocity = -_maxSpeed;
 		else if (_velocity > _maxSpeed)
@@ -207,5 +206,12 @@ namespace Micromachines {
 	{	
 		if (_life > 0)
 			_life -= 10;
+	}
+	
+	void Car::positionSecondPlayer(cg::Vector3d position, double rotation)
+	{
+		_position = position;
+		_position[1] = position[1]+23;
+		_carRotation = rotation;
 	}
 }

@@ -11,21 +11,21 @@
 
 #include "cg.h"
 #include "Car.h"
-//#include "ObstacleManager.h"
 #include "Obstacle.h"
 #include "ReactiveObject.h"
+#include "PlayerManager.h"
 
 
 namespace Micromachines {
 	class CollisionManager : public cg::Entity, public cg::IUpdateListener {
 	private:
-	//	std::vector<Car*> _players;
-		Car* _car;
-		//ObstacleManager* _obstacleManager;
+		PlayerManager* _pm;
 		typedef std::vector<Obstacle*>::iterator tObstacleIterator;
 		typedef std::vector<ReactiveObject*>::iterator tReactObstaclesIterator;
 		std::vector<Obstacle*> _obstacles;
-		std::vector<ReactiveObject*> _reactObstacles; 
+		std::vector<ReactiveObject*> _reactObstacles;
+		std::vector<Car*> _players;
+		typedef std::vector<Car*>::iterator tplayersIterator;
 		
 	public:
 		CollisionManager();

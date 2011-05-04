@@ -11,14 +11,16 @@
 
 #include "cg.h"
 #include "Car.h"
+#include "PlayerManager.h"
 
 namespace Micromachines {
 	class ReactiveObject : public cg::Entity, public cg::IDrawListener, public cg::IUpdateListener{
 	private:
 		cg::Vector3d _position, _initPos;
-		Car* _car;
+		PlayerManager* _pm;
+		typedef std::vector<Car*>::iterator tplayersIterator;
 		
-		bool carNear();
+		bool carNear(Car *car);
 		
 	public:
 		ReactiveObject(cg::Vector3d pos);

@@ -12,11 +12,11 @@ namespace Micromachines {
 	
 	void HUD::init()
 	{
-		_car = (Car*) cg::Registry::instance()->get("Car");
+		_pm = (PlayerManager*) cg::Registry::instance()->get("PlayerManager");
 		cg::tWindow win = cg::Manager::instance()->getApp()->getWindow();
 		_winWidth = win.width;
 		_winHeight = win.height;
-		_max = (_car->getLife()+10);
+		_car = NULL;
 	}
 	
 	void HUD::drawLifeBar()
@@ -56,44 +56,49 @@ namespace Micromachines {
 	
 	void HUD::drawOverlay()
 	{
-		std::string s = "1st";
-		glColor3f(0.0f, 0.0f, 0.0f);
-		glRasterPos2d(300, 450);
-		
-       		for (int i = 0; s[i] != '\0'; i++) {
-
-        		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, s[i]);
-        	}
-        	
-        	/********************OVERLAY ELAPSED TIME***********************/
-        	int minutes = (glutGet(GLUT_ELAPSED_TIME)/60000)%60;
-        	int seconds = (glutGet(GLUT_ELAPSED_TIME)/1000)%60;
-        	int tenthsecs = (glutGet(GLUT_ELAPSED_TIME)/10) % 100;
-        	
-        	std::ostringstream time;
-        	time << minutes << " : " << seconds;
-        	time <<  " : " << tenthsecs;
-        	
-        	std::string strtime = time.str();
-        	glRasterPos2d(20, 450);
-        	for (int j = 0; strtime[j] != '\0'; j++) {
-
-        		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, strtime[j]);
-        	}
-		/*******************************************************************/
-		
-		/************************ OVERLAY SPEED ****************************/
-		std::ostringstream vel;
-		vel << (int) (_car->getVelocity()*1200) << " km/h";
-		std::string velocity = vel.str();
-		glColor3f(0.3f, 1.0f, 1.0f);
-		glRasterPos2d(50, 50);
-		for(int k = 0; velocity[k] != '\0'; k++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, velocity[k]);
-		
-		/*******************************************************************/
-		
-		drawLifeBar();
+		if(_car == NULL)
+			_car = _pm->firstPlayer();
+		else {
+			_max = (_car->getLife()+10);
+			std::string s = "1st";
+			glColor3f(0.0f, 0.0f, 0.0f);
+			glRasterPos2d(300, 450);
+			
+			for (int i = 0; s[i] != '\0'; i++) {
+				
+				glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, s[i]);
+			}
+			
+			/********************OVERLAY ELAPSED TIME***********************/
+			int minutes = (glutGet(GLUT_ELAPSED_TIME)/60000)%60;
+			int seconds = (glutGet(GLUT_ELAPSED_TIME)/1000)%60;
+			int tenthsecs = (glutGet(GLUT_ELAPSED_TIME)/10) % 100;
+			
+			std::ostringstream time;
+			time << minutes << " : " << seconds;
+			time <<  " : " << tenthsecs;
+			
+			std::string strtime = time.str();
+			glRasterPos2d(20, 450);
+			for (int j = 0; strtime[j] != '\0'; j++) {
+				
+				glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, strtime[j]);
+			}
+			/*******************************************************************/
+			
+			/************************ OVERLAY SPEED ****************************/
+			std::ostringstream vel;
+			vel << (int) (_car->getVelocity()*1200) << " km/h";
+			std::string velocity = vel.str();
+			glColor3f(0.3f, 1.0f, 1.0f);
+			glRasterPos2d(50, 50);
+			for(int k = 0; velocity[k] != '\0'; k++)
+				glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, velocity[k]);
+			
+			/*******************************************************************/
+			
+			drawLifeBar();
+		}
 	}
 		
 

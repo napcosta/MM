@@ -18,7 +18,7 @@ namespace Micromachines{
 	
 	void CollisionManager::init()
 	{	
-		_car = (Car*)cg::Registry::instance()->get("Car");
+		//_car = (Car*)cg::Registry::instance()->get("Car");
 		//_players.push_back((Car*)cg::Registry::instance()->get("Car"));
 	//	_players.push_back((Car*)cg::Registry::instance()->get("Player2"));
 	//	_obstacleManager = (ObstacleManager*)cg::Registry::instance()->get("OM");
@@ -27,7 +27,7 @@ namespace Micromachines{
 	
 	void CollisionManager::update(unsigned long elapsed_millis)
 	{
-		bool frontCollision;
+	/*	bool frontCollision;
 		
 		//std::vector<Entity*>::iterator iend = _obstacleManager->end();
 		
@@ -72,7 +72,7 @@ namespace Micromachines{
 					}
 				}
 			
-		}
+		}*/
 	}
 	
 	void CollisionManager::setObstacles(std::vector<Obstacle*> obstacles)

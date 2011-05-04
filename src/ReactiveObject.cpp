@@ -20,8 +20,9 @@ namespace Micromachines {
 	
 	void ReactiveObject::init()
 	{
-		_car = (Car*)cg::Registry::instance()->get("Car");
+		//_car = (Car*)cg::Registry::instance()->get("Car");
 		_initPos = _position;
+		_pm = (PlayerManager*)cg::Registry::instance()->get("PlayerManager");
 	}
 	
 	void ReactiveObject::draw()
@@ -67,43 +68,45 @@ namespace Micromachines {
 		glEnd();
 	}
 	
-	bool ReactiveObject::carNear()
+	bool ReactiveObject::carNear(Car* car)
 	{
-		cg::Vector3d carPos = _car->getPosition();
+		cg::Vector3d carPos = car->getPosition();
 		
 		return (carPos[0] > _position[0]-50 && carPos[0] < _position[0]+50 && carPos[1] > _position[1]-50 && carPos[1] < _position[1]+50);
 	}
 	
 	void ReactiveObject::update(unsigned long elapsed_millis)
 	{
-		if(carNear()){
-			if(_position[0] <= _initPos[0]+20 && _position[0] >= _initPos[0])
-				_position[0] = _position[0]+5;
-		}
-		else if (_position[0] > _initPos[0])
-			_position[0] = _position[0]-5;
-	
-/*		bool frontCollision;
-		
-		cg::Vector2d size = cg::Vector2d(27, 18);
-		if (_car->getAppForce() >= 0)
-			frontCollision = true;
-		else
-			frontCollision = false;
-		if (_car->isCollision(_position, size)) {
-			_car->decreaseLife();
-			if (frontCollision == true)
-				_car->setVelocity(-0.1);
-			else if (frontCollision == false) {
-				_car->setVelocity(0.06);
-				puts("here");
+		std::vector<Car*> players = _pm->getPlayers();
+		for (tplayersIterator i = players.begin(); i != players.end(); i++) {
+			if(carNear((*i))){
+				if(_position[0] <= _initPos[0]+20 && _position[0] >= _initPos[0])
+					_position[0] = _position[0]+5;
 			}
-		}*/	
+			else if (_position[0] > _initPos[0])
+				_position[0] = _position[0]-5;
+			
+			/*		bool frontCollision;
+			 
+			 cg::Vector2d size = cg::Vector2d(27, 18);
+			 if (_car->getAppForce() >= 0)
+			 frontCollision = true;
+			 else
+			 frontCollision = false;
+			 if (_car->isCollision(_position, size)) {
+			 _car->decreaseLife();
+			 if (frontCollision == true)
+			 _car->setVelocity(-0.1);
+			 else if (frontCollision == false) {
+			 _car->setVelocity(0.06);
+			 puts("here");
+			 }
+			 }*/	
+		}
 	}
 	
 	cg::Vector3d ReactiveObject::getPosition()
 	{
-		std::cout << "reactOb " << _position << std::endl;
 		return _position;
 	}
 }

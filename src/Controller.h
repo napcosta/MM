@@ -10,6 +10,8 @@
 
 #include "cg.h"
 #include "Car.h"
+#include "PlayerManager.h"
+
 //#include <Math.h>
 namespace Micromachines {
 
@@ -17,10 +19,16 @@ namespace Micromachines {
 			   public cg::IKeyboardEventListener {
 
 	private:
-		Car* _player1;
-		Car* _player2;
+		PlayerManager* _pm;
 		cg::Vector2d _dirKeysP1, _dirKeysP2;
-
+		bool _2Players;
+		Car* _firstPlayer;
+		Car* _secondPlayer;
+				   
+		void specialKeyPressed(int key);
+				   void specialKeyReleased(int key);
+				   void keyPressed(int key);
+				   void keyReleased(int key);
 
 
 	public:
@@ -31,6 +39,7 @@ namespace Micromachines {
 		void onKeyReleased(unsigned char key);
 		void onSpecialKeyPressed(int key);
 		void onSpecialKeyReleased(int key);
+		void setPlayers(std::vector<Car*> players);
 	};
 
 }

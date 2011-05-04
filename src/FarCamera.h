@@ -9,6 +9,8 @@
 #define BEVCAMERA_H_
 #include "cg.h"
 #include "Car.h"
+#include "PlayerManager.h"
+
 #define PI 3.14159265
 
 namespace Micromachines {
@@ -19,6 +21,7 @@ namespace Micromachines {
 		double _winWidth, _winHeight;
 		double _carRotation;
 		cg::Vector3d _position;
+		PlayerManager* _pm;
 		Car* _car;
 
 	public:

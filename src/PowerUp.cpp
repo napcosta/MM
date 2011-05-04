@@ -27,7 +27,7 @@ namespace Micromachines {
 		_color = cg::Vector3d(0.9, 0.9, 0.9);
 		_initialPos = _position;
 		_direction = -1;
-		_car = (Car*) cg::Registry::instance()->get("Car");
+		_playerManager = (PlayerManager*) cg::Registry::instance()->get("PlayerManager");
 	}
     
 	void PowerUp::draw()

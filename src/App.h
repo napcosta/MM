@@ -23,6 +23,7 @@
 #include "Room.h"
 #include "HUD.h"
 #include "CollisionManager.h"
+#include "PlayerManager.h"
 
 namespace Micromachines {
 

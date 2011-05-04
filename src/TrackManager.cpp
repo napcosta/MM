@@ -7,6 +7,10 @@
 //
 
 #include "TrackManager.h"
+#include "PlayerManager.h"
+#include "TrackPiece.h"
+#include "Room.h"
+#include "Car.h"
 
 namespace Micromachines {
     
@@ -17,7 +21,7 @@ namespace Micromachines {
 			_size = floorSize/BLOCK_TRACK_SIZE;
 		else _size = floorSize/BLOCK_TRACK_SIZE+1;
 		_floor = std::vector<std::vector<int> >(_size, std::vector<int>(_size, 0));
-		_car = (Car*) cg::Registry::instance()->get("Car");
+		_pm = (PlayerManager*) cg::Registry::instance()->get("PlayerManager");
 		_ofTrack = false;
 		_ofTrackForce = cg::Properties::instance()->getDouble("CAR_OUT_OF_TRACK_FORCE");
 		_onTrackForce = cg::Properties::instance()->getDouble("CAR_MOV_FORCE");
@@ -103,22 +107,22 @@ namespace Micromachines {
 		return range;
 	}
 	
-	void TrackManager::trackType1(cg::Vector3d pos, int x, int y)
+	void TrackManager::trackType1(cg::Vector3d pos, int x, int y, Car* car)
 	{
 		std::vector<int> ranges = range(x, y);
 		
 		if (pos[0] < ranges[0]+ 27 || pos[0] > ranges[1] - 27){
 		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
-			_car->setMovForce(_ofTrackForce);
+			car->setMovForce(_ofTrackForce);
 		} else { 
 		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
-			_car->setMovForce(_onTrackForce);
+			car->setMovForce(_onTrackForce);
 		}
 	}
 	
-	void TrackManager::trackType2(cg::Vector3d pos, int x, int y)
+	void TrackManager::trackType2(cg::Vector3d pos, int x, int y, Car* car)
 	{
 		std::vector<int> ranges = range(x, y);
 		
@@ -139,15 +143,15 @@ namespace Micromachines {
 		    (pos[0] > ranges[1] - 27) && (pos[1] < ranges[2] + 27))) {
 		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
-			_car->setMovForce(_ofTrackForce);
+			car->setMovForce(_ofTrackForce);
 		} else {
 		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
-			_car->setMovForce(_onTrackForce);
+			car->setMovForce(_onTrackForce);
 		}
 	}
 	
-	void TrackManager::trackType3(cg::Vector3d pos, int x, int y)
+	void TrackManager::trackType3(cg::Vector3d pos, int x, int y, Car* car)
 	{
 		std::vector<int> ranges = range(x,y);
 		
@@ -168,16 +172,16 @@ namespace Micromachines {
 		    (pos[0] < ranges[0] + 27) && (pos[1] < ranges[2] + 27))) {
 			std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
-			_car->setMovForce(_ofTrackForce);
+			car->setMovForce(_ofTrackForce);
 		} else { 
 			std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
-			_car->setMovForce(_onTrackForce);
+			car->setMovForce(_onTrackForce);
 		}
 		
 	}
 	
-	void TrackManager::trackType4(cg::Vector3d pos, int x, int y)
+	void TrackManager::trackType4(cg::Vector3d pos, int x, int y, Car* car)
 	{
 		std::vector<int> ranges = range(x,y);
 		
@@ -198,16 +202,16 @@ namespace Micromachines {
 		    (pos[0] > ranges[0] + 27) && (pos[1] > ranges[2] + 27))) {
 		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
-			_car->setMovForce(_ofTrackForce);
+			car->setMovForce(_ofTrackForce);
 		} else { 
 		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
-			_car->setMovForce(_onTrackForce);
+			car->setMovForce(_onTrackForce);
 		}
 		
 	}
 	
-	void TrackManager::trackType5(cg::Vector3d pos, int x, int y)
+	void TrackManager::trackType5(cg::Vector3d pos, int x, int y, Car* car)
 	{
 		std::vector<int> ranges = range(x,y);
 		
@@ -228,66 +232,69 @@ namespace Micromachines {
 		    (pos[0] < ranges[0] + 27) && (pos[1] > ranges[3] - 27))) {
 		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
-			_car->setMovForce(_ofTrackForce);
+			car->setMovForce(_ofTrackForce);
 		} else {
 		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
-			_car->setMovForce(_onTrackForce);
+			car->setMovForce(_onTrackForce);
 		}
 		
 	}
 	
-	void TrackManager::trackType6(cg::Vector3d pos, int x, int y)
+	void TrackManager::trackType6(cg::Vector3d pos, int x, int y, Car* car)
 	{
 		std::vector<int> ranges = range(x, y);
 		
 		if (pos[1] < ranges[2]+ 27 || pos[1] > ranges[3] - 27) {
 		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
-			_car->setMovForce(_ofTrackForce);
+			car->setMovForce(_ofTrackForce);
 		} else { 
 			//std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
-			_car->setMovForce(_onTrackForce);
+			car->setMovForce(_onTrackForce);
 		}
 	}
 	
 	void TrackManager::update(unsigned long elapsed_millis)
 	{
-		cg::Vector3d pos = _car->getPosition();
-		std::vector<int> mat = posToMatrix(pos[0], pos[1]);
+		_players = _pm->getPlayers();
+		for(tplayersIterator i = _players.begin(); i != _players.end(); i++){
+			cg::Vector3d pos = (*i)->getPosition();
+			std::vector<int> mat = posToMatrix(pos[0], pos[1]);
 		
-		int type = getTypeFromMatrix(mat[0], mat[1]);
-		switch (type) {
+			int type = getTypeFromMatrix(mat[0], mat[1]);
+			switch (type) {
 				
-			case 0:
-				_ofTrack = true;
-				_car->setMovForce(_ofTrackForce);
-			//	std::cout << "Estou fora" << std::endl;
-				break;
-			case 1:
-				trackType1(pos, mat[0], mat[1]);
-				break;
+				case 0:
+					_ofTrack = true;
+					(*i)->setMovForce(_ofTrackForce);
+					//	std::cout << "Estou fora" << std::endl;
+					break;
+				case 1:
+					trackType1(pos, mat[0], mat[1], (*i));
+					break;
 				
-			case 2:
-				trackType2(pos, mat[0], mat[1]);
-				break;
+				case 2:
+					trackType2(pos, mat[0], mat[1], (*i));
+					break;
 				
-			case 3:
-				trackType3(pos, mat[0], mat[1]);
-				break;
+				case 3:
+					trackType3(pos, mat[0], mat[1], (*i));
+					break;
 			
-			case 4:
-				trackType4(pos, mat[0], mat[1]);
-				break;
+				case 4:
+					trackType4(pos, mat[0], mat[1], (*i));
+					break;
 				
-			case 5:
-				trackType5(pos, mat[0], mat[1]);
-				break;
+				case 5:
+					trackType5(pos, mat[0], mat[1], (*i));
+					break;
 				
-			case 6:
-				trackType6(pos, mat[0], mat[1]);
-				break;
+				case 6:
+					trackType6(pos, mat[0], mat[1], (*i));
+					break;
+			}
 		}
 	}
     

@@ -72,6 +72,8 @@
 		B01B299D134A491100EF6438 /* Room.h in Headers */ = {isa = PBXBuildFile; fileRef = B01B299B134A491100EF6438 /* Room.h */; };
 		B027CC201344AD9D00209BF5 /* Lights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B027CC1E1344AD9D00209BF5 /* Lights.cpp */; };
 		B027CC211344AD9D00209BF5 /* Lights.h in Headers */ = {isa = PBXBuildFile; fileRef = B027CC1F1344AD9D00209BF5 /* Lights.h */; };
+		B02B1B92137194BD00C25180 /* PlayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02B1B90137194BD00C25180 /* PlayerManager.cpp */; };
+		B02B1B93137194BD00C25180 /* PlayerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B02B1B91137194BD00C25180 /* PlayerManager.h */; };
 		B0385E33133BE208003D302E /* ObstacleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0385E31133BE208003D302E /* ObstacleManager.cpp */; };
 		B0385E34133BE208003D302E /* ObstacleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0385E32133BE208003D302E /* ObstacleManager.h */; };
 		B073720D13423A2100163303 /* glm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B073720B13423A2100163303 /* glm.cpp */; };
@@ -191,6 +193,8 @@
 		B01B299B134A491100EF6438 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
 		B027CC1E1344AD9D00209BF5 /* Lights.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lights.cpp; sourceTree = "<group>"; };
 		B027CC1F1344AD9D00209BF5 /* Lights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lights.h; sourceTree = "<group>"; };
+		B02B1B90137194BD00C25180 /* PlayerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerManager.cpp; sourceTree = "<group>"; };
+		B02B1B91137194BD00C25180 /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
 		B0385E31133BE208003D302E /* ObstacleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObstacleManager.cpp; sourceTree = "<group>"; };
 		B0385E32133BE208003D302E /* ObstacleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObstacleManager.h; sourceTree = "<group>"; };
 		B073720B13423A2100163303 /* glm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glm.cpp; sourceTree = "<group>"; };
@@ -388,10 +392,10 @@
 				B0F4D592136F89B300ECC7F2 /* PowerUp.h */,
 				B0F4D593136F89B300ECC7F2 /* PowerUpManager.cpp */,
 				B0F4D594136F89B400ECC7F2 /* PowerUpManager.h */,
-				B0CC6C14135230C1000C33FF /* DirtParticle.cpp */,
-				B0CC6C15135230C1000C33FF /* DirtParticle.h */,
 				B0FB07C1135FABC200227FE4 /* DoubleCamera.cpp */,
 				B0FB07C2135FABC200227FE4 /* DoubleCamera.h */,
+				B0CC6C14135230C1000C33FF /* DirtParticle.cpp */,
+				B0CC6C15135230C1000C33FF /* DirtParticle.h */,
 				B0CC6C16135230C1000C33FF /* DirtParticleManager.cpp */,
 				B0CC6C17135230C1000C33FF /* DirtParticleManager.h */,
 				B000B17D134F9896008E2AF9 /* HUD.cpp */,
@@ -433,6 +437,8 @@
 				B0C846E9135C87E900CDC0B8 /* ReactiveObject.h */,
 				B0FB07BD135F745500227FE4 /* CollisionManager.cpp */,
 				B0FB07BE135F745500227FE4 /* CollisionManager.h */,
+				B02B1B90137194BD00C25180 /* PlayerManager.cpp */,
+				B02B1B91137194BD00C25180 /* PlayerManager.h */,
 			);
 			name = src;
 			path = ../src;
@@ -515,6 +521,7 @@
 				B0FB07C4135FABC200227FE4 /* DoubleCamera.h in Headers */,
 				B0F4D596136F89B400ECC7F2 /* PowerUp.h in Headers */,
 				B0F4D598136F89B400ECC7F2 /* PowerUpManager.h in Headers */,
+				B02B1B93137194BD00C25180 /* PlayerManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +638,7 @@
 				B0FB07C3135FABC200227FE4 /* DoubleCamera.cpp in Sources */,
 				B0F4D595136F89B400ECC7F2 /* PowerUp.cpp in Sources */,
 				B0F4D597136F89B400ECC7F2 /* PowerUpManager.cpp in Sources */,
+				B02B1B92137194BD00C25180 /* PlayerManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

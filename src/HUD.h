@@ -3,7 +3,7 @@
 
 #include "cg.h"
 #include "Car.h"
-
+#include "PlayerManager.h"
 
 namespace Micromachines {
 
@@ -11,10 +11,11 @@ namespace Micromachines {
 		    public cg::Entity {
 		
 		private:
+			PlayerManager* _pm;
 			Car *_car;
 			int _winWidth;
 			int _winHeight;
-			    int _max;
+			int _max;
 			    
 			void drawLifeBar();
 			    
