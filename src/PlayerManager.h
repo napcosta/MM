@@ -36,6 +36,7 @@ namespace Micromachines {
 		std::vector<Car*> getPlayers();
 		Car* firstPlayer();
 		Car* secondPlayer();
+		bool hasTwoPlayers();
 	};
 }
 

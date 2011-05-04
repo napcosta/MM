@@ -21,10 +21,9 @@ namespace Micromachines {
 	
 	private:
 		double _winWidth, _winHeight;
-		double _rotation;
-		cg::Vector3d _position;
 		PlayerManager* _pm;
-		Car* _car;
+		Car* _player1;
+		Car* _player2;
 
 	public:
 		DoubleCamera();

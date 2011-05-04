@@ -93,4 +93,9 @@ namespace Micromachines {
 			return _players[1];
 		} else return NULL;
 	}
+	
+	bool PlayerManager::hasTwoPlayers()
+	{
+		return _2Players;
+	}
 }
