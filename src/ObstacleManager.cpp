@@ -10,12 +10,15 @@
 
 namespace Micromachines {
     
-	ObstacleManager::ObstacleManager(std::string id) : cg::Group(id) {
+	ObstacleManager::ObstacleManager(std::string id) : cg::Group(id) 
+	{
 	}
-	ObstacleManager::~ObstacleManager() {
+	ObstacleManager::~ObstacleManager() 
+	{
 	}
 	void ObstacleManager::createEntities() {
 		int nObstacles = cg::Properties::instance()->getInt("N_OBSTACLES");
+		_cm = (CollisionManager*)cg::Registry::instance()->get("COLLISION_MANAGER");
 		srand((unsigned)time(0));
 		for(int i = 0; i < nObstacles; i++) {
 			std::ostringstream os;
@@ -24,6 +27,7 @@ namespace Micromachines {
 			ob->init();
 			_obstacles.push_back(ob);
 		}
+		_cm->setObstacles(_obstacles);
 		cg::Vector3d reactPos;
 		reactPos[0] = -160;
 		reactPos[1] = -52;
@@ -31,6 +35,7 @@ namespace Micromachines {
 		ReactiveObject *react = new ReactiveObject(reactPos);
 		react->init();
 		_reactObstacles.push_back(react);
+		_cm->setReactObstacles(_reactObstacles);
 	}
 	
 	void ObstacleManager::postInit() {

@@ -17,6 +17,7 @@
 #include "cg.h"
 #include "Obstacle.h"
 #include "ReactiveObject.h"
+#include "CollisionManager.h"
 
 namespace Micromachines {
     
@@ -30,6 +31,7 @@ namespace Micromachines {
 		std::vector<ReactiveObject*> _reactObstacles;
 		typedef std::vector<Obstacle*>::iterator tObstacleIterator;
 		typedef std::vector<ReactiveObject*>::iterator tReactObstaclesIterator;
+		CollisionManager* _cm;
                                 
 	protected:
 		void createEntities();

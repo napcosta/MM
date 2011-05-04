@@ -17,7 +17,7 @@ namespace Micromachines {
 			_size = floorSize/BLOCK_TRACK_SIZE;
 		else _size = floorSize/BLOCK_TRACK_SIZE+1;
 		_floor = std::vector<std::vector<int> >(_size, std::vector<int>(_size, 0));
-		_car = (Car*) cg::Registry::instance()->get("Player1");
+		_car = (Car*) cg::Registry::instance()->get("Car");
 		_ofTrack = false;
 		_ofTrackForce = cg::Properties::instance()->getDouble("CAR_OUT_OF_TRACK_FORCE");
 		_onTrackForce = cg::Properties::instance()->getDouble("CAR_MOV_FORCE");

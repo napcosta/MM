@@ -21,17 +21,17 @@ namespace Micromachines {
 
 	void Controller::init()
 	{
-		_player1 = (Car*) cg::Registry::instance()->get("Player1");
-		_player2 = (Car*) cg::Registry::instance()->get("Player2");
+		_player1 = (Car*) cg::Registry::instance()->get("Car");
+		//_player2 = (Car*) cg::Registry::instance()->get("Player2");
 		_dirKeysP1 = cg::Vector2d(0.0, 0.0);
-		_dirKeysP2 = cg::Vector2d(0.0, 0.0);
+	//	_dirKeysP2 = cg::Vector2d(0.0, 0.0);
 	}
 
 	void Controller::onKeyPressed(unsigned char key)
 	{
 		if (key == 27) {
 			cg::Manager::instance()->shutdownApp();
-		} else {
+		}/* else {
 			//for player2
 			cg::Vector2d keys = _player2->getArrowKeyPressed();
 			switch (key) {
@@ -54,12 +54,12 @@ namespace Micromachines {
 			}
 			_player2->applyForce(_dirKeysP2);
 			_player2->setArrowKeyPressed(keys);
-		}
+		}*/
 	}
 
 	void Controller::onKeyReleased(unsigned char key)
 	{
-		//for player2
+/*		//for player2
 		cg::Vector2d arrowKeyPressed = _player2->getArrowKeyPressed();
 		switch (key) {
 			case 'w':
@@ -80,7 +80,7 @@ namespace Micromachines {
 				break;
 		}
 		_player2->applyForce(_dirKeysP2);
-		_player2->setArrowKeyPressed(arrowKeyPressed);
+		_player2->setArrowKeyPressed(arrowKeyPressed);*/
 	}
 
 	void Controller::onSpecialKeyPressed(int key)
