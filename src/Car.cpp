@@ -100,7 +100,6 @@ namespace Micromachines {
 	{
 
 		double time = (double) elapsed_millis;
-		std::cout << "car " << _position << std::endl;
 		if (_velocity < -_maxSpeed)
 			_velocity = -_maxSpeed;
 		else if (_velocity > _maxSpeed)

@@ -24,11 +24,11 @@ namespace Micromachines {
 		cg::Vector3d _position, _color, _initialPos;
 		double _winHeight, _winWidth;
 		Car* _car;
-        
 		int RandomBeetween(int min, int max);
+      //  	GLMmodel *model;
         
 	public:
-		PowerUp(std::string name);
+		PowerUp(std::string name, cg::Vector3d pos);
 		~PowerUp();
 		void init();
 		void draw();

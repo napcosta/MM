@@ -21,9 +21,10 @@ namespace Micromachines {
 		int nPowerUps = cg::Properties::instance()->getInt("N_POWERUPS");
 		srand((unsigned)time(0));
 		for(int i = 0; i < nPowerUps; i++) {
+			cg::Vector3d pos = cg::Vector3d(-50,-125+i*20, -400);
 			std::ostringstream os;
 			os << "PowerUp" << i;
-			add(new PowerUp(os.str()));
+			add(new PowerUp(os.str(), pos));
 		}
 	}
 }
