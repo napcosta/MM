@@ -10,12 +10,13 @@
 #include <vector>
 
 #include "cg.h"
-#include "Car.h"
-#include "PlayerManager.h"
 
 #define PI 3.14159265
 
 namespace Micromachines {
+	
+	class Car;
+	class PlayerManager;
 
 	class NearCamera : public cg::Entity, public cg::IDrawListener {
 	

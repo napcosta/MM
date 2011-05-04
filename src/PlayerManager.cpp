@@ -7,6 +7,8 @@
 //
 
 #include "PlayerManager.h"
+#include "Car.h"
+#include "DirtParticleManager.h"
 
 namespace Micromachines {
 	

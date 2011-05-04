@@ -4,9 +4,10 @@
  *  Created on: Aug 2, 2010
  *      Author: pinto
  */
-#include<stdio.h>
 
 #include "Controller.h"
+#include "Car.h"
+#include "PlayerManager.h"
 
 namespace Micromachines {
 

@@ -9,18 +9,13 @@
 #ifndef OBSTACLE_MANAGER_H
 #define OBSTACLE_MANAGER_H
 
-#include <sstream>
-#include <string>
-#include <vector>
-#include <ctime>
-#include <cstdlib>
 #include "cg.h"
-#include "Obstacle.h"
-#include "ReactiveObject.h"
-#include "CollisionManager.h"
+#include "Collidable.h"
 
 namespace Micromachines {
-    
+	
+	class CollisionManager;
+	
 	class ObstacleManager : public cg::Group,
                             public cg::GroupDraw,
                             public cg::GroupUpdate,

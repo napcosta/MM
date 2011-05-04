@@ -10,14 +10,14 @@
 #define COLLISION_MANAGER_H
 
 #include "cg.h"
-#include "Car.h"
-#include "PowerUp.h"
-#include "Obstacle.h"
-#include "ReactiveObject.h"
-#include "PlayerManager.h"
-
+#include "Collidable.h"
 
 namespace Micromachines {
+	
+	class PlayerManager;
+	class PowerUp;
+	class Car;
+	
 	class CollisionManager : public cg::Entity, public cg::IUpdateListener {
 	private:
 		PlayerManager* _pm;

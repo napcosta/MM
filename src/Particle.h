@@ -7,10 +7,12 @@
 
 #ifndef PARTICLE_H_
 #define PARTICLE_H_
+
 #include "cg.h"
 #include <math.h>
 
 #define G 270
+
 namespace Micromachines {
 
 	class Particle : public cg::Entity,

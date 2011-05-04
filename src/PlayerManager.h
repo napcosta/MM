@@ -10,10 +10,11 @@
 #define PLAYER_MANAGER
 
 #include "cg.h"
-#include "Car.h"
-#include "DirtParticleManager.h"
 
 namespace Micromachines {
+	
+	class DirtParticleManager;
+	class Car;
 	
 	class PlayerManager : public cg::Group, public cg::GroupDraw, public cg::GroupUpdate {
 	private:

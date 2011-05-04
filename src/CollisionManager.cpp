@@ -8,7 +8,10 @@
 
 #include "CollisionManager.h"
 #include "Car.h"
-#include "Collidable.h"
+#include "PowerUp.h"
+#include "Obstacle.h"
+#include "ReactiveObject.h"
+#include "PlayerManager.h"
 
 namespace Micromachines{
 	

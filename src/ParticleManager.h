@@ -7,6 +7,7 @@
 
 #ifndef PARTICLEMANAGER_H_
 #define PARTICLEMANAGER_H_
+
 #include "Particle.h"
 
 namespace Micromachines {

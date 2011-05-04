@@ -9,11 +9,12 @@
 #define CONTROLLER_H_
 
 #include "cg.h"
-#include "Car.h"
-#include "PlayerManager.h"
 
 //#include <Math.h>
 namespace Micromachines {
+	
+	class Car;
+	class PlayerManager;
 
 	class Controller : public cg::Entity,
 			   public cg::IKeyboardEventListener {

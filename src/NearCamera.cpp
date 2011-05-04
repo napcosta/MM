@@ -6,6 +6,8 @@
  */
 
 #include "NearCamera.h"
+#include "Car.h"
+#include "PlayerManager.h"
 
 namespace Micromachines {
 

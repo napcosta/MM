@@ -2,10 +2,11 @@
 #define HUD_H
 
 #include "cg.h"
-#include "Car.h"
-#include "PlayerManager.h"
 
 namespace Micromachines {
+	
+	class PlayerManager;
+	class Car;
 
 	class HUD : public cg::IDrawOverlayListener,
 		    public cg::Entity {

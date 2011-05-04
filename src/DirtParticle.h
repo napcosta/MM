@@ -10,10 +10,11 @@
 
 #include "cg.h"
 #include "Particle.h"
-#include "Car.h"
-#include "TrackManager.h"
 
 namespace Micromachines {
+	
+	class Car;
+	class TrackManager;
 
 	class DirtParticle : public Particle
 	{

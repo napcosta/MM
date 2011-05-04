@@ -7,13 +7,15 @@
 
 #ifndef BEVCAMERA_H_
 #define BEVCAMERA_H_
+
 #include "cg.h"
-#include "Car.h"
-#include "PlayerManager.h"
 
 #define PI 3.14159265
 
 namespace Micromachines {
+	
+	class Car;
+	class PlayerManager;
 
 	class FarCamera : public cg::Entity, public cg::IDrawListener {
 

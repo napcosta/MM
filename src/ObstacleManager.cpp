@@ -6,7 +6,15 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#include <sstream>
+#include <string>
+#include <vector>
+#include <ctime>
+#include <cstdlib>
 #include "ObstacleManager.h"
+#include "Obstacle.h"
+#include "ReactiveObject.h"
+#include "CollisionManager.h"
 
 namespace Micromachines {
     
