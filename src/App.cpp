@@ -24,14 +24,14 @@ namespace Micromachines {
 		//addEntity(new ParticleManager("ParticleMngr"));
 
 		//add player1
-		addEntity(new Car("Player1", 1));
-		Car *_car = (Car*)cg::Registry::instance()->get("Player1");
+		addEntity(new Car("Car", 1));
+		Car *_car = (Car*)cg::Registry::instance()->get("Car");
 		addEntity(new DirtParticleManager("DPM1", _car));
 		
 		//add Player2
-		addEntity(new Car("Player2", 2));
-		_car = (Car*)cg::Registry::instance()->get("Player2");
-		addEntity(new DirtParticleManager("DPM2", _car));
+	//	addEntity(new Car("Player2", 2));
+	//	_car = (Car*)cg::Registry::instance()->get("Player2");
+	//	addEntity(new DirtParticleManager("DPM2", _car));
 		
 		addEntity(new PowerUpManager("PowerUpManager"));
 		addEntity(new Controller());

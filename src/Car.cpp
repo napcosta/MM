@@ -38,18 +38,18 @@ namespace Micromachines {
 		_atrittionFactor = 100;
 		_mass = 500;
 		_arrowKeyPressed =cg::Vector2d(0.0, 0.0);
-		if (_player==1){
+	//	if (_player==1){
 			model = glmReadOBJ((char*)"src/Models/smart.obj");
 			_position[0] = -4;
 			_position[1] = -113;
 			_position[2] = -396;
-		}
-		else {
+	//	}
+/*		else {
 			model = glmReadOBJ((char*)"src/Models/smart2.obj");
 			_position[0] = -4;
 			_position[1] = -95;
 			_position[2] = -396;
-		}
+		}*/
 		glmUnitize(model);
         	glmFacetNormals(model);
         	glmVertexNormals(model, 90.0);
@@ -100,7 +100,7 @@ namespace Micromachines {
 	{
 
 		double time = (double) elapsed_millis;
-		
+		std::cout << "car " << _position << std::endl;
 		if (_velocity < -_maxSpeed)
 			_velocity = -_maxSpeed;
 		else if (_velocity > _maxSpeed)
@@ -200,7 +200,7 @@ namespace Micromachines {
 	
 	bool Car::isCollision(cg::Vector3d pos, cg::Vector2d size)
 	{
-		return (_position[0]+5 > pos[0]-size[0] && _position[0]-5 < pos[0]+size[0] && _position[1]+5 > pos[1]-size[1] && _position[1]-5 < pos[1]+size[1]); 
+		return (_position[0]+3 > pos[0]-size[0] && _position[0]-3 < pos[0]+size[0] && _position[1]+5 > pos[1]-size[1] && _position[1]-5 < pos[1]+size[1]); 
 	}
 	
 	void Car::decreaseLife()

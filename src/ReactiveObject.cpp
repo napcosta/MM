@@ -20,7 +20,7 @@ namespace Micromachines {
 	
 	void ReactiveObject::init()
 	{
-		_car = (Car*)cg::Registry::instance()->get("Player1");
+		_car = (Car*)cg::Registry::instance()->get("Car");
 		_initPos = _position;
 	}
 	
@@ -82,11 +82,28 @@ namespace Micromachines {
 		}
 		else if (_position[0] > _initPos[0])
 			_position[0] = _position[0]-5;
+	
+/*		bool frontCollision;
 		
+		cg::Vector2d size = cg::Vector2d(27, 18);
+		if (_car->getAppForce() >= 0)
+			frontCollision = true;
+		else
+			frontCollision = false;
+		if (_car->isCollision(_position, size)) {
+			_car->decreaseLife();
+			if (frontCollision == true)
+				_car->setVelocity(-0.1);
+			else if (frontCollision == false) {
+				_car->setVelocity(0.06);
+				puts("here");
+			}
+		}*/	
 	}
 	
 	cg::Vector3d ReactiveObject::getPosition()
 	{
+		std::cout << "reactOb " << _position << std::endl;
 		return _position;
 	}
 }
