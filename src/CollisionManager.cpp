@@ -26,7 +26,7 @@ namespace Micromachines{
 		bool frontCollision;
 		
 		for(tObstacleIterator i = _obstacles.begin(); i != _obstacles.end(); i++){
-			std::cout << (*i)->getId() << std::endl;
+		//	std::cout << (*i)->getId() << std::endl;
 			cg::Vector2d size = cg::Vector2d(27, 18);
 			if (_car->getAppForce() >= 0)
 				frontCollision = true;
@@ -60,7 +60,7 @@ namespace Micromachines{
 		}
 		
 		for (tPowerUpIterator i = _powerUp.begin(); i != _powerUp.end(); i++) {
-			cg::Vector2d size = cg::Vector2d(27, 18);
+			cg::Vector2d size = cg::Vector2d(0, 0);
 			//std::cout << (*i)->getPosition() << std::endl;
 			if (_car->isCollision((*i)->getPosition(), size)) {
 				puts("POWERUP");

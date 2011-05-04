@@ -78,6 +78,10 @@ namespace Micromachines {
 		glEnd();
 	}
 	
+	void PowerUp::update(unsigned long elapsed_millis) 
+	{
+	}
+	
 	cg::Vector3d PowerUp::getPosition()
 	{
 		return _position;

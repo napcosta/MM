@@ -17,7 +17,8 @@
 
 namespace Micromachines {
 	class PowerUp : public cg::Entity,
-	public cg::IDrawListener
+	public cg::IDrawListener,
+	public cg::IUpdateListener
 	{
 	private:
 		int _direction;
@@ -32,6 +33,7 @@ namespace Micromachines {
 		~PowerUp();
 		void init();
 		void draw();
+		void update(unsigned long elapsed_millis);
 		cg::Vector3d getPosition();
 	};
 }

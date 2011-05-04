@@ -22,7 +22,7 @@ namespace Micromachines {
 		_cm = (CollisionManager*)cg::Registry::instance()->get("COLLISION_MANAGER");
 		srand((unsigned)time(0));
 		for(int i = 0; i < nPowerUps; i++) {
-			cg::Vector3d pos = cg::Vector3d(-50,-125+i*20, -400);
+			cg::Vector3d pos = cg::Vector3d(-50,-125+i*20, -400); // the coordinates of the powerups
 			std::ostringstream os;
 			os << "PowerUp" << i;
 			PowerUp *pu = new PowerUp(os.str(), pos);
@@ -31,5 +31,18 @@ namespace Micromachines {
 
 		}
 		_cm->setPowerUps(_powerUp);
+	}
+	
+	void PowerUpManager::draw()
+	{
+		for(tPowerUpIterator i = _powerUp.begin(); i != _powerUp.end(); i++) {
+			(*i)->draw();
+		}
+	}
+	void PowerUpManager::update(unsigned long elapsed_millis)
+	{
+		for(tPowerUpIterator i = _powerUp.begin(); i != _powerUp.end(); i++) {
+			(*i)->update(elapsed_millis);
+		}
 	}
 }
