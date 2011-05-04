@@ -36,7 +36,7 @@ namespace Micromachines {
 			glVertex2d(_winWidth-(inc+oneLife), _winHeight-10);
 			glEnd();
 		}
-		
+		/*********** CONTORNO DA LIFEBAR ***********/
 		glLineWidth(2);
 		glColor3d(0, 0, 0);
 		glBegin(GL_LINES);
@@ -52,6 +52,40 @@ namespace Micromachines {
 		glVertex2d(_winWidth-_max, _winHeight-10);
 		glVertex2d(_winWidth-10, _winHeight-10);
 		glEnd();
+		/********************************************/
+	}
+	
+	void HUD::drawPowerUp()
+	{
+		int powerup = _car->getPowerUp();
+		int i, onePowerUp = (_max-10)/10;
+		std::cout << _car->getPowerUp() << std::endl;
+		glLineWidth(0);
+		glColor3d(1, 0, 0.0);
+		for (i = 0; i < powerup; i++) {
+			glBegin(GL_QUADS);
+			glVertex2d(_winWidth-40, _winHeight-200);
+			glVertex2d(_winWidth-40, _winHeight-220);
+			glVertex2d(_winWidth-40-onePowerUp, _winHeight-220);
+			glVertex2d(_winWidth-40-onePowerUp, _winHeight-200);
+			glEnd();
+		}
+		
+		glLineWidth(2);
+		glColor3d(0, 0, 0);
+		glBegin(GL_LINES);
+		glVertex2d(_winWidth-10, _winHeight-500);
+		glVertex2d(_winWidth-10, _winHeight-520);
+		
+		glVertex2d(_winWidth-10, _winHeight-520);
+		glVertex2d(_winWidth-_max, _winHeight-520);
+		
+		glVertex2d(_winWidth-_max, _winHeight-520);
+		glVertex2d(_winWidth-_max, _winHeight-500);
+		
+		glVertex2d(_winWidth-_max, _winHeight-500);
+		glVertex2d(_winWidth-10, _winHeight-500);
+		glEnd();
 	}
 	
 	void HUD::drawOverlay()
@@ -59,7 +93,6 @@ namespace Micromachines {
 		if(_car == NULL)
 			_car = _pm->firstPlayer();
 		else {
-			_max = (_car->getLife()+10);
 			std::string s = "1st";
 			glColor3f(0.0f, 0.0f, 0.0f);
 			glRasterPos2d(300, 450);
@@ -98,6 +131,7 @@ namespace Micromachines {
 			/*******************************************************************/
 			
 			drawLifeBar();
+			drawPowerUp();
 		}
 	}
 		

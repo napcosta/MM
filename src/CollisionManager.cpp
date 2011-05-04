@@ -18,61 +18,55 @@ namespace Micromachines{
 	
 	void CollisionManager::init()
 	{	
-		//_car = (Car*)cg::Registry::instance()->get("Car");
-		//_players.push_back((Car*)cg::Registry::instance()->get("Car"));
-	//	_players.push_back((Car*)cg::Registry::instance()->get("Player2"));
-	//	_obstacleManager = (ObstacleManager*)cg::Registry::instance()->get("OM");
-	//	_obstacles = _obstacleManager->getObstacles();
+		_car = (Car*)cg::Registry::instance()->get("Car");
 	}
 	
 	void CollisionManager::update(unsigned long elapsed_millis)
 	{
-	/*	bool frontCollision;
-		
-		//std::vector<Entity*>::iterator iend = _obstacleManager->end();
+		bool frontCollision;
 		
 		for(tObstacleIterator i = _obstacles.begin(); i != _obstacles.end(); i++){
-		puts("LALALALALALALA");
-			std::cout << (*i)->getId() << std::endl;
+			//	std::cout << (*i)->getId() << std::endl;
 			cg::Vector2d size = cg::Vector2d(27, 18);
-			
-	//		for (int j = 0; j < _players.size(); j++) {
-				if (_car->getAppForce() >= 0)
-					frontCollision = true;
-				else
-					frontCollision = false;
-				if (_car->isCollision((*i)->getPosition(), size)) {
-				printf("baTI\n");
-					_car->decreaseLife();
-					if (frontCollision == true)
-						_car->setVelocity(-0.1);
-					else if (frontCollision == false) {
-						_car->setVelocity(0.06);
-						puts("here!");
-					}
+			if (_car->getAppForce() >= 0)
+				frontCollision = true;
+			else
+				frontCollision = false;
+			if (_car->isCollision((*i)->getPosition(), size)) {
+				_car->decreaseLife();
+				if (frontCollision == true)
+					_car->setVelocity(-0.1);
+				else if (frontCollision == false) {
+					_car->setVelocity(0.06);
 				}
-		
+			}
+			
 		}
-		
 		for(tReactObstaclesIterator i = _reactObstacles.begin(); i != _reactObstacles.end(); i++){
 			cg::Vector2d size = cg::Vector2d(27, 18);
 			//for (int j = 0; j < _players.size(); j++) {
-				if (_car->getAppForce() >= 0)
-					frontCollision = true;
-				else
-					frontCollision = false;
-				if (_car->isCollision((*i)->getPosition(), size)) {
-				printf("ola\n");
-					_car->decreaseLife();
-					if (frontCollision == true)
-						_car->setVelocity(-0.1);
-					else if (frontCollision == false) {
-						_car->setVelocity(0.06);
-						puts("here!");
-					}
+			if (_car->getAppForce() >= 0)
+				frontCollision = true;
+			else
+				frontCollision = false;
+			if (_car->isCollision((*i)->getPosition(), size)) {
+				_car->decreaseLife();
+				if (frontCollision == true)
+					_car->setVelocity(-0.1);
+				else if (frontCollision == false) {
+					_car->setVelocity(0.06);
 				}
-			
-		}*/
+			}
+		}
+		
+		for (tPowerUpIterator i = _powerUp.begin(); i != _powerUp.end(); i++) {
+			cg::Vector2d size = cg::Vector2d(0, 0);
+			//std::cout << (*i)->getPosition() << std::endl;
+			if (_car->isCollision((*i)->getPosition(), size)) {
+				_car->incPowerUp();
+				puts("POWERUP");
+			}
+		}
 	}
 	
 	void CollisionManager::setObstacles(std::vector<Obstacle*> obstacles)
@@ -83,5 +77,10 @@ namespace Micromachines{
 	void CollisionManager::setReactObstacles(std::vector<ReactiveObject*> obstacles)
 	{
 		_reactObstacles = obstacles;
+	}
+	
+	void CollisionManager::setPowerUps(std::vector<PowerUp*> powerUp)
+	{
+		_powerUp = powerUp;
 	}
 }

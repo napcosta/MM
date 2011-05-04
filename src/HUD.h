@@ -18,6 +18,7 @@ namespace Micromachines {
 			int _max;
 			    
 			void drawLifeBar();
+			void drawPowerUp();
 			    
 		public: 
 			HUD();
@@ -25,7 +26,7 @@ namespace Micromachines {
 			void init();
 			void drawOverlay();
 			void drawString();
-			void update(unsigned long elapsed_millis);
+			//void update(unsigned long elapsed_millis);
 	
 	};}
 	

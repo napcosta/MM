@@ -13,25 +13,27 @@
 #define VELOCITY 0.1
 
 #include "cg.h"
-#include "PlayerManager.h"
 
 namespace Micromachines {
 	class PowerUp : public cg::Entity,
-	public cg::IDrawListener
+	public cg::IDrawListener,
+	public cg::IUpdateListener
 	{
 	private:
 		int _direction;
 		cg::Vector3d _position, _color, _initialPos;
 		double _winHeight, _winWidth;
-		PlayerManager* _playerManager;
-        
+
 		int RandomBeetween(int min, int max);
+      //  	GLMmodel *model;
         
 	public:
-		PowerUp(std::string name);
+		PowerUp(std::string name, cg::Vector3d pos);
 		~PowerUp();
 		void init();
 		void draw();
+		void update(unsigned long elapsed_millis);
+		cg::Vector3d getPosition();
 	};
 }
 

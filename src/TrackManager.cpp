@@ -170,11 +170,11 @@ namespace Micromachines {
 		if ((pos[0] > ranges[1]-27) || (pos[1] > ranges[3] - 27) || (pos[1] < pos[0]*m1 + b1) ||
 		    (pos[1] > pos[0]*m2 + b2) || (pos[1] > pos[0]*m3+b3) || ((pos[1] < pos[0]*m4+b4) &&
 		    (pos[0] < ranges[0] + 27) && (pos[1] < ranges[2] + 27))) {
-			std::cout << "Estou fora" << std::endl;
+		//	std::cout << "Estou fora" << std::endl;
 			_ofTrack = true;
 			car->setMovForce(_ofTrackForce);
 		} else { 
-			std::cout << "Estou dentro" << std::endl;
+		//	std::cout << "Estou dentro" << std::endl;
 			_ofTrack = false;
 			car->setMovForce(_onTrackForce);
 		}
