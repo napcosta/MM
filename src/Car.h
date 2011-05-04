@@ -38,6 +38,7 @@ namespace Micromachines {
 		double _movForce;
 		int _life;
 		int _player;
+		int _powerUp;
                  
 		GLMmodel *model;
 
@@ -56,6 +57,8 @@ namespace Micromachines {
 		cg::Vector3d getPosition();
 		cg::Vector2d getArrowKeyPressed();
 		int getLife();
+		int getPowerUp();
+		void incPowerUp();
 		bool isCollision(cg::Vector3d pos, cg::Vector2d size);
 		void decreaseLife();
 		void setMovForce(double force);

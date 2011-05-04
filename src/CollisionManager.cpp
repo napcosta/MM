@@ -63,6 +63,7 @@ namespace Micromachines{
 			cg::Vector2d size = cg::Vector2d(0, 0);
 			//std::cout << (*i)->getPosition() << std::endl;
 			if (_car->isCollision((*i)->getPosition(), size)) {
+				_car->incPowerUp();
 				puts("POWERUP");
 			}
 		}

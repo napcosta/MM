@@ -29,7 +29,7 @@ namespace Micromachines {
 		_rotationSpeed = cg::Properties::instance()->getDouble("CAR_ROTATION_SPEED");
 		_movForce = cg::Properties::instance()->getDouble("CAR_MOV_FORCE");
 		_life = cg::Properties::instance()->getInt("CAR_MAX_LIFE");
-		
+		_powerUp = 0;
 		
 		_winHeight = cg::Manager::instance()->getApp()->getWindow().height;
 		_velocity = 0.0;
@@ -38,18 +38,10 @@ namespace Micromachines {
 		_atrittionFactor = 100;
 		_mass = 500;
 		_arrowKeyPressed =cg::Vector2d(0.0, 0.0);
-	//	if (_player==1){
 			model = glmReadOBJ((char*)"src/Models/smart.obj");
 			_position[0] = -4;
 			_position[1] = -113;
 			_position[2] = -396;
-	//	}
-/*		else {
-			model = glmReadOBJ((char*)"src/Models/smart2.obj");
-			_position[0] = -4;
-			_position[1] = -95;
-			_position[2] = -396;
-		}*/
 		glmUnitize(model);
         	glmFacetNormals(model);
         	glmVertexNormals(model, 90.0);
@@ -75,11 +67,7 @@ namespace Micromachines {
 		_movForce = force;
 	}
 	
-//	void Car::setRotationSpeed(int rotSpeed)
-//	{
-//		_rotationSpeed = rotSpeed;
-//	}
-	
+
 	void Car::draw()
 	{	
         	glColor3d(0.0, 0.0, 80.0);
@@ -195,6 +183,16 @@ namespace Micromachines {
 	int Car::getLife()
 	{
 		return _life;
+	}
+	
+	int Car::getPowerUp()
+	{
+		return _powerUp;
+	}
+	
+	void Car::incPowerUp()
+	{
+		_powerUp++;
 	}
 	
 	bool Car::isCollision(cg::Vector3d pos, cg::Vector2d size)
