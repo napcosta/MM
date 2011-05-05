@@ -34,16 +34,18 @@ namespace Micromachines{
 		for (tplayersIterator j = _players.begin(); j != _players.end(); j++) {
 			
 			for(tCollidableIterator i = _obstacles.begin(); i != _obstacles.end(); i++){
-				if ((*j)->getAppForce() >= 0)
-					frontCollision = true;
-				else
-					frontCollision = false;
-				if (((*j) != (*i)) && ((*j)->isCollision((*i)->getPosition(), (*i)->getSize()))) {
-					(*j)->decreaseLife();
-					if (frontCollision == true)
-						(*j)->setVelocity(-0.1);
-					else if (frontCollision == false) {
-						(*j)->setVelocity(0.06);
+				if (_pm->hasTwoPlayers() || !(*j)->getId().compare("Car2")) {
+					if ((*j)->getAppForce() >= 0)
+						frontCollision = true;
+					else
+						frontCollision = false;
+					if (((*j) != (*i)) && ((*j)->isCollision((*i)->getPosition(), (*i)->getSize()))) {
+						(*j)->decreaseLife();
+						if (frontCollision == true)
+							(*j)->setVelocity(-0.1);
+						else if (frontCollision == false) {
+							(*j)->setVelocity(0.06);
+						}
 					}
 				}
 				
