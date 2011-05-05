@@ -27,7 +27,7 @@ namespace Micromachines {
 		int i, oneLife = (_max-10)/10;
 		int inc = oneLife;
 		
-		
+		std::cout << life << std::endl;
 		glLineWidth(0);
 		glColor3d(0.4, 1, 0.1);
 		for (i = 0; i < life; i++, inc+= oneLife) {
@@ -95,6 +95,7 @@ namespace Micromachines {
 		if(_car == NULL)
 			_car = _pm->firstPlayer();
 		else {
+			_max = (_car->getLife()+10);
 			std::string s = "1st";
 			glColor3f(0.0f, 0.0f, 0.0f);
 			glRasterPos2d(300, 450);
