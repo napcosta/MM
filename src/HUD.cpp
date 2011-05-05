@@ -27,7 +27,6 @@ namespace Micromachines {
 		int i, oneLife = (_max-10)/10;
 		int inc = oneLife;
 		
-		std::cout << life << std::endl;
 		glLineWidth(0);
 		glColor3d(0.4, 1, 0.1);
 		for (i = 0; i < life; i++, inc+= oneLife) {

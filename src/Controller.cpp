@@ -87,13 +87,15 @@ namespace Micromachines {
 		if (key == 27) {
 			cg::Manager::instance()->shutdownApp();
 		} else if (key == '2'){
-			
-			if(_2Players)
-				_2Players = false;
-			else 
+			if(!_2Players){
 				_2Players = true;
-			_pm->addOrRemovePlayer2();
-			
+				_pm->addOrRemovePlayer2();
+			}
+		} else if (key == '1') {
+			if(_2Players){
+				_2Players = false;
+				_pm->addOrRemovePlayer2();
+			}
 		} else if (_2Players) {
 			if (_secondPlayer == NULL){
 				_secondPlayer = _pm->secondPlayer();
