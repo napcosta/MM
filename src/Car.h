@@ -34,11 +34,15 @@ namespace Micromachines {
 		double _atrittionFactor;
 		double _mass;
 		double _maxSpeed;
+		double _initMaxSpeed;
 		double _movForce;
 		int _life;
 		int _player;
 		int _powerUp;
 		cg::Vector2d _collisionSize;
+		bool _nitro;
+		int _maxNitroTime;
+		int _timeSinceNitro;
                  
 		GLMmodel *model;
 		CollisionManager* _cm;
@@ -67,6 +71,7 @@ namespace Micromachines {
 		void setVelocity(double velocity);
 		double getAppForce();
 		void positionSecondPlayer(cg::Vector3d position, double rotation);
+		void usePowerUp();
 	};
 
 }

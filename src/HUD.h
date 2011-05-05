@@ -17,6 +17,7 @@ namespace Micromachines {
 			int _winWidth;
 			int _winHeight;
 			int _max;
+			int _nitroRadius;
 			    
 			void drawLifeBar();
 			void drawPowerUp();
@@ -27,6 +28,7 @@ namespace Micromachines {
 			void init();
 			void drawOverlay();
 			void drawString();
+			void drawNitro();
 			//void update(unsigned long elapsed_millis);
 	
 	};}

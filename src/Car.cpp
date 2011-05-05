@@ -30,6 +30,7 @@ namespace Micromachines {
 	{
 		_size = cg::Properties::instance()->getInt("CAR_SIZE");
 		_maxSpeed = cg::Properties::instance()->getDouble("CAR_MAX_SPEED");
+		_initMaxSpeed = _maxSpeed;
 		_rotationSpeed = cg::Properties::instance()->getDouble("CAR_ROTATION_SPEED");
 		_movForce = cg::Properties::instance()->getDouble("CAR_MOV_FORCE");
 		_life = cg::Properties::instance()->getInt("CAR_MAX_LIFE");
@@ -63,6 +64,9 @@ namespace Micromachines {
         	glmVertexNormals(model, 90.0);
  		glmScale(model, _size[0]);
 		_carRotation = -90;
+		_timeSinceNitro = 0;
+		_nitro = false;
+		_maxNitroTime = 200;
 		
 		std::vector<Collidable*> thisCar;
 		thisCar.push_back(this);
@@ -103,6 +107,13 @@ namespace Micromachines {
 
 	void Car::update(unsigned long elapsed_millis)
 	{
+		if(_nitro){
+			if (_timeSinceNitro == _maxNitroTime) {
+				_nitro = false;
+				_timeSinceNitro = 0;
+				_maxSpeed = _initMaxSpeed;
+			} else _timeSinceNitro++;
+		}
 
 		double time = (double) elapsed_millis;
 		if (_velocity < -_maxSpeed)
@@ -209,7 +220,9 @@ namespace Micromachines {
 	
 	void Car::incPowerUp()
 	{
-		_powerUp++;
+		if (_powerUp < 3) {
+			_powerUp++;
+		}
 	}
 	
 	bool Car::isCollision(cg::Vector3d pos, cg::Vector2d size)
@@ -233,5 +246,15 @@ namespace Micromachines {
 	cg::Vector2d Car::getSize()
 	{
 		return _collisionSize;
+	}
+	
+	void Car::usePowerUp()
+	{
+		if (_powerUp > 0 && !_nitro) {
+			_powerUp--;
+			_maxSpeed = _maxSpeed*2;
+			_velocity = _velocity*2;
+			_nitro = true;
+		}
 	}
 }

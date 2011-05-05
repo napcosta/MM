@@ -50,6 +50,9 @@ namespace Micromachines {
 				_dirKeysP2[0] -= _secondPlayer->getRotationSpeed();
 				keys[0] += 1;
 				break;
+			case 'q':
+				_secondPlayer->usePowerUp();
+				break;
 		}
 		_secondPlayer->applyForce(_dirKeysP2);
 		_secondPlayer->setArrowKeyPressed(keys);
@@ -102,6 +105,8 @@ namespace Micromachines {
 				keyPressed(key);
 			}
 			else keyPressed(key);
+		} else if (key == 'p') {
+			_firstPlayer->usePowerUp();
 		}
 	}
 

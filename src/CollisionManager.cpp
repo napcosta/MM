@@ -34,7 +34,7 @@ namespace Micromachines{
 		for (tplayersIterator j = _players.begin(); j != _players.end(); j++) {
 			
 			for(tCollidableIterator i = _obstacles.begin(); i != _obstacles.end(); i++){
-				if (_pm->hasTwoPlayers() || !(*j)->getId().compare("Car2")) {
+				if (!_pm->hasTwoPlayers() || !(*j)->getId().compare("Car2")) {
 					if ((*j)->getAppForce() >= 0)
 						frontCollision = true;
 					else
@@ -54,7 +54,6 @@ namespace Micromachines{
 			for (tPowerUpIterator i = _powerUp.begin(); i != _powerUp.end(); i++) {
 				if ((*j)->isCollision((*i)->getPosition(), (*i)->getSize())) {
 					(*j)->incPowerUp();
-					puts("POWERUP");
 				}
 			}
 		}

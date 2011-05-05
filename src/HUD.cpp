@@ -1,6 +1,8 @@
+#include <math.h>
 #include "HUD.h"
 #include "Car.h"
 #include "PlayerManager.h"
+
 
 namespace Micromachines {
 
@@ -19,6 +21,7 @@ namespace Micromachines {
 		_winWidth = win.width;
 		_winHeight = win.height;
 		_car = NULL;
+		_nitroRadius = 7;
 	}
 	
 	void HUD::drawLifeBar()
@@ -37,6 +40,7 @@ namespace Micromachines {
 			glVertex2d(_winWidth-(inc+oneLife), _winHeight-10);
 			glEnd();
 		}
+		
 		/*********** CONTORNO DA LIFEBAR ***********/
 		glLineWidth(2);
 		glColor3d(0, 0, 0);
@@ -60,18 +64,7 @@ namespace Micromachines {
 	{
 		int powerup = _car->getPowerUp();
 		int i, onePowerUp = (_max-10)/10;
-		std::cout << _car->getPowerUp() << std::endl;
-		glLineWidth(0);
-		glColor3d(1, 0, 0.0);
-		for (i = 0; i < powerup; i++) {
-			glBegin(GL_QUADS);
-			glVertex2d(_winWidth-40, _winHeight-200);
-			glVertex2d(_winWidth-40, _winHeight-220);
-			glVertex2d(_winWidth-40-onePowerUp, _winHeight-220);
-			glVertex2d(_winWidth-40-onePowerUp, _winHeight-200);
-			glEnd();
-		}
-		
+
 		glLineWidth(2);
 		glColor3d(0, 0, 0);
 		glBegin(GL_LINES);
@@ -89,12 +82,45 @@ namespace Micromachines {
 		glEnd();
 	}
 	
+	void HUD::drawNitro()
+	{
+		int x = _winWidth-17;
+		int y = _winHeight-50;
+		int carNitro = _car->getPowerUp();
+		
+		for (int i = 0; i < carNitro; i++) {
+			
+			glColor3d(0.1, 0.3, 0.2);
+			glBegin(GL_TRIANGLE_FAN);
+			for (int angle = 0; angle <= 360; angle = angle+5) {
+				glVertex2d(x + sin(angle) * _nitroRadius, y + cos(angle) * _nitroRadius);
+			}
+			glEnd();
+			x = x - 20;
+		}
+		
+		x = _winWidth-17;
+		
+		for (int i = 0; i < 3; i++) {
+			
+			glLineWidth(2);
+			glColor3d(0, 0, 0);
+			glBegin(GL_LINE_LOOP);
+			for (int angle = 0; angle <= 360; angle = angle+5) {
+				glVertex2d(x + sin(angle) * _nitroRadius, y + cos(angle) * _nitroRadius);
+			}
+			glEnd();
+			x = x - 20;
+		}
+		
+	}
+	
 	void HUD::drawOverlay()
 	{
-		if(_car == NULL)
+		if(_car == NULL){
 			_car = _pm->firstPlayer();
-		else {
 			_max = (_car->getLife()+10);
+		} else {
 			std::string s = "1st";
 			glColor3f(0.0f, 0.0f, 0.0f);
 			glRasterPos2d(300, 450);
@@ -134,6 +160,7 @@ namespace Micromachines {
 			
 			drawLifeBar();
 			drawPowerUp();
+			drawNitro();
 		}
 	}
 		
