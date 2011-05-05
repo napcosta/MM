@@ -21,6 +21,7 @@ namespace Micromachines {
 	
 	private:
 		double _winWidth, _winHeight;
+		cg::Vector3d _position;
 		PlayerManager* _pm;
 		Car* _player1;
 		Car* _player2;
