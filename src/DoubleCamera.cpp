@@ -8,7 +8,9 @@
 #include "DoubleCamera.h"
 #include "Car.h"
 #include "PlayerManager.h"
-
+#include <math.h>
+#include <algorithm>
+#include <iostream>
 namespace Micromachines {
 
 	DoubleCamera::DoubleCamera() : Entity("NearCamera")
@@ -50,13 +52,37 @@ namespace Micromachines {
 		} else {
 			_posPlayer1 = -_player1->getPosition();
 			_posPlayer2 = -_player2->getPosition();
+			double xDistance = 0;
+			double yDistance = 0;
+			double distance = 0;
+			double cameraDistance = 0;
 			
 			cg::Vector3d position = cg::Vector3d((_posPlayer1[0]+_posPlayer2[0])/2, (_posPlayer1[1]+_posPlayer2[1])/2, _posPlayer1[2]);
 			
+			
+			if (_posPlayer1[0] >_posPlayer2[0])
+				xDistance = fabs(_posPlayer1[0]-_posPlayer2[0]);
+			else
+				xDistance = fabs(_posPlayer1[0]-_posPlayer2[0]);
+				
+			if (_posPlayer1[1] >_posPlayer2[1])
+				yDistance = fabs(_posPlayer1[1]-_posPlayer2[1]);
+			else
+				yDistance = fabs(_posPlayer1[1]-_posPlayer2[1]);
+			
+			distance = sqrt((yDistance + xDistance) * (yDistance + xDistance));
+			
+			
+			if (distance < 200)
+				cameraDistance = distance;
+			else
+				cameraDistance = 200;
+				
+			std::cout << cameraDistance << std::endl;
 			glMatrixMode(GL_PROJECTION);
 			glLoadIdentity();
 			gluPerspective(60, _winWidth/_winHeight, 1, 3000);
-			gluLookAt(-position[0] -100 , -position[1], -355, 
+			gluLookAt(-position[0] -50 - cameraDistance*0.3 , -position[1]- 50 - cameraDistance*0.3 , -355 + cameraDistance*0.1, 
 				  -position[0], -position[1], -396, 
 				  0, 0 , 1);
 			glMatrixMode(GL_MODELVIEW);
