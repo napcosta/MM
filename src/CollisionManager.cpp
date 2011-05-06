@@ -34,7 +34,7 @@ namespace Micromachines{
 		for (tplayersIterator j = _players.begin(); j != _players.end(); j++) {
 			
 			for(tCollidableIterator i = _obstacles.begin(); i != _obstacles.end(); i++){
-				if (!_pm->hasTwoPlayers() || !(*j)->getId().compare("Car2")) {
+				if (_pm->hasTwoPlayers() || (!_pm->hasTwoPlayers() && (*i)->getId().compare("Car2"))) {
 					if ((*j)->getAppForce() >= 0)
 						frontCollision = true;
 					else
