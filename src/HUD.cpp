@@ -65,6 +65,18 @@ namespace Micromachines {
 		int powerup = _car->getPowerUp();
 		int i, onePowerUp = (_max-10)/10;
 
+	//	std::cout << _car->getPowerUp() << std::endl;
+		glLineWidth(0);
+		glColor3d(1, 0, 0.0);
+		for (i = 0; i < powerup; i++) {
+			glBegin(GL_QUADS);
+			glVertex2d(_winWidth-90, _winHeight-200);
+			glVertex2d(_winWidth-90, _winHeight-220);
+			glVertex2d(_winWidth-90+_car->getPowerUp(), _winHeight-220);
+			glVertex2d(_winWidth-90+_car->getPowerUp(), _winHeight-200);
+			glEnd();
+		}
+		
 		glLineWidth(2);
 		glColor3d(0, 0, 0);
 		glBegin(GL_LINES);
