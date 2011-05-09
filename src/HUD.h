@@ -20,7 +20,6 @@ namespace Micromachines {
 			int _nitroRadius;
 			    
 			void drawLifeBar();
-			void drawPowerUp();
 			    
 		public: 
 			HUD();
