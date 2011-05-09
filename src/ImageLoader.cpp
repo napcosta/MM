@@ -214,10 +214,3 @@ GLuint LoadTexture(const char* filename)
 	return textureID;
 }
 
-
-
-
-
-
-
-

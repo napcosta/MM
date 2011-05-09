@@ -52,8 +52,9 @@ namespace Micromachines{
 			}
 			
 			for (tPowerUpIterator i = _powerUp.begin(); i != _powerUp.end(); i++) {
-				if ((*j)->isCollision((*i)->getPosition(), (*i)->getSize())) {
+				if ((*j)->isCollision((*i)->getPosition(), (*i)->getSize()) && (*i)->isDraw() == true) {
 					(*j)->incPowerUp();
+					(*i)->notDraw();
 				}
 			}
 		}

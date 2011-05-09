@@ -24,13 +24,16 @@ namespace Micromachines {
 		double _winHeight, _winWidth;
 		cg::Vector2d _size;
 		int RandomBeetween(int min, int max);
-      //  	GLMmodel *model;
+    		bool _draw;
+    		int t;
         
 	public:
 		PowerUp(std::string name, cg::Vector3d pos);
 		~PowerUp();
 		void init();
 		void draw();
+		void notDraw();
+		bool isDraw();
 		void update(unsigned long elapsed_millis);
 		cg::Vector3d getPosition();
 		cg::Vector2d getSize();
