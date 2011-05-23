@@ -58,6 +58,42 @@ namespace Micromachines {
 		glVertex2d(_winWidth-10, _winHeight-10);
 		glEnd();
 		/********************************************/
+		
+		if (_pm->hasTwoPlayers()) {
+			int life = _pm->secondPlayer()->getLife()/10;
+			int max = (_pm->secondPlayer()->getLife()+10);
+			int i, oneLife = (max-10)/10;
+			int inc = oneLife;
+			
+			glLineWidth(0);
+			glColor3d(0.4, 1, 0.1);
+			for (i = 0; i < life; i++, inc+= oneLife) {
+				glBegin(GL_QUADS);
+				glVertex2d(_winWidth-inc, _winHeight-100);
+				glVertex2d(_winWidth-inc, _winHeight-120);
+				glVertex2d(_winWidth-(inc+oneLife), _winHeight-120);
+				glVertex2d(_winWidth-(inc+oneLife), _winHeight-100);
+				glEnd();
+			}
+			
+			/*********** CONTORNO DA LIFEBAR ***********/
+			glLineWidth(2);
+			glColor3d(0, 0, 0);
+			glBegin(GL_LINES);
+			glVertex2d(_winWidth-10, _winHeight-100);
+			glVertex2d(_winWidth-10, _winHeight-120);
+			
+			glVertex2d(_winWidth-10, _winHeight-120);
+			glVertex2d(_winWidth-_max, _winHeight-120);
+			
+			glVertex2d(_winWidth-_max, _winHeight-120);
+			glVertex2d(_winWidth-_max, _winHeight-100);
+			
+			glVertex2d(_winWidth-_max, _winHeight-100);
+			glVertex2d(_winWidth-10, _winHeight-100);
+			glEnd();
+			/********************************************/
+		}
 	}
 	
 	void HUD::drawNitro()
@@ -89,6 +125,37 @@ namespace Micromachines {
 			}
 			glEnd();
 			x = x - 20;
+		}
+		
+		if (_pm->hasTwoPlayers()) {
+			int x = _winWidth-17;
+			int y = _winHeight-150;
+			int carNitro = _pm->secondPlayer()->getPowerUp();
+			
+			for (int i = 0; i < carNitro; i++) {
+				
+				glColor3d(0.1, 0.3, 0.2);
+				glBegin(GL_TRIANGLE_FAN);
+				for (int angle = 0; angle <= 360; angle = angle+5) {
+					glVertex2d(x + sin(angle) * _nitroRadius, y + cos(angle) * _nitroRadius);
+				}
+				glEnd();
+				x = x - 20;
+			}
+			
+			x = _winWidth-17;
+			
+			for (int i = 0; i < 3; i++) {
+				
+				glLineWidth(2);
+				glColor3d(0, 0, 0);
+				glBegin(GL_LINE_LOOP);
+				for (int angle = 0; angle <= 360; angle = angle+5) {
+					glVertex2d(x + sin(angle) * _nitroRadius, y + cos(angle) * _nitroRadius);
+				}
+				glEnd();
+				x = x - 20;
+			}
 		}
 		
 	}

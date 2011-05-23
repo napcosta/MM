@@ -90,6 +90,7 @@ namespace Micromachines {
 	Car* PlayerManager::secondPlayer()
 	{
 		if(_2Players){
+			std::cout << _players[1]->getPowerUp() << std::endl;
 			return _players[1];
 		} else return NULL;
 	}
